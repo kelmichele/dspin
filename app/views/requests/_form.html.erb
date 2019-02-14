@@ -60,7 +60,7 @@
     <div class="form-group event_type">
       <label>* Event Type: </label><br>
       <%= f.select(:event_type) do %>
-        <% [['Select Answer', ''], ['Food', 'Food'], ['Keynote', 'Keynote'], ['Fireside chat', 'Fireside chat'], ['Panel', 'Panel'], ['Other', 'Other']].each do |c| -%>
+        <% [['Select Answer', ''], ['Keynote', 'Keynote'], ['Fireside chat', 'Fireside chat'], ['Panel', 'Panel'], ['Other', 'Other']].each do |c| -%>
           <%= content_tag(:option, c.first, value: c.last) %>
         <% end %>
       <% end %>
