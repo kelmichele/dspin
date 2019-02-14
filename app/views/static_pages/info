@@ -13,19 +13,6 @@ TERMINAL SHIT
 		- Buy 1000 books: 40% off 
 
 
-		 aws:
-		   access_key_id: AKIAIXQDPY2UNTHNAWXQ
-		   secret_access_key: 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
-
-		# Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
-		secret_key_base: 487847fec8fdfd2f21f921290bd726db2f97ef915a3b363aedb6dee6fac756596efb4e1bcd11bfc1aeb3d1cfe38926612a123267a65fd2ee92713e4a11264a06
-
-		gmail:
-		    g_user: kelproduction.enviro@gmail.com
-		    g_pass: 2V4>su7$CKt{,QdN3o=n
-
-
-
 
 Previous Speaking Events 
 	AmericasMart: Featured Influencers Series 

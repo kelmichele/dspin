@@ -1,0 +1,76 @@
+<%= render 'shared/errors', obj: @event %>
+  <%= form_for(@event, :html => {class: "form-horizontal", role: "form" }) do |f| %>
+  <fieldset>
+   <!--  < if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    < end %> -->
+
+    <% if flash[:alert] %>
+      <div class="notice"><%= flash[:alert] %></div>
+    <% end %>
+
+    <p class="print">* indicates required field</p>
+    <div class="clearfix"></div><hr>
+
+		<div class="form-group type">
+		  <label>* Event Type:</label><br>
+		  <%= f.text_field :type %> 
+		</div>
+
+		<div class="form-group title">
+		  <label>* Event Title:</label><br>
+		  <%= f.text_field :title %> 
+		</div>
+
+		<div class="form-group date">
+		  <label>* Date:</label><br>
+		  <%= f.text_field :date %> 
+		</div>
+
+		<div class="form-group time">
+		  <label>* Time:</label><br>
+		  <%= f.text_field :time %> 
+		</div>
+
+		<div class="form-group location">
+		  <label>* Location:</label><br>
+		  <%= f.text_field :location %> 
+		</div>
+
+		<div class="form-group description">
+		  <label>* Description:</label><br>
+		  <%= f.text_field :description %> 
+		</div>
+
+		<div class="form-group price">
+		  <label>* Price:</label><br>
+		  <%= f.text_field :price %> 
+		</div>
+
+		<div class="form-group link">
+		  <label>* Link:</label><br>
+		  <%= f.text_field :link %> 
+		</div>
+
+		<div class="form-group image">
+		  <label>* Image:</label><br>
+		  <%= f.text_field :image %> 
+		</div>
+
+		<div class="form-group extras">
+		  <label>* Extra Info:</label><br>
+		  <%= f.text_field :extras %> 
+		</div>
+
+    <div class="form-group honey">
+      <%= label_tag :honey %>
+      <%= f.text_field :honey %>
+      <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+    </div>
+
+    <div class="form-group submit">
+      <%= f.submit "Submit", :class=> "send-message" %>
+    </div>
+
+  </fieldset>
+<% end %>

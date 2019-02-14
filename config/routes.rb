@@ -24,6 +24,6 @@ Rails.application.routes.draw do
   get '/ff', to: 'links#ff'
   get '/fab', to: 'links#fab'
 
-  # resources :requests
-  # resources :events
+  resources :requests
+  resources :events
 end

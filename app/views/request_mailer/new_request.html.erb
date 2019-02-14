@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+
+  <body>
+  	<h1>Request to Book Dana</h1>
+    <h3>Personal Information:</h3>
+		<hr>
+		<p><b>Name:</b><br>
+		<%= @request.name %></p>
+
+		<p><b>Email:</b><br>
+		<%= @request.email %></p>
+
+		<p><b>Phone Number:</b><br>
+		<%= @request.phone %></p>
+
+		<hr>
+		<h3>Event Information:</h3>
+		<hr>
+		<p><b>Event name:</b><br>
+		<%= @request.event_name %></p>
+
+		<p><b>Event date:</b><br>
+		<%= @request.event_date %></p>
+
+		<p><b>Location:</b><br>
+		<%= @request.event_location %></p>
+
+		<p><b>Link to event:</b><br>
+		<%= @request.event_link %></p>
+
+		<p><b>Event Message:</b><br>
+		<%= @request.event_message %></p>
+
+		<p><b>Type of event:</b><br>
+		<%= @request.event_type %></p>
+
+		<p><b>Honoriam Range:</b><br>
+		<%= @request.honoriam %></p>
+
+		<p><b>Additional Comments:</b><br>
+		<%= @request.comments %></p>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<%= render 'shared/errors', obj: @request %>
+  <%= form_for(@request, :html => {class: "form-horizontal", role: "form" }) do |f| %>
+<!-- <= form_for @request, url: request_path do |request| %> -->
+  <fieldset>
+   <!--  < if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    < end %> -->
+
+    <% if flash[:alert] %>
+      <div class="notice"><%= flash[:alert] %></div>
+    <% end %>
+
+    <p class="print">* indicates required field</p>
+    <div class="clearfix"></div><hr>
+
+  	<h4>Personal Details</h4>    
+    <div class="form-group name">
+      <label>* Full Name:</label><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form-group email">
+      <label>* Email: </label><br>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="form-group phone">
+      <label>* Phone: </label><br>
+      <%= f.text_field :phone %>
+    </div>
+
+
+
+  	<h4>Event Details</h4>    
+    <div class="form-group event_name">
+      <label>* Event Name:</label><br>
+      <%= f.text_field :event_name %>
+    </div>
+
+    <div class="form-group event_date">
+      <label>* Event Date: </label><br>
+      <%= f.date_field :event_date %>
+    </div>
+
+    <div class="form-group event_location">
+      <label>* Event Location: </label><br>
+      <%= f.text_field :event_location %>
+    </div>
+
+    <div class="form-group event_link">
+      <label>Event Link:</label><br>
+      <%= f.text_field :event_link %>
+    </div>
+
+    <div class="form-group event_message">
+      <label>* Event Message: </label><br>
+      <%= f.text_field :event_message %>
+    </div>
+
+    <div class="form-group event_type">
+      <label>* Event Type: </label><br>
+      <%= f.select(:event_type) do %>
+        <% [['Select Answer', ''], ['Food', 'Food'], ['Keynote', 'Keynote'], ['Fireside chat', 'Fireside chat'], ['Panel', 'Panel'], ['Other', 'Other']].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="form-group honoriam">
+      <label>Honoriam Range: </label><br>
+      <%= f.text_field :honoriam %>
+    </div>
+
+    <div class="form-group comments">
+      <label>Additional Comments: </label><br>
+      <%= f.text_area :comments %>
+    </div>
+
+    <div class="form-group honey">
+      <%= label_tag :honey %>
+      <%= f.text_field :honey %>
+      <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+    </div>
+
+    <div class="form-group submit">
+      <%= f.submit "Submit", :class=> "send-message" %>
+    </div>
+
+  </fieldset>
+<% end %>
