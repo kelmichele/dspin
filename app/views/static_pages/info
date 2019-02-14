@@ -1,0 +1,61 @@
+TERMINAL SHIT
+		Rails.application.credentials.gmail[:g_user]
+
+		Traceback (most recent call last):
+		        1: from (irb):7
+		NoMethodError (undefined method `[]' for nil:NilClass)
+
+
+
+		- Buy 50 books: 10% off 
+		- Buy 100 books: 20% off 
+		- Buy 250 books: 30% off 
+		- Buy 1000 books: 40% off 
+
+
+		 aws:
+		   access_key_id: AKIAIXQDPY2UNTHNAWXQ
+		   secret_access_key: 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
+
+		# Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
+		secret_key_base: 487847fec8fdfd2f21f921290bd726db2f97ef915a3b363aedb6dee6fac756596efb4e1bcd11bfc1aeb3d1cfe38926612a123267a65fd2ee92713e4a11264a06
+
+		gmail:
+		    g_user: kelproduction.enviro@gmail.com
+		    g_pass: 2V4>su7$CKt{,QdN3o=n
+
+
+
+
+Previous Speaking Events 
+	AmericasMart: Featured Influencers Series 
+		https://atlanta.daybooknetwork.com/story/2018-10-16/54954-october-2018-atlanta-apparel/
+	
+	Plywood Presents 
+		https://www.youtube.com/watch?v=H3gJtV6Cy-0
+	
+	UGA 40 Under 40
+		https://drive.google.com/file/d/17gbdCYUg52ZKprBNeSqf7m1-L71bSUWq/view
+	
+	"Imagine If" Innovation Conference
+		https://drive.google.com/file/d/1nCIhXMid3IAVCn7XAEvBMMPxK8lTLVR3/view
+
+	CARE for AIDS
+	Matrix Residential INSPIRE Retreat
+
+
+Podcasts
+	Carey Nieuwhof Leadership Podcast 
+		https://careynieuwhof.com/episode208/
+
+	Imagine More 
+		https://www.imaginemorepodcast.com/episodes/dana-spinola
+
+	Launch Youniveristy
+		https://launchyouniversity.com/podcast/069-when-passion-and-heart-lead-the-way-dana-spinola-of-fabrik/
+
+	CEO Exclusive Radio 
+		http://www.ceoexclusiveinsights.com/fabrik/
+
+	Love or Work 
+		https://simplecast.com/s/168bffc8

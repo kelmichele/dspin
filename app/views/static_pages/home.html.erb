@@ -1,0 +1,64 @@
+<% @page_title = "Love What You Do" %>
+<% @page_description = "" %>
+
+<div class="full open">
+	<div class="inside lg">
+		<%= image_tag('dana-hero.jpg', class: 'img-responsive', alt: '') %>
+	</div>
+</div>
+
+
+<div class="color-text">
+	<div class="inside med2">
+		<h1><span>Ignite your passion. Find your purpose.</span><br><span> Live life with meaning.</span></h1>
+	</div>
+</div>
+
+
+<div class="laysec2">
+	<div class="inside lg">
+		<%= link_to root_path, class: 'box one' do %>
+			<%= image_tag('stack.jpg', class: 'img-responsive img-bg', alt: '') %> 
+			<!-- <%= image_tag('home-link1.jpg', class: 'img-responsive img-bg', alt: '') %>  -->
+			<h4>Get Your Book Now</h4>
+			<p class="norm">Order your life-changing copy of <span>love what you do.</span> today, and start exploring your passion. </p>
+		<% end %>
+
+		<%= link_to root_path, class: 'box two' do %>
+			<%= image_tag('home-link2.jpg', class: 'img-responsive img-bg', alt: '') %>  
+			<h4>Speaking Engagements</h4>
+			<p class="norm">Check out Dana's upcoming and past events, or learn more about booking her for your own speaking engagement.</p>
+		<% end %>
+	</div>
+</div>
+
+<div class="insta">
+	<div class="inside lg">
+		<div class="tbox">
+			<h4>Follow Me On Instagram</h4>
+			<h5>@danaspinola</h5>
+		</div>
+
+		<script src="http://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+		<!-- LightWidget WIDGET sm space -->
+		<!-- <iframe src="//lightwidget.com/widgets/31d1a20b17315de4a36bb121b8048ac6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->
+
+		<!-- LightWidget WIDGET lg space-->
+		<iframe src="//lightwidget.com/widgets/df568c51ac3f52d684ae4b8aacd74053.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+	</div>
+</div>
+
+
+
+<div class="news">
+	<div class="inside lg">
+		<div class="signbox">
+			<h4>Follow the Passion:</h4>
+			<div class="title-line center"></div><div class="clearfix"></div>
+			<p class="norm">Sign up to get tips and inspiration for living a life you love delivered straight to your inbox</p>
+			<input><%= link_to "Sign Up", root_path, class: 'ds-link' %>
+			<ul class="social"><%= render 'shared/social' %></ul>
+		</div>
+	</div>
+</div>

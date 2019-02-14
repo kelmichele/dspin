@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,500,600|Montserrat:400,600,700');
+@import "mixins";
+@import "variables";
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+@font-face {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+.inside{width: 85%; @include center-block();
+  // 1224px
+  &.xl {width: 95%;}
+  &.lg {width: 90%;}
+  // 1296px
+  &.alt {width: 80%;}
+  // 1152px;
+  &.med {width:75%;}
+  &.med-def {width:1080px;}
+  &.med2 {width:65%;}
+  &.med3 {width:60%;}
+  // 864px
+  &.narrow {width:55%;}
+  &.narrow-def {width:792px}
+
+  &.home-def {width:850px;}
+
+  @media (max-width:1100px) {
+    &.med-def {width:90%;}
+  }
+  
+  @include bp(xl) {
+    &.svn {width:1015px;}
+    &.med2-def{width: 940px;}
+  }
+
+  @include bp(tb) {
+    &.med {width:80%;}
+    &.med2 {width:75%;}
+    &.med3 {width:70%;}
+    &.narrow {width:70%;}
+    &.home-def {width:75%;}
+  }
+
+  @include bp(br) {
+    &.med2-def {width:85%;}
+    &.svn {width:85%;}
+  }
+
+  @include bp(lg) {
+    &.xx {width:648px;}
+  }
+
+  @include bp(tn) {
+    &.narrow-def {width:80%;}
+  }
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {max-width: 556px;}
+  @media (min-width: 768px) {max-width: 748px;}
+  @media (min-width: 992px) {max-width: 972px;}
+  @include bp(dt) {max-width: 1180px;}
+  @include bp(ph) {max-width: 90%;}
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  &.full{
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+
+body {
+  margin:0;
+	line-height: 1.5em;
+  font-family: $body;
+  @include sec-default();
+
+  @include bp(br) {
+    border-top: 0;
+  }
+  // background-color: $f8;
+  // padding:0 50px;
+  // .page-body {background-color: $f9;}
+
+
+  // &.safari {-webkit-font-smoothing: antialiased;}
+  h1, h2, h3, h4, h5, p, li, a {color: $black; line-height: 1.5em;font-family: $body;
+    text-transform: uppercase;
+      // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    &.norm{text-transform: none;}
+    &.bmargin0 {margin-bottom: 0;}
+    &.strong {font-weight: bold;}
+    &.semi {font-weight: $semi;}
+  }
+  p,li{font-weight: 300;}
+  p{font-size: 17px;}
+  h1{font-size: 2rem; font-weight: bold;}
+  h2{font-size: 1.75rem;}
+  h1, h2, h3, h4, h5 {font-family: $monte;}
+}
+.bmargin0 {margin-bottom: 0;}
+.tmargin0 {margin-top: 0;}
+
+.text-center {text-align: center;}
+
+.visually-hidden {
+  @include visuallyHidden();
+}
+
+.img-responsive {max-width: 100%; height: auto; display:block;}
+ul{margin:0;}
+li {list-style-type: none;}
+ul.disc li{list-style-type: disc;}
+
+a {
+  &:focus,
+  &:hover {opacity: .7;}
+}
+
+// forms //
+.msg-bx {@include sec-default();
+  .alert-top {padding:8px 0;}
+}
+.notice, .notice p, p.alert.scs, .alert-top {color: $red; text-align: center;}
+
+.panel.panel-danger.err {
+  // width:90%; @include center-block();
+  margin:30px 0;
+  border-bottom: 1px solid rgba($red,.5); padding-bottom: 15px;
+  h4.panel-title {background-color: rgba($red, .8); color: $white; @include tshadowl(rgba($black, .7)); margin-bottom:10px;padding-left: 10px;}
+  li {color: $red; margin-bottom:5px; list-style-type: disc;}
+}
+.alert.alert-success {background-color: rgba(0,146,13, .2); color: $black;}
+
+
+p.print {font-size: .9rem; margin-top: 7px; color: $gold;}
+form{
+  fieldset{border:0;}
+  input, textarea,select {width:100%; height:30px;margin-top:3px; font-size: 15px; padding-left: 5px;}
+  textarea{height: 100px;padding-top:3px;}
+  label{font-size: 15px; color: $black; font-weight: $semi;}
+
+  .form-group {margin-bottom: 20px;}
+  .form-group.submit{@include sec-default();
+    input.send-message, input[type=submit] { width:auto; height:auto; background-color: $black; font-size: 15px; color: $white; 
+      font-weight: 600; text-transform: uppercase; letter-spacing: .7px;font-family: $monte; padding: 8px 30px;
+    }
+  }
+}

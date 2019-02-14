@@ -1,0 +1,77 @@
+@import "variables";
+@import "mixins";
+
+.uk-navbar-nav {}
+.uk-navbar-nav>li>a{ padding:0; min-height:auto; }
+.navbar-center{
+	@include sec-default(); background-color: $white;
+	width:87%;@include center-block();
+}
+// display:block !important;
+
+//*********************************//
+//********** header inline *********//
+//*********************************//
+.logo-name {font-family: $didot; font-size: 28px; text-transform: uppercase; 
+	line-height: 1.8rem; letter-spacing: 1px;
+
+	&:hover {text-decoration: none; color: $black; opacity: .7;}
+}
+
+.inline-header {@include sec-default();background-color: $white; padding:20px 0 70px;
+	// text-align: center;
+	.mobile-nav {display: none;}
+
+	.uk-navbar-container.inside{width:90%;background-color: $white;}
+	.nb-logo, .uk-navbar-nav {width:30%; display: inline-block; float: left;}
+	.nb-logo{padding:20px 0px 0;}
+	.logo {width:175px; float: left;
+		// @include center-block();
+	}
+
+	.uk-navbar-nav{width:60%; float: right;
+	 	padding:10px 0 10px; margin-top: 15px;
+	 	// text-align: center;
+	}
+
+	.uk-navbar-nav li{
+		display: inline-block; float: none; margin: 0 0 0px 4%;
+		a {font-size: 16px; font-family: $didot; color: $black; text-transform: uppercase; 
+			letter-spacing: .8px;padding:0; min-height: auto;}
+
+		&.fab {float:right;
+			.nav-fab {height:16px;}
+		}
+	}
+
+	.uk-navbar-dropdown{ padding: 10px 5px 15px 10px; margin-top: 15px;
+		width:250px;
+		background-color: $f9;
+		.uk-nav.uk-navbar-dropdown-nav {text-align: left;
+			li {@include sec-default(); padding:5px 0;
+				a{font-weight: normal;text-transform: none; font-size: 16px; letter-spacing: .2px; }
+			}
+		}
+	}
+}
+
+
+
+
+footer {@include sec-default();
+	.top-foot {@include sec-default(); padding:30px 0 20px;
+		.ft-block {display: inline-block; float: left; width:20%;
+			&.one {margin-left: 13%;}
+		}
+
+		h4{margin-bottom: 0px; font-size:1.15rem;font-weight: 600;}
+		ul {margin-top:10px; padding:0;}
+		li{margin-bottom: 7px;}
+	}
+
+	.btm-foot {@include sec-default(); padding: 10px; background-color: $black;
+		.copy, .hs {display: inline-block; float: left; width:50%;}
+		.hs {float: right; text-align: right;}
+		p, a {color: $white; font-size: 13px; letter-spacing: 1.2px; margin: 0;}
+	}
+}
