@@ -11,21 +11,20 @@
 				<%= link_to "Create New Event", new_event_path, class: 'ds-link' %>
 	    </div>
 		<% end %>
+		<div class="clearfix"></div>
 		<hr>
+		
 		<% @events.each do |event| %>
-			<!-- <style type="text/css">
-				.event-li.event-<= event.id %> {
-					< if event.image.attached? %>
-						background-image: url(<= rails_blob_url(event.image) %>);
-						< else %>
-						background-image: url(/assets/home-slide-bone.jpg);
-					< end %>
-				}
-			</style> -->
+			<div class="event-li event-<%= event.id %>">
+				<% if event.image.attached? %>
+				  <%= image_tag event.image, alt: "#{event.title}"%>
+				<% end %>
 
-			<%= link_to event_path(event), class: "event-li event-#{event.id}" do %>
-			  <h3 class="title"><%= event.title %></h3>
-			<% end %>
+				<%= link_to event_path(event), class: 'textbox' do %>
+					<h4><%= event.title %></h4>
+					<p><%= event.date %> &nbsp; | &nbsp; <%= event.time %></p>
+				<% end %>
+			</div>
 		<% end %>
 	</div>
 </div>

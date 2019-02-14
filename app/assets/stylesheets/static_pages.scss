@@ -90,6 +90,12 @@ h2 {line-height: 1.35rem;}
     ul {padding-left: 0; margin-left: 0; margin-bottom: 0;} 
     .socials {width:35%; float:right;}
   }
+
+  #purchase-options{
+    .option{display: inline-block; float: left; width:45%;}
+    .option.o2 {float: right;}
+    .ds-link {@include sec-default();}
+  }
 }
 
 
@@ -121,3 +127,51 @@ h2 {line-height: 1.35rem;}
   h4{margin-bottom: 0; font-weight: bold; border-bottom: $border; padding-bottom:6px; color:$black;}
   h3{margin:5px 0 10px; font-size: 1.3rem; font-weight: $semi;}
 }
+
+
+
+
+
+
+//*************************************//
+//************* EVENTS ***************//
+//************************************//
+.events {
+  .event-li {display: inline-block; float: left; width:45%;
+    &::nth-child(2n+2) {float: right;}
+
+    .textbox {@include sec-default();margin-top:20px;
+      &:hover {text-decoration: none;}
+    }
+    h4 {font-weight: bold;letter-spacing: 1px; margin-bottom: 1px;}
+    p{font-size: 1rem; margin-top: 0; letter-spacing: .6px;}
+  }
+
+  .event-image{margin-bottom: 20px;}
+  .event-box {@include sec-default();
+    h3, h4, p{margin: 10px 0;}
+  }
+  
+  .form-group.image {
+    label{@include sec-default();}
+    #event_image{ width:60%; border:1px solid rgba($black,.1);padding:15px; height:auto;}    
+  }
+
+  &.edit{
+    .thumb {width:100px; margin-bottom: 20px;}
+    p.tsmall {margin-bottom: 5px; font-size: 14px; font-weight: 600;}
+
+    .form-group .image-box{ 
+      border:1px solid rgba($black,.1);
+      padding:15px; height:auto;
+    }
+    .rmv-img {color: $red; font-size: 14px; font-weight: bold; }
+    .current{margin-top: 15px;}
+  }
+}
+
+
+
+
+
+

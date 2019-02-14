@@ -176,6 +176,7 @@ form{
   label{font-size: 15px; color: $black; font-weight: $semi;}
 
   .form-group {margin-bottom: 20px;}
+  &.admin-form .form-group {margin-bottom: 30px;}
   .form-group.submit{@include sec-default();
     input.send-message, input[type=submit] { width:auto; height:auto; background-color: $black; font-size: 15px; color: $white; 
       font-weight: 600; text-transform: uppercase; letter-spacing: .7px;font-family: $monte; padding: 8px 30px;
