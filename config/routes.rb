@@ -24,5 +24,9 @@ Rails.application.routes.draw do
   get '/fab', to: 'links#fab'
 
   resources :requests
-  resources :events
+  resources :events do 
+    member do
+      delete :delete_image_attachment
+    end
+  end
 end

@@ -1,2 +1,31 @@
 <% @page_title = "Event" %>
 <% @page_description = "" %>
+
+
+
+<div class="full-sec">
+	<div class="inside med">
+		<h1 class="text-center"><%= @event.title %></h1>
+		<% if user_signed_in? && current_user.admin? %>
+	    <button class="admin-uk wl-uk uk-float-right" type="button"><span  uk-icon="icon: settings;"></span></button>
+	    <div uk-dropdown="mode: click; pos: bottom-right; boundary: .wl-uk;">
+				<%= link_to "Create New Event", new_event_path, class: 'ds-link' %>
+				<%= link_to "Edit Event", edit_event_path, class: 'ds-link' %>
+	    </div>
+		<% end %>
+		<hr>
+
+		<% if @event.image.attached? %>
+		  <%= image_tag @event.image, alt: "#{@event.title}"%>
+		<% end %>
+		<h3><%= @event.title %></h3>
+		<h3><%= @event.date %></h3>
+		<h3><%= @event.time %></h3>
+		<h3><%= @event.location %></h3>
+		<h3><%= @event.description %></h3>
+		<!-- <h3><= @event.price %></h3> -->
+		<!-- <h3><= @event.link %></h3> -->
+		
+	</div>
+</div>
+

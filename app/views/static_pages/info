@@ -1,16 +1,7 @@
-TERMINAL SHIT
-		Rails.application.credentials.gmail[:g_user]
-
-		Traceback (most recent call last):
-		        1: from (irb):7
-		NoMethodError (undefined method `[]' for nil:NilClass)
-
-
-
-		- Buy 50 books: 10% off 
-		- Buy 100 books: 20% off 
-		- Buy 250 books: 30% off 
-		- Buy 1000 books: 40% off 
+- Buy 50 books: 10% off 
+- Buy 100 books: 20% off 
+- Buy 250 books: 30% off 
+- Buy 1000 books: 40% off 
 
 
 

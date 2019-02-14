@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  validates :type, presence: true
+  validates :event_type, presence: true
   validates :title, presence: true
   validates :date, presence: true
   validates :time, presence: true
@@ -9,4 +9,7 @@ class Event < ApplicationRecord
   # validates :link, presence: true
   # validates :image, presence: true
   # validates :extras, presence: true
+
+  has_one_attached :image
+  # default_scope -> { order(date: :desc) }
 end

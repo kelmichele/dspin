@@ -14,7 +14,12 @@
 
 		<div class="form-group type">
 		  <label>* Event Type:</label><br>
-		  <%= f.text_field :type %> 
+		  <!-- <= f.text_field :event_type %>  -->
+		  <%= f.select(:event_type) do %>
+		    <% [['Speaking', 'Speaking'], ['Book tour', 'Book tour']].each do |c| -%>
+		      <%= content_tag(:option, c.first, value: c.last) %>
+		    <% end %>
+		  <% end %>
 		</div>
 
 		<div class="form-group title">
@@ -54,7 +59,19 @@
 
 		<div class="form-group image">
 		  <label>Image:</label><br>
-		  <%= f.text_field :image %> 
+		  <%= f.file_field :image %>
+
+		  <% unless @event.new_record? %>
+				<% if @event.image.attached? %>
+					<div class="full current">
+						<p class="tsmall">Current Image:</p>
+					  <div class="thumb"><%= image_tag @event.image %></div>
+						<%= link_to '[ Remove image ]', delete_image_attachment_event_url(@event), class: 'rmv-img',
+	                method: :delete,
+	                data: { confirm: 'Are you sure you want to delete this image?' } %>
+          </div>
+				<% end %>
+	    <% end %>
 		</div>
 
 		<div class="form-group extras">
