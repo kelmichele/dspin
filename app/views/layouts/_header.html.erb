@@ -43,6 +43,7 @@ HEART drop down menu
           <ul class="uk-navbar-nav">
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Events", events_path %></li>
+
             <li><%= link_to "Speaking", new_request_path %>
               <div class="uk-navbar-dropdown">
                 <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -53,18 +54,19 @@ HEART drop down menu
                 
             </li>
 
-            <!-- <li>
+            <li>
               <%= link_to "Book", root_path %>
               <div class="uk-navbar-dropdown">
                 <ul class="uk-nav uk-navbar-dropdown-nav">
                   <li><%= link_to "About the Book", root_path %></li>
                   <li><%= link_to "Buy the Book", root_path %></li>
-                  <li><%= link_to "Love What You Do Tour", root_path %></li>
+                  <!-- <li><%= link_to "Love What You Do Tour", root_path %></li> -->
                 </ul>
               </div>
-            </li> -->
+            </li>
             
-            <!-- <li><%= link_to "Press", root_path %></li> -->
+            <li><%= link_to "Press", root_path %></li>
+
             <li>
               <%= link_to "Heart", root_path %>
               <div class="uk-navbar-dropdown">
@@ -77,6 +79,10 @@ HEART drop down menu
 
             <li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
           </ul>
+
+          <!-- <div class="fab-link">
+            <%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %>
+          </div> -->
         <!-- </div> -->
       </div>
 

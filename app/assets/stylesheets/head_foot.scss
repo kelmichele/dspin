@@ -18,34 +18,35 @@
 	&:hover {text-decoration: none; color: $black; opacity: .7;}
 }
 
-.inline-header {@include sec-default();background-color: $white; padding:20px 0 70px;
+.inline-header {@include sec-default();background-color: $white; padding:50px 0 70px;
 	// text-align: center;
 	.mobile-nav {display: none;}
 
 	.uk-navbar-container.inside{width:90%;background-color: $white;}
-	.nb-logo, .uk-navbar-nav {width:30%; display: inline-block; float: left;}
+	.nb-logo, .uk-navbar-nav {width:30%; width:250px; display: inline-block; float: left;}
 	.nb-logo{padding:20px 0px 0;}
-	.logo {width:175px; float: left;
-		// @include center-block();
-	}
+	.logo {width:175px; float: left;}
 
-	.uk-navbar-nav{width:60%; float: right;
+	.uk-navbar-nav{width:80%; float: right;
 	 	padding:10px 0 10px; margin-top: 15px;
-	 	// text-align: center;
+	 	text-align: center;
 	}
 
 	.uk-navbar-nav li{
-		display: inline-block; float: none; margin: 0 0 0px 4%;
+		display: inline-block; float: none; 
+		// margin: 0 0 0px 4%;
+		margin: 0px 1.5%;
 		a {font-size: 16px; font-family: $didot; color: $black; text-transform: uppercase; 
 			letter-spacing: .8px;padding:0; min-height: auto;}
 
-		&.fab {float:right;
+		&.fab {float:right; margin:0;
 			.nav-fab {height:16px;}
 		}
 	}
 
 	.uk-navbar-dropdown{ padding: 10px 5px 15px 10px; margin-top: 15px;
-		width:250px;
+		width:220px;
+		// width:auto;
 		background-color: $f9;
 		.uk-nav.uk-navbar-dropdown-nav {text-align: left;
 			li {@include sec-default(); padding:5px 0;

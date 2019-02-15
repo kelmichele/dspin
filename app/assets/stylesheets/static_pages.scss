@@ -180,10 +180,52 @@ h2 {line-height: 1.35rem;}
     &.as-title span.norm {letter-spacing: .3px;}
   }
 
-  .ab-sec {@include sec-default();
+  .ab-sec {@include sec-default(); padding:50px 0; 
     .text, .image { display: inline-block; float: left;}
-    .image {width:28%; float: right;}
-    .text {width:65%; padding:50px 0;}
+    .image {width:33%; float: right;}
+    .text {width:60%; padding:80px 0;}
+
+
+    position: relative; z-index: 0;
+    &::before {@include before();z-index: -1;width:8%;left:59%;}
+    &::after{@include after(); z-index: -2; @include sec-bgimage('dana-bio1.jpg'); background-size: 40%; background-position: top right;}
+
+    $bio: lighten($gold, 8%);
+    $philanth: $white;
+    $message: $cream;
+    $rec: $black;
+
+    &.bio{background-color:$bio;
+      &::before {
+        background: -webkit-linear-gradient(-90deg, rgba($bio, 0) 10%, rgba($bio, .8) 40%, $bio 85%);
+        background: linear-gradient(-90deg, rgba($bio, 0) 10%, rgba($bio, .8) 40%, $bio 85%);
+      }
+    }
+
+    &.philanth{background-color: $philanth;
+      &::after {background-image: url(image_path('dana-bio5.jpg')); background-position: top left;}
+      &::before {left:33%;
+        background: -webkit-linear-gradient(90deg, rgba($philanth, 0) 10%, rgba($philanth, .8) 40%, $philanth 65%);
+        background: linear-gradient(90deg, rgba($philanth, 0) 10%, rgba($philanth, .8) 40%, $philanth 65%);
+      }
+    }
+
+    &.message{background-color:$message;
+      &::after {background-image: url(image_path('danas27-crop.jpg')); }
+      &::before {left:60%;
+        background: -webkit-linear-gradient(-90deg, rgba($message, 0) 10%, rgba($message, .8) 40%, $message 75%);
+        background: linear-gradient(-90deg, rgba($message, 0) 10%, rgba($message, .8) 40%, $message 75%);
+      }
+    }
+
+    &.rec{background-color:$rec;
+      p,h3.as-title{color:$white;}
+      &::after {background-image: url(image_path('dana-bio7.jpg')); background-position: top left;}
+      &::before {left:32%;
+        background: -webkit-linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .6) 40%, $rec 80%);
+        background: linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .6) 40%, $rec 80%);
+      }
+    }
 
     &.philanth, &.rec {
       .text {float:right;}
@@ -191,10 +233,9 @@ h2 {line-height: 1.35rem;}
     }
 
     p{font-size: 16px; letter-spacing: .3px; margin-bottom: 20px;}
-    // .logo-link {width:200px;}
     .logo.fab {width:130px;}
-    .logo.inline {height:65px; display: inline-block;}
-    .logo.inline.free {height:80px; margin-left: 25px;}
+    .logo.inline {height:55px; display: inline-block; margin: 5px 20px;}
+    .logo.inline.free {height:70px; }
   }
 }
 
