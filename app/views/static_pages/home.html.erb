@@ -18,7 +18,6 @@
 <div class="laysec2">
 	<div class="inside lg">
 
-
 		<a class="box one" type="button" uk-toggle="target: #purchase-options">
 			<%= image_tag('home-stack.jpg', class: 'img-responsive img-bg', alt: '') %> 
 			<h4>Get Your Book Now</h4>
@@ -33,26 +32,19 @@
 				
 				<div class="uk-modal-body">
 			    <div class="option o1">
-			    	<%= link_to book1_path, class: 'ds-link', target: '_blank' do %>
+			    	<%= link_to fabrik_book_path, class: 'ds-link', target: '_blank' do %>
 			    		View on fabrikstyle.com
 			    	<% end %>
 			    </div>
 
 			    <div class="option o2">
-			    	<%= link_to book2_path, class: 'ds-link', target: '_blank' do %>
+			    	<%= link_to amazon_book_path, class: 'ds-link', target: '_blank' do %>
 			    		View on amazon.com
 			    	<% end %>
 			    </div>
 			  </div>
 		  </div>
 		</div>
-
-
-		<!-- link_to root_path, class: 'box one' do %>
-			<= image_tag('stack.jpg', class: 'img-responsive img-bg', alt: '') %> 
-			<h4>Get Your Book Now</h4>
-			<p class="norm">Order your life-changing copy of <span>love what you do.</span> today, and start exploring your passion. </p>
-		< end %> -->
 
 		<%= link_to root_path, class: 'box two' do %>
 			<%= image_tag('home-link2.jpg', class: 'img-responsive img-bg', alt: '') %>  

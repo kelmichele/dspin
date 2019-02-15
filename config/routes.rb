@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
   get 'about', to: 'static_pages#about'
+  get 'speaking-info', to: 'static_pages#speaking-info'
 
-  get '/book1', to: 'links#book1'
-  get '/book2', to: 'links#book2'
+  get '/fabrik_book', to: 'links#fabrik_book'
+  get '/amazon_book', to: 'links#amazon_book'
   get '/fb', to: 'links#fb'
   get '/insta', to: 'links#insta'
   get '/asher', to: 'links#asher'

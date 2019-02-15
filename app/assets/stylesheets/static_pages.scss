@@ -87,7 +87,7 @@ h2 {line-height: 1.35rem;}
     h4{font-weight: 600; font-size: 19px; letter-spacing: 1px; font-family: $monte; margin-bottom: 7px;}
     h4,a {text-transform: uppercase;}   
     li {display: inline-block;}
-    ul {padding-left: 0; margin-left: 0; margin-bottom: 0;} 
+    ul {padding-left: 0; margin-left: 0; margin-bottom: 0; margin-top:25px;} 
     .socials {width:35%; float:right;}
   }
 
@@ -129,16 +129,12 @@ h2 {line-height: 1.35rem;}
 }
 
 
-
-
-
-
 //*************************************//
 //************* EVENTS ***************//
 //************************************//
 .events {
-  .event-li {display: inline-block; float: left; width:45%;
-    &::nth-child(2n+2) {float: right;}
+  .event-li {display: inline-block; float: left; width:45%; margin-left: 3.5%; margin-bottom: 40px;
+    // &:nth-child(2n+2) {float: right;}
 
     .textbox {@include sec-default();margin-top:20px;
       &:hover {text-decoration: none;}
@@ -167,6 +163,38 @@ h2 {line-height: 1.35rem;}
     }
     .rmv-img {color: $red; font-size: 14px; font-weight: bold; }
     .current{margin-top: 15px;}
+  }
+}
+
+
+//*************************************//
+//************* ABOUT ***************//
+//************************************//
+.about {
+  h1, p{margin-top: 0;}
+  h1{margin-bottom: 7px;}
+  h2{margin-top: 0px; font-size:1.25rem;}
+
+  h1,h2,h3 {
+    &.as-title {font-weight: bold; font-size: 1.3rem;margin-bottom: 7px; text-transform: uppercase; letter-spacing: 1px;}
+    &.as-title span.norm {letter-spacing: .3px;}
+  }
+
+  .ab-sec {@include sec-default();
+    .text, .image { display: inline-block; float: left;}
+    .image {width:28%; float: right;}
+    .text {width:65%; padding:50px 0;}
+
+    &.philanth, &.rec {
+      .text {float:right;}
+      .image {float: left;}
+    }
+
+    p{font-size: 16px; letter-spacing: .3px; margin-bottom: 20px;}
+    // .logo-link {width:200px;}
+    .logo.fab {width:130px;}
+    .logo.inline {height:65px; display: inline-block;}
+    .logo.inline.free {height:80px; margin-left: 25px;}
   }
 }
 

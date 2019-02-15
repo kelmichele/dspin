@@ -1,9 +1,9 @@
 class LinksController < ApplicationController
-	def book1
-		redirect_to('https://fabrikstyle.com/pages/love-what-you-do')
+	def fabrik_book
+		redirect_to('https://fabrikstyle.com/products/love-what-you-do')
 	end
 
-	def book2
+	def amazon_book
 	  redirect_to('https://www.amazon.com/Love-What-You-Do-creating/dp/0578412810')
 	end
 

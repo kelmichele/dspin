@@ -13,7 +13,7 @@
 		<% end %>
 		<div class="clearfix"></div>
 		<hr>
-		
+
 		<% @events.each do |event| %>
 			<div class="event-li event-<%= event.id %>">
 				<% if event.image.attached? %>
@@ -28,3 +28,4 @@
 		<% end %>
 	</div>
 </div>
+

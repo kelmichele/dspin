@@ -113,15 +113,9 @@ body {
   @include bp(br) {
     border-top: 0;
   }
-  // background-color: $f8;
-  // padding:0 50px;
-  // .page-body {background-color: $f9;}
 
-
-  // &.safari {-webkit-font-smoothing: antialiased;}
   h1, h2, h3, h4, h5, p, li, a {color: $black; line-height: 1.5em;font-family: $body;
     text-transform: uppercase;
-      // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     &.norm{text-transform: none;}
     &.bmargin0 {margin-bottom: 0;}
     &.strong {font-weight: bold;}
@@ -132,6 +126,7 @@ body {
   h1{font-size: 2rem; font-weight: bold;}
   h2{font-size: 1.75rem;}
   h1, h2, h3, h4, h5 {font-family: $monte;}
+  span.norm{text-transform: none;}
 }
 .bmargin0 {margin-bottom: 0;}
 .tmargin0 {margin-top: 0;}
