@@ -1,38 +1,50 @@
 <footer>
 	<div class="top-foot">
-		<div class="inside xl">
-			<div class="ft-block one">
-				<h4>Book</h4>
-				<ul>
-					<li>Buy the Book</li>
-					<li>Book Tour</li>
-				</ul>
-			</div>
+		<div class="inside">
+			<div class="border-row"></div>
 			
-			<div class="ft-block two">
+
+			<!-- <div class="ft-block two">
+				<h4>Events</h4>
+				<ul>
+          <li><%= link_to "Events", events_path %></li>
+					<li><%= link_to "Past Events", past_events_path %></li>
+				</ul>
+			</div> -->
+			
+			<div class="ft-block one">
 				<h4>Speaking</h4>
 				<ul>
-					<li>Talks</li>
-					<li>Book Dana</li>
+          <li><%= link_to "Events", events_path %></li>
+					<li><%= link_to "Past Events", past_events_path %></li>
+					<li><%= link_to "Book Dana", new_request_path %></li>
+					<li><%= link_to "Packages & Info", speaking_info_path %></li>
+				</ul>
+			</div>
+
+			<div class="ft-block two">
+				<h4>Book</h4>
+				<ul>
+					<li><%= link_to "About the Book", love_what_you_do_path %></li>
+					<li><%= link_to "Buy the Book", buy_the_book_path %></li>
 				</ul>
 			</div>
 
 			<div class="ft-block three">
-				<h4>External</h4>
+				<h4>Partners</h4>
 				<ul>
-					<li>Asher</li>
-					<li class="norm">free fab'rik</li>
-					<li class="norm">fab'rik</li>
+					<li><%= link_to "Asher", '/asher', target: '_blank' %></li>
+					<li><%= link_to "free fab'rik", '/ff', target: '_blank', class: 'norm' %></li>
+					<li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
 				</ul>
 			</div>
 
 			<div class="ft-block four">
 				<h4>Company</h4>
 				<ul>
-					<li>About</li>
-					<li>Contact</li>
-					<li>Blog</li>
-					<li>Press</li>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Press", root_path %></li>
 				</ul>
 			</div>
 		</div>

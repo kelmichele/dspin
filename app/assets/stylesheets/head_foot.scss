@@ -61,14 +61,22 @@
 
 
 footer {@include sec-default();
+	.border-row{@include sec-default(); height:6px; margin-bottom: 30px;
+		border-top: $border; border-bottom: $border; border-color: rgba($black,.4);
+	}
 	.top-foot {@include sec-default(); padding:30px 0 20px;
-		.ft-block {display: inline-block; float: left; width:20%;
-			&.one {margin-left: 13%;}
+		.ft-block {display: inline-block; float: left; 
+			width:20%;
+			&.one {margin-left: 15%;}
+
+			// width:17%; margin-left:2%;
+			// &.one {margin-left: 7%}
 		}
 
 		h4{margin-bottom: 0px; font-size:1.15rem;font-weight: 600;}
 		ul {margin-top:10px; padding:0;}
 		li{margin-bottom: 7px;}
+		li.fab .nav-fab {height:16px;}
 	}
 
 	.btm-foot {@include sec-default(); padding: 10px; background-color: $black;
@@ -82,7 +90,7 @@ footer {@include sec-default();
   width: 35px;
   height: 35px;
   position: fixed;
-  bottom: 15px;
+  bottom: 30px;
   right: 30px;
   // display: none;
   text-indent: -9999px;

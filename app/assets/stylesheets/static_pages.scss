@@ -158,7 +158,7 @@ h2 {line-height: 1.35rem;}
   
   .ehead{text-align: left; padding-bottom: 0px;}
   .event-list {@include sec-default(); position: relative; z-index: 0;
-    &::before{@include before(); width:85%; left:7.5%; height: 55px; background-color: $black;}
+    &::before{@include before(); width:90%; left:5%; height: 55px; background-color: $black;}
   }
   .event-fw {@include sec-default(); margin-bottom: 60px;
     padding-bottom: 60px;border-bottom: $border;
@@ -166,9 +166,18 @@ h2 {line-height: 1.35rem;}
     .textbox{float:right; width:45%; margin-top: 8%;}
   }
 
-  .event-vid{display: inline-block; width:48%; float: none; margin-left:1.5%;
+  .event-vid{@include sec-default();margin-bottom: 60px;
+    padding-bottom: 40px;border-bottom: $border;
     // width:640px; height:480px;
-    iframe {@include sec-default(); min-height:350px;}
+    iframe {@include sec-default(); min-height:350px; margin-bottom: 15px;}
+  }
+
+  .e-list, .p-list {display: inline-block; float:left; width:60%; }
+  .e-list h4{padding-left:15px;}
+  .p-list {width:28%; float:right; 
+    // margin-top:80px;
+    h4{color: darken($gold, 20%);}
+    .event-fw{margin-bottom:15px; padding-bottom:15px;}
   }
 }
 
@@ -192,6 +201,13 @@ h2 {line-height: 1.35rem;}
   }
 }
 
+.past-events {
+  // .ehead, .event-list::before{background-color: $gold;}
+  .ehead{padding-bottom:30px;}
+  .event-list{ padding-top:60px;
+    &::before {display: none;}
+  }
+}
 
 //*************************************//
 //************* ABOUT ***************//
@@ -216,9 +232,9 @@ h2 {line-height: 1.35rem;}
     &::before {@include before();z-index: -1;width:8%;left:59%;}
     &::after{@include after(); z-index: -2; @include sec-bgimage('dana-bio1.jpg'); background-size: 40%; background-position: top right;}
 
-    $bio: lighten($gold, 8%);
+    $bio: lighten($gold, 10%);
     $philanth: $white;
-    $message: lighten($gold, 8%);
+    $message: lighten($gold, 10%);
     $rec: $white;
 
     &.bio{background-color:$bio;
@@ -229,7 +245,7 @@ h2 {line-height: 1.35rem;}
     }
 
     &.philanth{background-color: $philanth;
-      &::after {background-image: url(image_path('dana-bio5.jpg')); background-position: top left;}
+      &::after {background-image: url(image_path('africa.jpg')); background-position: top left;}
       &::before {left:33%;
         background: -webkit-linear-gradient(90deg, rgba($philanth, 0) 10%, rgba($philanth, .8) 40%, $philanth 65%);
         background: linear-gradient(90deg, rgba($philanth, 0) 10%, rgba($philanth, .8) 40%, $philanth 65%);
@@ -270,56 +286,55 @@ h2 {line-height: 1.35rem;}
 //************* BOOK ***************//
 //************************************//
 .book {
+  h1.about{margin-top:-20px;margin-left: 25px;text-transform: lowercase;}
+  h1.buy {font-weight: normal; margin-top: 0; font-size:1.7rem;}
+  h2.buy {font-weight: bold; text-transform: lowercase; margin-bottom: 0; font-size: 2rem;}
+
   .overview {@include sec-default(); padding:$pad; 
-    .text, .image {display: inline-block; float: left; width: 35%;}
-    .text{float: right; width:60%; margin-top:7.5%; }
+    .text, .image {display: inline-block; float: left; width: 40%;}
+    .text{float: right; width:55%; margin-top:7.5%; }
+    p{text-transform: none;}
 
     .uk-slideshow{ height:600px;}
     .uk-slideshow-items{max-height:100%; height:100%;}
     .uk-slideshow-nav.uk-dotnav {@include sec-default(); text-align: center; margin-left: none;}
-    .uk-dotnav>* {display:inline-block; float:none; margin:auto; }
+    .uk-dotnav>* {display:inline-block; float:none; margin:auto;}
+    .uk-dotnav>.uk-active>* {background-color:$black;}
   }
 
-  &.lay2 {
-    .book-header2 {@include sec-default(); 
-      // height:450px; overflow: hidden;@include sec-bgimage('dana-bio3.jpg'); background-size: 48%; background-position: top right;
-      .text, .image {display: inline-block; float: left; width:45%;}
-      .image{float: right; max-height:450px; overflow: hidden; width:48%;}
-      .text {margin-top: 8%; margin-left: 3%;}
-    }
-
-    .purchase2 {@include sec-default();
-      // padding:$pad; 
-      .option{display: inline-block; float: left; width:45%;}
-      .option.o2 {float: right;}
-      .ds-link {@include sec-default();}
-
-      background-color: $black; padding:30px 0; text-align: center;
-      h3{color:$white;}
-      .option, .option.o2 {width: 30%; float: none; margin: 0 20px;}
-      .ds-link {background-color:$white; color:$black; font-weight: bold; @include tshadowl(rgba($black, .1));}
-    }
+  .book-header2 {@include sec-default(); 
+    // height:450px; overflow: hidden;@include sec-bgimage('dana-bio3.jpg'); background-size: 48%; background-position: top right;
+    .text, .image {display: inline-block; float: left; width:45%;}
+    .image{float: right; max-height:450px; overflow: hidden; width:48%;}
+    .text {margin-top: 8%; margin-left: 3%;}
   }
 
-  &.lay1 {@include sec-default();
-    .book-header {@include sec-default(); height:600px;
-      @include sec-bgimage('danas-book64.jpg'); background-size: 72%; background-position: center right;
+  .purchase2 {@include sec-default();
+    // padding:$pad; 
+    .option{display: inline-block; float: left; width:45%;}
+    .option.o2 {float: right;}
+    .ds-link {@include sec-default();}
 
-      .text {margin-left: 4%;}
-    }
-    .purchase {@include sec-default(); 
-      // padding:$pad;
-      .option{display: inline-block; float: left; width:45%;}
-      .option.o2 {float: right;}
-      .ds-link {@include sec-default(); }
-    }
-
-    .overview {
-      .text {margin-top:2.5%;}
-      .purchase {margin-top:15px; text-align: center;}
-      h3 {font-size:1.2rem; }
-    }
+    background-color: $black; padding:30px 0; text-align: center;
+    h3{color:$white;}
+    .option, .option.o2 {width: 30%; float: none; margin: 0 20px;}
+    .ds-link {background-color:$white; color:$black; font-weight: bold; @include tshadowl(rgba($black, .1));}
   }
+
+  .bulk {@include sec-default(); padding:$pad;
+    h4 {font-size: 1.15rem;}
+    p span{ font-weight: bold; }
+
+    .image, .text {display: inline-block; float: left; width:55%;}
+    .text {float:right; width:42%; text-align: center; margin-top: 5%;}
+
+    .img1, .img2 {display: inline-block; width:48%;}
+    .img2{margin-top:55px; width:55%; background-color: $white; padding:15px 0 0 15px; margin-left: -10%;}
+  }
+}
+
+.buy-the-book .book .book-header2 {
+  .text{width:50%; margin-left: 0; margin-top:10%;}
 }
 
 
