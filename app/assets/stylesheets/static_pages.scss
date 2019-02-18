@@ -140,20 +140,32 @@ h2 {line-height: 1.35rem;}
 //************* EVENTS ***************//
 //************************************//
 .events {
-  .event-li {display: inline-block; float: left; width:45%; margin-left: 3.5%; margin-bottom: 40px;
-    // &:nth-child(2n+2) {float: right;}
+  h4 {font-weight: bold;letter-spacing: 1px; margin-bottom: 1px;}
+  p{font-size: 1rem; margin-top: 0; letter-spacing: .6px;}
+  .event-box{
+    h3, h4, p{margin: 10px 0;}
+  }
 
+  .event-li {display: inline-block; float: left; width:45%; margin-left: 3.5%; margin-bottom: 40px;
     .textbox {@include sec-default();margin-top:20px;
       &:hover {text-decoration: none;}
     }
-    h4 {font-weight: bold;letter-spacing: 1px; margin-bottom: 1px;}
-    p{font-size: 1rem; margin-top: 0; letter-spacing: .6px;}
+    
+    .event-image{margin-bottom: 20px;}
+    .event-box {@include sec-default();}
   }
 
-  .event-image{margin-bottom: 20px;}
-  .event-box {@include sec-default();
-    h3, h4, p{margin: 10px 0;}
+  
+  .ehead{text-align: left; padding-bottom: 0px;}
+  .event-list {@include sec-default(); position: relative; z-index: 0;
+    &::before{@include before(); width:85%; left:7.5%; height: 55px; background-color: $black;}
   }
+  .event-fw {@include sec-default(); margin-bottom: 60px;
+    padding-bottom: 60px;border-bottom: $border;
+    .textbox, img {display: inline-block; float:left; width:50%;}
+    .textbox{float:right; width:45%; margin-top: 8%;}
+  }
+
   
   .form-group.image {
     label{@include sec-default();}
@@ -301,7 +313,6 @@ h2 {line-height: 1.35rem;}
       h3 {font-size:1.2rem; }
     }
   }
-
 }
 
 
