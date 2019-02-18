@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'about', to: 'static_pages#about'
   get 'speaking-info', to: 'static_pages#speaking-info'
+  get 'love-what-you-do', to: 'static_pages#love-what-you-do'
+  get 'buy-the-book', to: 'static_pages#buy-the-book'
 
   get '/fabrik_book', to: 'links#fabrik_book'
   get '/amazon_book', to: 'links#amazon_book'

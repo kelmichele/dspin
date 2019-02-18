@@ -2,9 +2,14 @@
 <% @page_description = "" %>
 
 
+<div class="inside">
+	<div class="ehead">
+		<h1><%= @page_title %></h1>
+	</div>
+</div>
+
 <div class="full-sec">
 	<div class="inside med">
-		<h1 class="text-center"><%= @page_title %></h1>
 		<% if user_signed_in? && current_user.admin? %>
 	    <button class="admin-uk wl-uk uk-float-right" type="button"><span  uk-icon="icon: settings;"></span></button>
 	    <div uk-dropdown="mode: click; pos: bottom-right; boundary: .wl-uk;">
