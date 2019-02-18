@@ -1,41 +1,41 @@
 <% @page_title = "Upcoming Events" %>
 <% @page_description = "" %>
 
+<div class="event-lay">
+	<div class="inside">
+		<div class="ehead">
+			<div class="inside">
+				<h1><%= @page_title %></h1>
+			</div>
+		</div>
+	</div>
 
-<div class="inside">
-	<div class="ehead">
-		<div class="inside">
-			<h1><%= @page_title %></h1>
+	<div class="event-list">
+		<div class="inside med2-def">
+			<% if user_signed_in? && current_user.admin? %>
+		    <button class="admin-uk wl-uk uk-float-right" type="button"><span  uk-icon="icon: settings;"></span></button>
+		    <div uk-dropdown="mode: click; pos: bottom-right; boundary: .wl-uk;">
+					<%= link_to "Create New Event", new_event_path, class: 'ds-link' %>
+		    </div>
+			<% end %>
+			<!-- <div class="clearfix"></div> -->
+			<!-- <hr> -->
+
+			<% @events.each do |event| %>
+				<div class="event-fw event-<%= event.id %>">
+					<% if event.image.attached? %>
+					  <%= image_tag event.image, alt: "#{event.title}"%>
+					<% end %>
+
+					<div class="textbox">
+						<h4><%= event.title %></h4>
+						<p><%= event.date %> &nbsp; | &nbsp; <%= event.time %></p>
+						<p class="desc"><%= event.description.truncate(60) %></p>
+
+						<%= link_to "Event Details", event_path(event), class: 'ds-link' %>
+					</div>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </div>
-
-<div class="event-list">
-	<div class="inside med2-def">
-		<% if user_signed_in? && current_user.admin? %>
-	    <!-- <button class="admin-uk wl-uk uk-float-right" type="button"><span  uk-icon="icon: settings;"></span></button>
-	    <div uk-dropdown="mode: click; pos: bottom-right; boundary: .wl-uk;">
-				<%= link_to "Create New Event", new_event_path, class: 'ds-link' %>
-	    </div> -->
-		<% end %>
-		<!-- <div class="clearfix"></div> -->
-		<!-- <hr> -->
-
-		<% @events.each do |event| %>
-			<div class="event-fw event-<%= event.id %>">
-				<% if event.image.attached? %>
-				  <%= image_tag event.image, alt: "#{event.title}"%>
-				<% end %>
-
-				<div class="textbox">
-					<h4><%= event.title %></h4>
-					<p><%= event.date %> &nbsp; | &nbsp; <%= event.time %></p>
-					<p class="desc"><%= event.description.truncate(60) %></p>
-
-					<%= link_to "Event Details", event_path(event), class: 'ds-link' %>
-				</div>
-			</div>
-		<% end %>
-	</div>
-</div>
-

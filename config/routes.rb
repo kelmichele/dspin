@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'speaking-info', to: 'static_pages#speaking-info'
   get 'love-what-you-do', to: 'static_pages#love-what-you-do'
   get 'buy-the-book', to: 'static_pages#buy-the-book'
+  get 'past-events', to: 'static_pages#past-events'
 
   get '/fabrik_book', to: 'links#fabrik_book'
   get '/amazon_book', to: 'links#amazon_book'

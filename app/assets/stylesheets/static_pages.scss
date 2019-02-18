@@ -139,7 +139,7 @@ h2 {line-height: 1.35rem;}
 //*************************************//
 //************* EVENTS ***************//
 //************************************//
-.events {
+.event-lay {
   h4 {font-weight: bold;letter-spacing: 1px; margin-bottom: 1px;}
   p{font-size: 1rem; margin-top: 0; letter-spacing: .6px;}
   .event-box{
@@ -166,7 +166,14 @@ h2 {line-height: 1.35rem;}
     .textbox{float:right; width:45%; margin-top: 8%;}
   }
 
-  
+  .event-vid{display: inline-block; width:48%; float: none; margin-left:1.5%;
+    // width:640px; height:480px;
+    iframe {@include sec-default(); min-height:350px;}
+  }
+}
+
+
+.events{
   .form-group.image {
     label{@include sec-default();}
     #event_image{ width:60%; border:1px solid rgba($black,.1);padding:15px; height:auto;}    
@@ -211,8 +218,8 @@ h2 {line-height: 1.35rem;}
 
     $bio: lighten($gold, 8%);
     $philanth: $white;
-    $message: $cream;
-    $rec: $black;
+    $message: lighten($gold, 8%);
+    $rec: $white;
 
     &.bio{background-color:$bio;
       &::before {
@@ -230,7 +237,7 @@ h2 {line-height: 1.35rem;}
     }
 
     &.message{background-color:$message;
-      &::after {background-image: url(image_path('danas27-crop.jpg')); }
+      &::after {background-image: url(image_path('family.jpg')); }
       &::before {left:60%;
         background: -webkit-linear-gradient(-90deg, rgba($message, 0) 10%, rgba($message, .8) 40%, $message 75%);
         background: linear-gradient(-90deg, rgba($message, 0) 10%, rgba($message, .8) 40%, $message 75%);
@@ -238,11 +245,11 @@ h2 {line-height: 1.35rem;}
     }
 
     &.rec{background-color:$rec;
-      p,h3.as-title{color:$white;}
+      // p,h3.as-title{color:$white;}
       &::after {background-image: url(image_path('dana-bio7.jpg')); background-position: top left;}
       &::before {left:32%;
-        background: -webkit-linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .6) 40%, $rec 80%);
-        background: linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .6) 40%, $rec 80%);
+        background: -webkit-linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .8) 40%, $rec 50%);
+        background: linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .8) 40%, $rec 50%);
       }
     }
 
@@ -344,14 +351,6 @@ h2 {line-height: 1.35rem;}
       &.eventfg{width:47%; display: inline-block; }
       &.event_date, &.event_link, &.event_type {float: right;}
     }
-  }
-
-  .past-events { @include sec-default(); padding: $pad;
-    .image, .list {display: inline-block; float: left; width:50%;}
-    .list {width:45%; float: right;}
-
-    h4{font-weight: bold;}
-    .pevent{ @include sec-default(); margin-bottom: 15px;}
   }
 }
 

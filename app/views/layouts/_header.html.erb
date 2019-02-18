@@ -1,17 +1,3 @@
-<!-- SPEAKING drop down menu 
--Talks 
--Request Dana to speak button (*more below) 
-
-BOOK drop down menu 
--About the book 
--Buy love what you do 
--love what you do tour 
-
-HEART drop down menu 
--Asher
--free fab'rik  -->
-
-
 <!-- <div class="above">
   <div class="full">
     <ul class="social">
@@ -32,7 +18,6 @@ HEART drop down menu
   <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
     <div class="navbar-center">
       <div class="nb-logo">
-        <!-- <= link_to(image_tag('lwyd.png', class: 'navbar-item logo', alt: 'Woof Gang Bakery company logo'), root_path )%>  -->
         <%= link_to root_path, class: 'logo-name' do %>
           Dana Spinola.
         <% end %>
@@ -47,8 +32,9 @@ HEART drop down menu
             <li><%= link_to "Speaking", new_request_path %>
               <div class="uk-navbar-dropdown">
                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                  <li><%= link_to "Packages & Information", speaking_info_path %></li>
+                  <li><%= link_to "Past Events", past_events_path %></li>
                   <li><%= link_to "Request to Book Dana", new_request_path %></li>
+                  <li><%= link_to "Packages & Information", speaking_info_path %></li>
                 </ul>
               </div>
                 
@@ -60,7 +46,6 @@ HEART drop down menu
                 <ul class="uk-nav uk-navbar-dropdown-nav">
                   <li><%= link_to "About the Book", love_what_you_do_path %></li>
                   <li><%= link_to "Buy the Book", buy_the_book_path %></li>
-                  <!-- <li><%= link_to "Love What You Do Tour", root_path %></li> -->
                 </ul>
               </div>
             </li>
@@ -79,11 +64,6 @@ HEART drop down menu
 
             <li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
           </ul>
-
-          <!-- <div class="fab-link">
-            <%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %>
-          </div> -->
-        <!-- </div> -->
       </div>
 
     </div>
