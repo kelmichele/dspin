@@ -308,3 +308,40 @@ h2 {line-height: 1.35rem;}
 
 
 
+//*************************************//
+//************* REQUESTS **************//
+//************************************//
+.booking-info{ @include sec-default();
+  .bi-head {@include sec-default(); text-align: center; 
+    h1, h2{margin:0;}
+    h1{font-size: 1.8rem;}
+    h2{font-size: 1.2rem;}
+    .text {@include sec-default(); margin-top: 30px;}
+  }
+
+  .form-section {@include sec-default(); padding: $pad;
+    p.print{margin:0; color: darken($gold, 10%); float: right; margin-top: -45px;}
+    h4{font-weight: bold; border-bottom:$border;}
+
+    .image, .form-side {display: inline-block; float: left; width: 50%;}
+    .form-side{ width:45%; float:right; }
+
+    // label {font-weight: 600;}
+    // input, textarea {border-color:$black;}
+    .form-group{
+      &.name, &.email, &.phone {width:31%; display: inline-block; float: none; margin: 0 1% 20px;}
+      &.eventfg{width:47%; display: inline-block; }
+      &.event_date, &.event_link, &.event_type {float: right;}
+    }
+  }
+
+  .past-events { @include sec-default(); padding: $pad;
+    .image, .list {display: inline-block; float: left; width:50%;}
+    .list {width:45%; float: right;}
+
+    h4{font-weight: bold;}
+    .pevent{ @include sec-default(); margin-bottom: 15px;}
+  }
+}
+
+

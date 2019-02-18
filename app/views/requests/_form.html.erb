@@ -10,8 +10,8 @@
       <div class="notice"><%= flash[:alert] %></div>
     <% end %>
 
-    <p class="print">* indicates required field</p>
-    <div class="clearfix"></div><hr>
+    <!-- <p class="print">* indicates required field</p> -->
+    <!-- <div class="clearfix"></div><hr> -->
 
   	<h4>Personal Details</h4>    
     <div class="form-group name">
@@ -30,34 +30,33 @@
     </div>
 
 
-
-  	<h4>Event Details</h4>    
-    <div class="form-group event_name">
+  	<h4 class="second">Event Details</h4>    
+    <div class="form-group eventfg event_name">
       <label>* Event Name:</label><br>
       <%= f.text_field :event_name %>
     </div>
 
-    <div class="form-group event_date">
+    <div class="form-group eventfg event_date">
       <label>* Event Date: </label><br>
       <%= f.date_field :event_date %>
     </div>
 
-    <div class="form-group event_location">
+    <div class="form-group eventfg event_location">
       <label>* Event Location: </label><br>
       <%= f.text_field :event_location %>
     </div>
 
-    <div class="form-group event_link">
+    <div class="form-group eventfg event_link">
       <label>Event Link:</label><br>
       <%= f.text_field :event_link %>
     </div>
 
-    <div class="form-group event_message">
+    <div class="form-group eventfg event_message">
       <label>* Event Message: </label><br>
       <%= f.text_field :event_message %>
     </div>
 
-    <div class="form-group event_type">
+    <div class="form-group eventfg event_type">
       <label>* Event Type: </label><br>
       <%= f.select(:event_type) do %>
         <% [['Select Answer', ''], ['Keynote', 'Keynote'], ['Fireside chat', 'Fireside chat'], ['Panel', 'Panel'], ['Other', 'Other']].each do |c| -%>
@@ -66,7 +65,7 @@
       <% end %>
     </div>
 
-    <div class="form-group honoriam">
+    <div class="form-group eventfg honoriam">
       <label>Honoriam Range: </label><br>
       <%= f.text_field :honoriam %>
     </div>
@@ -82,9 +81,10 @@
       <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
     </div>
 
-    <div class="form-group submit">
+    <div class="form-group eventfg submit">
       <%= f.submit "Submit", :class=> "send-message" %>
     </div>
+    <p class="print">* indicates required field</p>
 
   </fieldset>
 <% end %>
