@@ -420,6 +420,7 @@ h2 {line-height: 1.35rem;}
     .text, .image {display: inline-block; float: left; width:45%;}
     .image{float: right; max-height:450px; overflow: hidden; width:48%;}
     .text {margin-top: 8%; margin-left: 3%;}
+    span.lmargin{margin-left: 25px;}
   }
 
   .purchase2 {@include sec-default();
@@ -489,7 +490,64 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(md) {
-    
+    h2.about {font-size:1.2rem;}
+    h1.about {font-size: 1.4rem;}
+
+    .book-header2 {
+      .image{max-height:290px;}
+      .text { margin-left: 7%; margin-top:11%;}
+    }
+
+    .overview {padding:40px 0 15px;
+      .inside.med{width:85%;}
+      .text {width:99%;}
+      .image{ width:300px;}
+      .uk-slideshow{ height:430px;}
+    }
+
+    .purchase2 {padding-bottom: 10px;
+      .option, .option.o2 {width: auto; float:none; margin: 0px 10px 20px; }
+      h3{font-size: 1.15rem;}
+      .ds-link {font-size:14px;padding:10px 30px;}
+    }
+  }
+
+  @include bp(mb) {
+    h2.about {font-size:1.1rem;}
+    h1.about {font-size: 1.3rem;}
+
+    .book-header2 {
+      .image{max-height:255px;}
+    }
+  }
+
+  @include bp(oc) {
+    .book-header2 {
+      h1.about,span.lmargin{margin-left: 0;}
+      .image{max-height:255px;}
+      .text { margin-left: 0; width:52%; text-align:center; margin-top:11%;}
+    }
+
+    .overview {padding:40px 0 15px;
+      .inside.med{width:85%;}
+      .text {width:99%;}
+      .image{ width:300px;}
+      .uk-slideshow{ height:430px;}
+    }
+
+    .purchase2 {padding-bottom: 10px;
+      .option, .option.o2 {width: auto; float:none; margin: 0px 10px 20px; }
+      h3{font-size: 1.15rem;}
+      .ds-link {font-size:14px;padding:10px 30px;}
+    }
+  }
+
+  @include bp(ph) {
+    .book-header2 {padding:15px 0 30px;
+      // @include sec-bgimage('dana-bio3.jpg'); background-position: bottom right; background-size: 38%;
+      .image{display: none;}
+      .text {@include sec-default();margin-top:0;}
+    }
   }
 }
 
