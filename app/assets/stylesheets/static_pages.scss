@@ -444,6 +444,53 @@ h2 {line-height: 1.35rem;}
     .img1, .img2 {display: inline-block; width:48%;}
     .img2{margin-top:55px; width:55%; background-color: $white; padding:15px 0 0 15px; margin-left: -10%;}
   }
+
+  @include bp(tb) {
+    h2.about {font-size:1.5rem;}
+    h1.about {font-size: 1.8rem;}
+    .book-header2 {
+      .image{max-height:400px; width:48%;}
+      .text { width:45%; margin-top: 8%; margin-left: 3%;}
+    }
+
+    .purchase2 {
+      .option, .option.o2 {width: 40%; margin: 0 20px;}
+    }
+
+    .overview {padding:60px 0 30px;
+      p{font-size: 16px;}
+      .inside.med{width:85%;}
+      .text, .image {width: 35%;}
+      .text{ width:60%; margin-top:0; }
+      .uk-slideshow{ height:450px;}
+    }
+  }
+
+  @include bp(tn) {
+    h2.about {font-size:1.35rem;}
+    h1.about {font-size: 1.6rem;}
+    .book-header2 {
+      .image{max-height:320px;}
+    }
+
+    .purchase2 {
+      .option, .option.o2 {width: 43%; margin: 0 1%;}
+      h3{font-size: 1.25rem;}
+      .ds-link {font-size:14px;}
+    }
+
+    .overview {padding:60px 0 30px;
+      p{font-size: 15px;}
+      .inside.med{width:85%;}
+      .text, .image {width:80%; @include center-block();}
+      .image{ width:45%; margin-top: 30px; }
+      .uk-slideshow{ height:450px;}
+    }
+  }
+
+  @include bp(md) {
+    
+  }
 }
 
 .buy-the-book .book .book-header2 {
