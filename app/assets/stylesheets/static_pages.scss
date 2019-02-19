@@ -103,6 +103,54 @@ h2 {line-height: 1.35rem;}
     .option.o2 {float: right;}
     .ds-link {@include sec-default();}
   }
+
+  @include bp(tb) {
+    .color-text, .laysec2 {padding:$xpad-tb;}
+    .insta{margin-bottom: 60px;}
+    .news {padding:35px 0; margin-bottom:30px;
+      .title-line{margin-bottom: 0px;}
+      p{font-size:16px;}
+    }
+    .color-text h1{font-size: 1.45rem; margin-bottom: 0;}
+    .laysec2 {
+      .box {padding:0 7px;
+        img {margin-bottom: 0;}
+        h4,p{padding:0 6px;}
+        h4{margin-top:30px;}
+        p.norm {margin-top: 4px;}
+      }
+    }
+  }
+
+  @include bp(tn) {
+    .color-text, .laysec2 {padding:$xpad-tn;}
+
+    .color-text h1{font-size: 1.3rem;}
+    
+    .laysec2 {
+      .box {
+        h4{font-size: 1.1rem;}
+        p{font-size:15px;}
+      }
+    }
+
+    .news h4{font-size:18px;}
+  }
+
+  @include bp(md) {
+    .color-text h1{font-size: 1.2rem;}
+
+    .news p{font-size:15px;}
+  }
+
+  @include bp(oc) {
+    .laysec2 {
+      .box.one, .box.two { width:70%; @include center-block(); margin-top: 20px;
+        h4{font-size: 17px;}
+      }
+      .box.two {margin-top: 70px;}
+    }
+  }
 }
 
 

@@ -85,6 +85,11 @@
 
 @include bp(oc) {
 	.logo-name {font-size: 29px;}
+	.mobile-nav {margin-top: -5px;}
+}
+
+@include bp(ph) {
+	.logo-name {font-size: 25px;}
 }
 
 
