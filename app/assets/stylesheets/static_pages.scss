@@ -377,6 +377,21 @@ h2 {line-height: 1.35rem;}
       &.message::after{background-position: top right;}
     }
   }
+
+  @include bp(mb) {
+    .ab-sec {
+      .inside{width:85%;}
+      .text {padding:35px 0; @include sec-default();}
+      &::after, &::before {display: none;}
+    }
+  }
+
+  @include bp(sm) {
+    .ab-sec {
+      .inside{width:90%;}
+      .text {padding:35px 0; @include sec-default();}
+    }
+  }
 }
 
 
