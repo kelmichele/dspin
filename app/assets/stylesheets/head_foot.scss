@@ -98,6 +98,7 @@
 //*********************************//
 
 footer {@include sec-default();
+	.clearfix.mobile{display: none;}
 	.border-row{@include sec-default(); height:6px; margin-bottom: 30px;
 		border-top: $border; border-bottom: $border; border-color: rgba($black,.4);
 	}
@@ -120,6 +121,42 @@ footer {@include sec-default();
 		.copy, .hs {display: inline-block; float: left; width:50%;}
 		.hs {float: right; text-align: right;}
 		p, a {color: $white; font-size: 13px; letter-spacing: 1.2px; margin: 0;}
+	}
+
+
+	@include bp(tb) {
+		.top-foot {
+			h4{font-size:1.1rem;}
+			li {font-size: 14px;}
+			li.fab .nav-fab {height:15px;}
+		}
+	}
+
+	@include bp(nn) {
+		.top-foot {
+			.ft-block {
+				width:22%;
+				&.one {margin-left: 10%;}
+			}
+		}
+
+		.btm-foot {
+			.copy, .hs {@include sec-default(); text-align: center;}
+		}
+	}
+
+	@include bp(tn) {
+		.top-foot {
+			.inside{width:95%;}
+		}
+	}
+
+	@include bp(oc) {
+		.clearfix.mobile{display: block;}
+		.top-foot {display: none;
+			.inside{width:75%;}
+			.ft-block.one,.ft-block.two,.ft-block.three,.ft-block.four{width:45%; float: left; margin-left:3%;}
+		}
 	}
 }
 

@@ -59,11 +59,11 @@ h2 {line-height: 1.35rem;}
       line-height: 3em;
       span {background-color: $black; color:$white; padding:10px 20px;}
     }
+    h1.mobile-h1 {display: none;}
   }
 
   .laysec2{
     @include sec-default(); padding: $xpad; 
-    // text-align: center;
     position: relative; z-index: 0; 
     &::before{@include before(); background-color: darken($cream, 1%); height:50%;}
     .box{display: inline-block; width:48%;float:left;
@@ -144,8 +144,16 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(oc) {
+    .color-text {
+      .inside.med2-def{width:95%;}
+      h1.full-h1 {display: none;}
+      h1.mobile-h1 {display: block; margin-top: 0;}
+    }
+
     .laysec2 {
-      .box.one, .box.two { width:70%; @include center-block(); margin-top: 20px;
+      .box.one, .box.two { 
+        width:80%; @include center-block(); margin-top: 20px;
+        // img {width:90%; @include center-block();}
         h4{font-size: 17px;}
       }
       .box.two {margin-top: 70px;}
