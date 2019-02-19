@@ -297,13 +297,15 @@ h2 {line-height: 1.35rem;}
 
   .ab-sec {@include sec-default(); padding:50px 0; 
     .text, .image { display: inline-block; float: left;}
-    .image {width:33%; float: right;}
     .text {width:60%; padding:80px 0;}
+    // .text {width:51%; padding:80px 0; margin-left: 7.5%;}
+    .image {width:33%; float: right;}
 
 
     position: relative; z-index: 0;
     &::before {@include before();z-index: -1;width:8%;left:59%;}
-    &::after{@include after(); z-index: -2; @include sec-bgimage('dana-bio1.jpg'); background-size: 40%; background-position: top right;}
+    // &::after{@include after(); z-index: -2; @include sec-bgimage('dana-bio1.jpg'); background-size: 40%; background-position: top right;}
+    &::after{@include after(); z-index: -2; width:40%; left:60%; @include sec-bgimage('dana-bio1.jpg'); background-size: cover; }
 
     $bio: lighten($gold, 10%);
     $philanth: $white;
@@ -318,7 +320,8 @@ h2 {line-height: 1.35rem;}
     }
 
     &.philanth{background-color: $philanth;
-      &::after {background-image: url(image_path('africa.jpg')); background-position: top left;}
+      &::after {background-image: url(image_path('africa.jpg')); left:0;}
+      // &::after {background-image: url(image_path('africa.jpg')); background-position: top left; }
       &::before {left:33%;
         background: -webkit-linear-gradient(90deg, rgba($philanth, 0) 10%, rgba($philanth, .8) 40%, $philanth 65%);
         background: linear-gradient(90deg, rgba($philanth, 0) 10%, rgba($philanth, .8) 40%, $philanth 65%);
@@ -335,7 +338,8 @@ h2 {line-height: 1.35rem;}
 
     &.rec{background-color:$rec;
       // p,h3.as-title{color:$white;}
-      &::after {background-image: url(image_path('dana-bio7.jpg')); background-position: top left;}
+      // &::after {background-image: url(image_path('dana-bio7.jpg')); background-position: top left;}
+      &::after {background-image: url(image_path('dana-bio7.jpg')); left:0;}
       &::before {left:32%;
         background: -webkit-linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .8) 40%, $rec 50%);
         background: linear-gradient(90deg, rgba($rec, 0) 10%, rgba($rec, .8) 40%, $rec 50%);
@@ -351,6 +355,27 @@ h2 {line-height: 1.35rem;}
     .logo.fab {width:130px;}
     .logo.inline {height:55px; display: inline-block; margin: 5px 20px;}
     .logo.inline.free {height:70px; }
+
+  }
+  @include bp(tb) {
+    h1,h2,h3 {
+      &.as-title {font-size: 1.2rem;}
+      &.as-title span.norm {letter-spacing: .3px;}
+    }
+
+    .ab-sec {padding: 0;
+      p{font-size:15px;}
+      .inside{width:90%;}
+      .text {padding:65px 0;}
+
+      .logo.inline {height:40px;}
+      .logo.inline.free {height:60px; }
+
+    //   &::after {width:32%; left:68%;}
+    //   &::before{left:67%;}
+
+      &.message::after{background-position: top right;}
+    }
   }
 }
 
