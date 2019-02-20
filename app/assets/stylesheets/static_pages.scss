@@ -591,14 +591,30 @@ h2 {line-height: 1.35rem;}
 .book {
   h1.about{margin-top:-20px;margin-left: 25px;text-transform: lowercase;}
   h2,h1{text-transform: uppercase;}
-  h1{font-weight: $semi;}
-  .quotes{font-family: $didot; font-size: 80px;}
+  h1{font-weight: $semi; font-size:1.8rem; margin:0;}
 
-  .book-header2 {@include sec-default(); 
-    .text, .image {display: inline-block; float: left; width:45%;}
-    .image{ max-height:450px; overflow: hidden; width:48%;}
-    .text {margin-top: 8%; float: right;}
+  .book-header2 {@include sec-default(); position: relative; 
+    // .text, .image {display: inline-block; float: left; width:45%;}
+    // .image{ overflow: hidden; width:48%; position: absolute; bottom:0;}
+    // .text {margin-top: 8%; float: right; margin-bottom: 5%; border:$border; text-align: center;}
     span.lmargin{margin-left: 25px;}
+
+    
+
+    min-height:451px;@include sec-bgimage('dana-bio3.jpg'); background-size:48%; background-position: bottom left;
+    
+    .text {width:50%; position: relative; float: right; text-align: center;
+      // margin-top: 8%; margin-bottom: 5%;
+      padding:70px 30px 70px; margin-top:8%;
+      background-image: url(image_path('quote1.png')), url(image_path('quote2.png'));
+      background-size:60px, 60px; background-position: top left, bottom right;
+      background-repeat: no-repeat, no-repeat;
+    }
+
+    .quote1, .quote2{width:60px; position: absolute; display: none;}
+    .quote1{margin-left: -10%; margin-top: -6%}
+    .quote2 {left:100%;}
+
   }
 
   .overview {@include sec-default(); padding:$pad; 
