@@ -1,12 +1,12 @@
 <% @page_title = "Dana's Past Events" %>
 <% @page_description = "" %>
 
+<%= image_tag('collage2.png', class: 'img-responsive', alt: '') %> 
 <div class="event-lay">
 	<div class="inside lg">
-		<div class="ehead">
+		<!-- <div class="ehead"> -->
 			<div class="inside lg">
-				<h1><%= @page_title %></h1>
-			</div>
+			<!-- </div> -->
 		</div>
 	</div>
 
@@ -17,7 +17,8 @@
 					Are you interested in booking Dana for an upcoming event? <%= link_to "Click here", speaking_path, class: 'text-link' %> to provide us with a few details.
 				</h3> -->
 
-				<h3>Dana is a leader, a business person, and a working mom. She speaks on business, faith, LWYD, and what breaks your heart.
+				<h1 class="text-center" style="margin-bottom: 5px;"><%= @page_title %></h1>
+				<h3 style="margin-top: 0;">Dana is a leader, a business person, and a working mom. She speaks on business, faith, LWYD, and what breaks your heart.
 				If you are interested in booking Dana to speak at an event or function, <%= link_to "click here", speaking_path, class: 'text-link' %> to provide us with a few details. 
 				<!-- Select a category from the list below to watch/listen to some of Dana's previous speaking engagements. -->
 				</h3>
