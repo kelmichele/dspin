@@ -115,7 +115,7 @@ body {
   }
 
   h1, h2, h3, h4, h5, p, li, a {color: $black; line-height: 1.5em;font-family: $body;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     &.norm{text-transform: none;}
     &.bmargin0 {margin-bottom: 0;}
     &.strong {font-weight: bold;}

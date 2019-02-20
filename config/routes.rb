@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'buy-the-book', to: 'static_pages#buy-the-book'
   get 'past-events', to: 'static_pages#past-events'
   get 'press', to: 'static_pages#press'
+  get 'heart', to: 'static_pages#heart'
 
   get '/fabrik_book', to: 'links#fabrik_book'
   get '/amazon_book', to: 'links#amazon_book'
