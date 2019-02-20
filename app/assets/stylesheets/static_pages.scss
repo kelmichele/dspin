@@ -52,7 +52,7 @@
 //************************************//
 h2 {line-height: 1.35rem;}
 .home {
-  .color-text{@include sec-default(); text-align: center; padding: $xpad;
+  .color-text{@include sec-default(); text-align: center; padding: 50px 0 30px;
     h1{
       font-size: 1.6rem;
       font-weight: 500; 
@@ -799,7 +799,7 @@ h2 {line-height: 1.35rem;}
 
 //*************************************//
 //************* PACKAGES **************//
-//************************************//
+//*************************************//
 .spk-info {
   h1{font-size:1.7rem;margin-bottom: 0;}
   h2{font-size:1.1rem; margin-top: 8px;}
@@ -833,6 +833,30 @@ h2 {line-height: 1.35rem;}
     h3.pk-title{font-family: $didot; font-size: 2.7rem; margin-bottom: 5px; letter-spacing: 1px; text-transform: uppercase;}
     h4{margin: 0; font-size:1.1rem; font-weight: $semi;}
     p{margin-top:6px;}
+  }
+}
+
+
+//*************************************//
+//************* HEART **************//
+//************************************//
+.heart{
+  .heart-gram{@include sec-default(); position: relative; padding-bottom: 50px;
+    .layer1,.layer2,.layer3 {position: relative; text-align: right;}
+    p{font-size:19px;}
+    
+    .layer1{width:650px; @include center-block(); @include sec-bgimage('heart.png'); height:610px; z-index: 1;
+      padding-top: 60px; padding-right: 80px;
+    }
+    
+    .layer2{width:480px; @include center-block(); @include sec-bgimage('heart.png'); height:440px; z-index: 2;
+      margin-top: -480px;
+      padding-top: 40px; padding-right: 80px;
+    }
+    .layer3{width:350px; @include center-block(); @include sec-bgimage('heart.png'); height:370px; z-index: 2;
+      margin-top: -350px; text-align: center; padding-top: 160px;
+    }
+
   }
 }
 
