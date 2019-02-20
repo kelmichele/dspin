@@ -29,7 +29,12 @@ Rails.application.routes.draw do
   get '/ff', to: 'links#ff'
   get '/fab', to: 'links#fab'
 
-  resources :requests
+
+
+  resources :requests, :except => [:new]
+  get '/speaking', to: 'requests#new', as: 'speaking'
+  post '/speaking', to: 'requests#create'
+
   resources :events do 
     member do
       delete :delete_image_attachment

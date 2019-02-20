@@ -35,6 +35,9 @@
 }
 
 .page-body { @include sec-default(); }
+.border-row{@include sec-default(); height:6px; margin-bottom: 30px;
+  border-top: $border; border-bottom: $border; border-color: rgba($black,.4);
+}
 
 // danaspinola
 // atlanta22 
@@ -198,7 +201,7 @@ h2 {line-height: 1.35rem;}
 //************************************//
 .event-lay {
   h4 {font-weight: bold;letter-spacing: 1px; margin-bottom: 1px;}
-  p{font-size: 1rem; margin-top: 0; letter-spacing: .6px;}
+  p{font-size: 1rem; margin-top: 0; letter-spacing: .2px;}
   .event-box{
     h3, h4, p{margin: 10px 0;}
   }
@@ -208,22 +211,8 @@ h2 {line-height: 1.35rem;}
 
   .event-fw {@include sec-default(); margin-bottom: 60px;
     padding-bottom: 60px;border-bottom: $border;
-    .textbox, img {display: inline-block; float:left; width:50%;}
+    .textbox, img, iframe {display: inline-block; float:left; width:50%;}
     .textbox{float:right; width:45%; margin-top: 8%;}
-  }
-
-  .event-vid{@include sec-default();margin-bottom: 60px;
-    padding-bottom: 40px;border-bottom: $border;
-    // width:640px; height:480px;
-    iframe {@include sec-default(); min-height:350px; margin-bottom: 15px;}
-  }
-
-  .e-list, .p-list {display: inline-block; float:left; width:60%; }
-  .e-list h4{padding-left:15px;}
-  .p-list {width:28%; float:right; 
-    // margin-top:80px;
-    h4{color: darken($gold, 20%);}
-    .event-fw{margin-bottom:15px; padding-bottom:15px;}
   }
 }
 
@@ -261,12 +250,42 @@ h2 {line-height: 1.35rem;}
     // width:90%; @include center-block(); background-color:$white;border-bottom: 1px solid rgba($black,.4);padding-bottom:0; padding-left:0;
     // h1{color:$black;}
   }
+
   .event-list{ 
     &::before {display: none;}
+    h3.sec-title{font-weight: bold;}
+  }
+
+  .cat-list {@include sec-default();}
+
+  .event-fw{
+    padding-bottom: 0;border-bottom: none; padding-top:60px;border-top:$border;
+    iframe {min-height:350px; margin-bottom: 15px; width:60%;}
+    .textbox{width:35%;}
+  }
+
+  .event-hlf {
+    display: inline-block; float: left; width:47%;
+    .textbox, iframe {@include sec-default();}
+    iframe {min-height:350px; margin-bottom: 15px;}
+
+    &:nth-child(2n+2) {float:right;}
+  }
+
+  .event-vid{@include sec-default();margin-bottom: 60px;
+    // padding-bottom: 40px;border-bottom: $border;
+    // width:640px; height:480px;
+    iframe {@include sec-default(); min-height:320px; margin-bottom: 15px;}
+  }
+
+  .e-list, .p-list {display: inline-block; float:left; width:60%; }
+  .e-list h4{padding-left:15px;}
+  .p-list {width:28%; float:right; 
+    h4{color: darken($gold, 20%);}
+    .event-fw{margin-bottom:15px; padding-bottom:15px;}
   }
 
   .intro {@include sec-default(); padding:0px 0 40px;
-    // width:85%; @include center-block();
     h3{font-size:1.1rem;}
   }
 }
@@ -315,8 +334,8 @@ h2 {line-height: 1.35rem;}
     &::before {@include before();z-index: -1;width:8%;left:59%;}
     &::after{@include after(); z-index: -2; width:40%; left:60%; @include sec-bgimage('dana-bio1.jpg'); background-size: cover; }
 
-    $bio: lighten($gold, 10%);
-    $philanth: lighten($gold, 10%);
+    $bio: $lgold;
+    $philanth: $lgold;
     $message: $white;
     $rec: $white;
 
@@ -589,32 +608,30 @@ h2 {line-height: 1.35rem;}
 }
 
 .book {
-  h1.about{margin-top:-20px;margin-left: 25px;text-transform: lowercase;}
   h2,h1{text-transform: uppercase;}
-  h1{font-weight: $semi; font-size:1.8rem; margin:0;}
+  h1{font-weight: $semi; font-size:1.8rem; margin:0;
+    font-size:1.9rem; line-height: 1.7em;
+  }
+  h3.sec-title {margin-bottom:0; font-weight: bold; text-transform: uppercase;}
 
   .book-header2 {@include sec-default(); position: relative; 
-    // .text, .image {display: inline-block; float: left; width:45%;}
-    // .image{ overflow: hidden; width:48%; position: absolute; bottom:0;}
-    // .text {margin-top: 8%; float: right; margin-bottom: 5%; border:$border; text-align: center;}
-    span.lmargin{margin-left: 25px;}
-
-    
-
     min-height:451px;@include sec-bgimage('dana-bio3.jpg'); background-size:48%; background-position: bottom left;
     
     .text {width:50%; position: relative; float: right; text-align: center;
-      // margin-top: 8%; margin-bottom: 5%;
-      padding:70px 30px 70px; margin-top:8%;
+      padding:70px 30px 70px;
       background-image: url(image_path('quote1.png')), url(image_path('quote2.png'));
       background-size:60px, 60px; background-position: top left, bottom right;
       background-repeat: no-repeat, no-repeat;
+      margin-top:8%;
     }
 
     .quote1, .quote2{width:60px; position: absolute; display: none;}
     .quote1{margin-left: -10%; margin-top: -6%}
     .quote2 {left:100%;}
 
+
+    background-size:50%;
+    .text {margin-top:6%; margin-bottom: 3%;}
   }
 
   .overview {@include sec-default(); padding:$pad; 
@@ -641,8 +658,12 @@ h2 {line-height: 1.35rem;}
     .ds-link {background-color:$white; color:$black; font-weight: bold; @include tshadowl(rgba($black, .1));}
   }
 
+  p.book-pkgs{display: inline-block; float: none; width:24%; font-size:18px; color: $white;
+    span{font-weight: bold;}
+  }
 
   .bulk.top-blk {@include sec-default(); padding:$pad; text-align: center; 
+  .intro {@include sec-default(); margin-bottom: 25px; }
     .image, .text {display: inline-block; float: right; width:54%;}
     .text {float:left; width:43%; text-align: center; margin-top: 12%;}
 
@@ -651,17 +672,27 @@ h2 {line-height: 1.35rem;}
     .img1 {float: right;}
     .img2{margin-top:30px; width:52%; background-color: $white; padding:15px 15px 0 0; margin-right: -12%;}
 
-    h4 {font-size: 1.15rem;}
-    p{display: inline-block; float: none; width:24%; font-size:18px;}
-    p span{ font-weight: bold; }
+    h4 {font-size: 1.15rem; margin-top: 7px;}
 
     .option {@include sec-default();}
     .option.o2{margin-top: 20px;}
+
+
+
+
+    .boxes {display:inline-block; float:left; width:45%; margin-top:4.5%;}
+    .image{width:50%;}
+    .boxes {width:50%;}
+    .book-pkgs{display: inline-block; float: none; width:48%; font-size:18px; background-color: $black;
+      margin-bottom: 8px; padding:40px 10px;
+      &:nth-child(2n+2) {float:right;}
+
+      p{color: $white; margin:0;
+        span{font-weight: bold;}
+      }
+    }
   }
 
-  p.book-pkgs{display: inline-block; float: none; width:24%; font-size:18px; color: $white;
-    span{font-weight: bold;}
-  }
 
   @include bp(tb) {
     // h2.about {font-size:1.5rem;}
@@ -792,6 +823,17 @@ h2 {line-height: 1.35rem;}
       &.name, &.email, &.phone {width:31%; display: inline-block; float: none; margin: 0 1% 20px;}
       &.eventfg{width:47%; display: inline-block; }
       &.event_date, &.event_link, &.event_type {float: right;}
+    }
+  }
+
+  .cat-sec{@include sec-default();
+    h2{margin: 10px 0 20px; font-size: 1.15rem; text-align: center;}
+    .cat {display: inline-block; width:23.5%; float: none; margin:10px .5%;
+      background-color: $gold; padding:30px; text-align: center;
+      .link-title{@include sec-default(); background-color:$black; color: $white; padding:15px;
+        box-shadow:0px 5px 8px rgba($black,.25);
+        text-transform: uppercase; font-weight: $semi; letter-spacing: .4px;
+      }
     }
   }
 }
