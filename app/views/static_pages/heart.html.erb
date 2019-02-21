@@ -4,7 +4,7 @@
 <%= render 'shared/collage-hd' %>
 <div class="heart-gram">
 	<div class="inside med2-def">
-		<div class="layer1">
+		<!-- <div class="layer1">
 			<p>Asher Clothing Line</p>
 		</div>
 		
@@ -14,51 +14,49 @@
 
 		<div class="layer3">
 			<p>fab'rik</p>
-		</div>
+		</div> -->
+
+		<%= image_tag('heartagram.png', alt: '', class: 'img-responsive gram') %>
 	</div>
 </div>
 
 <div class="boxes">
-	<div class="inside">
-		<div class="asher">
-			<div class="text">
-				<!-- <h2>Asher Collection</h2> -->
-				<%= image_tag('asher.png', alt: '', class: 'img-responsive logo') %>
-				<p>
-					Asher is a collection of women’s clothing born out of a deep-seeded love for extraordinary fashion. As the brand grew, we were moved to serve greater purpose with our products. We found that purpose in Asher Babies, a partnership that faces the reality of childhood abandonment in Africa.
-				</p>
+		<div class="inside">
+			<div class="asher">
+				<div class="text">
+					<!-- <h2>Asher Collection</h2> -->
+					<%= image_tag('asher.png', alt: '', class: 'img-responsive logo') %>
+					<p>
+						Asher is a collection of women’s clothing born out of a deep-seeded love for extraordinary fashion. As the brand grew, we were moved to serve greater purpose with our products. We found that purpose in Asher Babies, a partnership that faces the reality of childhood abandonment in Africa.
+					</p>
 
-				<p>
-					On average, hundreds of babies are abandoned by their mothers each month in African hospitals, clinics, police stations and even outdoors. 
-					Proceeds from every Asher purchase help provide a loving home, basic needs, healthcare and educational fees for African children who have been abandoned. Each garment from the Asher Collection is paired with a specific child to fund his or her specialized needs.
+					<p class="more">
+						On average, hundreds of babies are abandoned by their mothers each month in African hospitals, clinics, police stations and even outdoors. 
+						Proceeds from every Asher purchase help provide a loving home, basic needs, healthcare and educational fees for African children who have been abandoned. Each garment from the Asher Collection is paired with a specific child to fund his or her specialized needs.
+					</p>
 
-				</p>
+					<%= link_to "Meet the Asher Babies", 'https://shopasher.com/blogs/asher-babies', target: '_blank', class: 'ds-link' %>
+					<%= link_to "Shop Asher Collection", 'https://fabrikstyle.com/collections/asher-collection', target: '_blank', class: 'ds-link alt' %>
+				</div>
 
-				<%= link_to "Meet the Asher Babies", 'https://shopasher.com/blogs/asher-babies', target: '_blank', class: 'ds-link' %>
-				<%= link_to "Shop Asher Collection", 'https://fabrikstyle.com/collections/asher-collection', target: '_blank', class: 'ds-link alt' %>
+				<div class="image">
+					<%= image_tag('asher-babes.jpg', alt: '', class: 'img-responsive') %>
+				</div>
 			</div>
+			
+			<div class="border-row"></div>
 
-			<div class="image">
-				<%= image_tag('asher-babes.jpg', alt: '', class: 'img-responsive') %>
-			</div>
-		</div>
-		
-		<div class="border-row"></div>
+			<div class="freefab">
+				<div class="text">
+					<!-- <h2 class="norm">free fab'rik</h2> -->
+					<%= image_tag('free-fabrik.png', alt: '', class: 'img-responsive logo') %>
+					<p>free fab'rik is a non-profit that hosts free shopping sprees for young ladies in need. Founded in 2009 by Dana Spinola, CEO & founder of fab’rik, free fab'rik's mission is to restore strength, dignity, and hope to women who have lost theirs as a result of depression, poverty, exploitation, and abuse.</p>
 
-		<div class="freefab">
-			<div class="text">
-				<!-- <h2 class="norm">free fab'rik</h2> -->
-				<%= image_tag('free-fabrik.png', alt: '', class: 'img-responsive logo') %>
-				<p>free fab'rik is a non-profit that hosts free shopping sprees for young ladies in need. Founded in 2009 by Dana Spinola, CEO & founder of fab’rik, free fab'rik's mission is to restore strength, dignity, and hope to women who have lost theirs as a result of depression, poverty, exploitation, and abuse.</p>
+					<p class="more">free fab'rik shopping sprees are a chance for these ladies to experience the thrill of boutique shopping, without the pressure of price tags. Women from all over the area volunteer to visit shelters and homes -- to talk, share stories, and spend time getting to know these women. The goal is to remind them just how beautiful they are, and cheer them on as they dress for success.</p>
+					<%= link_to "Donate to free fab'rik", ff_path, target: '_blank', class: 'ds-link' %>
+				</div>
 
-				<p>free fab'rik shopping sprees are a chance for these ladies to experience the thrill of boutique shopping, without the pressure of price tags. Women from all over the area volunteer to visit shelters and homes -- to talk, share stories, and spend time getting to know these women. The goal is to remind them just how beautiful they are, and cheer them on as they dress for success.</p>
-				<%= link_to "Donate to free fab'rik", ff_path, target: '_blank', class: 'ds-link' %>
-			</div>
-
-			<div class="image">
-				<iframe src="https://www.youtube.com/embed/FSFrLHJqyEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				
+				<div class="image"><%= image_tag('ff-group.jpg', alt: '', class: 'img-responsive') %></div>
 			</div>
 		</div>
 	</div>
-</div>

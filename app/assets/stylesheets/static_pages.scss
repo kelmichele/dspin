@@ -328,6 +328,7 @@ h2 {line-height: 1.35rem;}
 //************* ABOUT ***************//
 //************************************//
 .about {
+  .inside.lg.collage{@include sec-default();}
   h1, p{margin-top: 0;}
   h1{margin-bottom: 7px;}
   h2{margin-top: 0px; font-size:1.25rem;}
@@ -666,11 +667,11 @@ h2 {line-height: 1.35rem;}
   .bi-head {@include sec-default(); text-align: center; 
     h1, h2{margin:0;}
     h1{font-size: 1.8rem;}
-    h2{font-size: 1.2rem;}
+    h2{font-size: 1.2rem; margin-bottom: 35px;} 
     .text {@include sec-default(); margin-top: 0px;}
   }
 
-  .form-section {@include sec-default(); padding: $pad;
+  .form-section {@include sec-default(); padding:30px 0 0;
     p.print{margin:0; color: darken($gold, 10%); float: right; margin-top: -45px;}
     h4{font-weight: bold; border-bottom:$border;}
 
@@ -686,7 +687,7 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  .cat-sec{@include sec-default();
+  .cat-sec{@include sec-default(); 
     h2{margin: 10px 0 20px; font-size: 1.15rem; text-align: center;}
     .cat {display: inline-block; float: none; 
       width:23.5%;  margin:10px .5%;
@@ -807,7 +808,10 @@ h2 {line-height: 1.35rem;}
 //************* HEART **************//
 //************************************//
 .heart{
+  p.more {margin-bottom: 40px;}
+  .logo{width:200px;}
   .heart-gram{@include sec-default(); position: relative; padding-bottom: 50px;
+    .gram {width:470px; @include center-block();}
     .layer1,.layer2,.layer3 {position: relative; text-align: right;}
     p{font-size:19px;}
     
@@ -840,7 +844,62 @@ h2 {line-height: 1.35rem;}
     .text {float:left;}
     .image {float:right;}
   }
+
+
+  .ab-sec {@include sec-default(); padding:50px 0; 
+    .text, .image { display: inline-block; float: left;}
+    .text {width:60%; padding:80px 0;}
+    .image {width:33%; float: right;}
+    .logo{width:200px;}
+    .logo.free{width:240px;}
+
+    position: relative; z-index: 0;
+    &::before {@include before();z-index: -1;width:8%;left:59%;}
+    &::after{@include after(); z-index: -2; width:40%; left:60%; @include sec-bgimage('zuri.jpg'); background-size: cover; }
+
+    $asher: lighten($gold, 15%);;
+    $ff: $white;
+
+    &.ash{background-color:$asher;
+      &::before {
+        background: -webkit-linear-gradient(-90deg, rgba($asher, 0) 10%, rgba($asher, .8) 40%, $asher 85%);
+        background: linear-gradient(-90deg, rgba($asher, 0) 10%, rgba($asher, .8) 40%, $asher 85%);
+      }
+    }
+
+    &.free{
+      background-color: $ff;
+      &::after {background-image: url(image_path('ff-group.jpg')); left:0;}
+      &::before {left:34%;
+        background: -webkit-linear-gradient(90deg, rgba($ff, 0) 10%, rgba($ff, .8) 40%, $ff 65%);
+        background: linear-gradient(90deg, rgba($ff, 0) 10%, rgba($ff, .8) 40%, $ff 65%);
+      }
+
+      .text{float:right;}
+    }
+  }
+
+
+  .package{@include sec-default(); margin:50px 0 100px;
+    position: relative; z-index: 0;
+    &::before {@include before(); border:5px double $black; width:90%;}
+    .dets, .image {display: inline-block; float: left; width:59%;}
+    .image {width:40%; float: right; margin-top: -5%;}
+    .dets {padding: 55px 0px 65px;}
+
+    &.p1{
+      .dets{margin-left:4%; width:60%;}
+      .image{margin-right: -8%;}
+    }
+
+    &.p2{
+      .dets {float:right; margin-right: 6%;}
+      .image{float: left; margin-left: -8%;}
+      &::before{left:10%;}
+    }
+  }
 }
+
 
 
 
