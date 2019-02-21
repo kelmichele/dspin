@@ -8,6 +8,7 @@
 .ds-link {@include link(30%, $white); background-color: $black; @include tshadowl(rgba($black, .3));
   // text-transform: uppercase;
   &.autoh {height:auto; max-height: auto;}
+  &.alt {background-color:$dgold;}
 }
 .text-link{font-weight: bold; color: $black;
   &.und {text-decoration: underline; }
@@ -821,7 +822,23 @@ h2 {line-height: 1.35rem;}
     .layer3{width:350px; @include center-block(); @include sec-bgimage('heart.png'); height:370px; z-index: 2;
       margin-top: -350px; text-align: center; padding-top: 160px;
     }
+  }
 
+  .boxes {@include sec-default();}
+  .asher, .freefab {@include sec-default(); margin:30px 0 70px; 
+    h2{margin-bottom: 7px; font-weight: $semi;}
+    p{margin-top:0;}
+    .text, .image {display: inline-block; float: left; width:44%;}
+    .text {width: 53%; float: right;}
+
+    iframe {width:100%; min-height:375px;}
+    .logo {width:200px; margin:15px 0;}
+    //682 375 
+  }
+
+  .freefab{
+    .text {float:left;}
+    .image {float:right;}
   }
 }
 
