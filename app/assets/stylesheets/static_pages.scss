@@ -828,12 +828,73 @@ h2 {line-height: 1.35rem;}
 
   .cat-sec{@include sec-default();
     h2{margin: 10px 0 20px; font-size: 1.15rem; text-align: center;}
-    .cat {display: inline-block; width:23.5%; float: none; margin:10px .5%;
+    .cat {display: inline-block; float: none; 
+      width:23.5%;  margin:10px .5%;
       background-color: $gold; padding:30px; text-align: center;
-      .link-title{@include sec-default(); background-color:$black; color: $white; padding:15px;
-        box-shadow:0px 5px 8px rgba($black,.25);
+      .link-title{@include sec-default(); background-color:$black; color: $white; padding:15px 0;
+        box-shadow:0px 5px 8px rgba($black,.25); text-align: center;
         text-transform: uppercase; font-weight: $semi; letter-spacing: .4px;
       }
+    }
+  }
+
+  @media screen and (max-width:1100px) {
+    .cat-sec .cat {
+      padding: 20px;
+      .link-title{padding: 15px 0px;}
+    }
+  }
+
+  @include bp(tb) {
+    .bi-head {
+      h1 {font-size: 1.65rem;}
+    }
+
+    .cat-sec {
+      h2 {font-size:1.1rem;}
+      .cat {padding: 15px;
+        .link-title{padding: 10px 0px; font-size: 15px;}
+      }
+    }
+
+    .form-section {padding:0px 0;
+      form {width:85%; @include center-block();}
+      p.print{ margin-top: 15px;}
+      h4{margin-top: 30px;@include sec-default();}
+
+      .form-group{
+        @include sec-default(); margin: 0 0 20px;
+        &.name, &.email, &.phone {@include sec-default();}
+        &.eventfg{@include sec-default(); }
+      }
+    }
+  }
+
+  @include bp(tn) {
+    .bi-head {
+      h1 {font-size: 1.4rem;}
+    }
+
+    .cat-sec {text-align: center;
+      h2 {font-size:1rem;}
+      .cat { width:45%; float: none; margin: 15px 1%;}
+    }
+
+    fieldset {margin-top: 0; padding-top:0;}
+  }
+
+  @include bp(tb) {
+    .bi-head {
+      h1 {font-size: 1.45rem;}
+    }
+
+    .cat-sec {
+      h2 {font-size:1rem;}
+    }
+
+    .form-section {
+      form {width:95%; }
+      p.print{ @include sec-default();}
     }
   }
 }
