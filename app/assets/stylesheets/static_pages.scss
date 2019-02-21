@@ -422,216 +422,21 @@ h2 {line-height: 1.35rem;}
 //*************************************//
 //************* BOOK ***************//
 //************************************//
-// .book {
-//   h1.about{margin-top:-20px;margin-left: 25px;text-transform: lowercase;}
-//   h2.about{text-transform: uppercase;}
-//   h1.buy {font-weight: normal; margin-top: 0; font-size:1.7rem;}
-//   h2.buy {font-weight: bold; text-transform: lowercase; margin-bottom: 0; font-size: 2rem;}
-
-//   .overview {@include sec-default(); padding:$pad; 
-//     .text, .image {display: inline-block; float: left; width: 40%;}
-//     .text{float: right; width:55%; margin-top:7.5%; }
-//     p{text-transform: none;}
-
-//     .uk-slideshow{ height:600px;}
-//     .uk-slideshow-items{max-height:100%; height:100%;}
-//     .uk-slideshow-nav.uk-dotnav {@include sec-default(); text-align: center; margin-left: none;}
-//     .uk-dotnav>* {display:inline-block; float:none; margin:auto;}
-//     .uk-dotnav>.uk-active>* {background-color:$black;}
-//   }
-
-//   .book-header2 {@include sec-default(); 
-//     // height:450px; overflow: hidden;@include sec-bgimage('dana-bio3.jpg'); background-size: 48%; background-position: top right;
-//     .text, .image {display: inline-block; float: left; width:45%;}
-//     .image{float: right; max-height:450px; overflow: hidden; width:48%;}
-//     .text {margin-top: 8%; margin-left: 3%;}
-//     span.lmargin{margin-left: 25px;}
-//   }
-
-//   .purchase2 {@include sec-default();
-//     // padding:$pad; 
-//     .option{display: inline-block; float: left; width:45%;}
-//     .option.o2 {float: right;}
-//     .ds-link {@include sec-default();}
-
-//     background-color: $black; padding:30px 0; text-align: center;
-//     h3{color:$white;}
-//     .option, .option.o2 {width: 30%; float: none; margin: 0 20px;}
-//     .ds-link {background-color:$white; color:$black; font-weight: bold; @include tshadowl(rgba($black, .1));}
-//   }
-
-//   .bulk {@include sec-default(); padding:$pad;
-//     h4 {font-size: 1.15rem;}
-//     p span{ font-weight: bold; }
-
-//     .image, .text {display: inline-block; float: left; width:55%;}
-//     .text {float:right; width:42%; text-align: center; margin-top: 5%;}
-
-//     .img1, .img2 {display: inline-block; width:48%;}
-//     .img2{margin-top:55px; width:55%; background-color: $white; padding:15px 0 0 15px; margin-left: -10%;}
-//   }
-
-//   @include bp(tb) {
-//     h2.about {font-size:1.5rem;}
-//     h1.about {font-size: 1.8rem;}
-//     .book-header2 {
-//       .image{max-height:400px; width:48%;}
-//       .text { width:45%; margin-top: 8%; margin-left: 3%;}
-//     }
-
-//     .purchase2 {
-//       .option, .option.o2 {width: 40%; margin: 0 20px;}
-//     }
-
-//     .overview {padding:60px 0 30px;
-//       p{font-size: 16px;}
-//       .inside.med{width:85%;}
-//       .text, .image {width: 35%;}
-//       .text{ width:60%; margin-top:0; }
-//       .uk-slideshow{ height:450px;}
-//     }
-//   }
-
-//   @include bp(tn) {
-//     h2.about {font-size:1.35rem;}
-//     h1.about {font-size: 1.6rem;}
-//     .book-header2 {
-//       .image{max-height:320px;}
-//     }
-
-//     .purchase2 {
-//       .option, .option.o2 {width: 43%; margin: 0 1%;}
-//       h3{font-size: 1.25rem;}
-//       .ds-link {font-size:14px;}
-//     }
-
-//     .overview {padding:60px 0 30px;
-//       p{font-size: 15px;}
-//       .inside.med{width:85%;}
-//       .text, .image {width:80%; @include center-block();}
-//       .image{ width:45%; margin-top: 30px; }
-//       .uk-slideshow{ height:450px;}
-//     }
-//   }
-
-//   @include bp(md) {
-//     h2.about {font-size:1.2rem;}
-//     h1.about {font-size: 1.4rem;}
-
-//     .book-header2 {
-//       .image{max-height:290px;}
-//       .text { margin-left: 7%; margin-top:11%;}
-//     }
-
-//     .overview {padding:40px 0 15px;
-//       .inside.med{width:85%;}
-//       .text {width:99%;}
-//       .image{ width:300px;}
-//       .uk-slideshow{ height:430px;}
-//     }
-
-//     .purchase2 {padding-bottom: 10px;
-//       .option, .option.o2 {width: auto; float:none; margin: 0px 10px 20px; }
-//       h3{font-size: 1.15rem;}
-//       .ds-link {font-size:14px;padding:10px 30px;}
-//     }
-//   }
-
-//   @include bp(mb) {
-//     h2.about {font-size:1.1rem;}
-//     h1.about {font-size: 1.3rem;}
-
-//     .book-header2 {
-//       .image{max-height:255px;}
-//     }
-//   }
-
-//   @include bp(oc) {
-//     .book-header2 {
-//       h1.about,span.lmargin{margin-left: 0;}
-//       .image{max-height:255px;}
-//       .text { margin-left: 0; width:52%; text-align:center; margin-top:11%;}
-//     }
-
-//     .overview {padding:40px 0 15px;
-//       .inside.med{width:85%;}
-//       .text {width:99%;}
-//       .image{ width:300px;}
-//       .uk-slideshow{ height:430px;}
-//     }
-
-//     .purchase2 {padding-bottom: 10px;
-//       .option, .option.o2 {width: auto; float:none; margin: 0px 10px 20px; }
-//       h3{font-size: 1.15rem;}
-//       .ds-link {font-size:14px;padding:10px 30px;}
-//     }
-//   }
-
-//   @include bp(ph) {
-//     .book-header2 {padding:15px 0 30px;
-//       // @include sec-bgimage('dana-bio3.jpg'); background-position: bottom right; background-size: 38%;
-//       .image{display: none;}
-//       .text {@include sec-default();margin-top:0;}
-//     }
-//   }
-// }
-
-.buy-the-book .book {
-  .book-header2 {
-    .text{width:50%; margin-left: 0; margin-top:10%;}
-  }
-
-  .bulk.top-blk {padding:0 0 80px; text-align: center; 
-    margin-top:-20px;
-    .image, .text { width:54%; }
-    .text {width:45%; margin-top: 5%;}
-    .full.book-pkg {padding-top:40px;}
-    p{display: inline-block; float: none; width:24%; font-size:18px;}
-
-    .option {@include sec-default();}
-    .option.o2{margin-top: 20px;}
-  }
-
-  .purchase3 {@include sec-default(); padding:60px 0; text-align: center;
-    h3{font-weight: bold;}
-    .option{display: inline-block; float: left; width:45%;}
-    .option.o2 {float: right;}
-    .ds-link {@include sec-default();}
-
-    .option, .option.o2 {width: 30%; float: none; margin: 0 20px;}
-    .ds-link {font-weight: $semi;}
-  }
-
-  p.book-pkgs{display: inline-block; float: none; width:24%; font-size:18px; color: $white;
-    span{font-weight: bold;}
-  }
-}
-
 .book {
   h2,h1{text-transform: uppercase;}
-  h1{font-weight: $semi; font-size:1.8rem; margin:0;
-    font-size:1.9rem; line-height: 1.7em;
-  }
+  h1{font-weight: $semi; margin:0;font-size:1.9rem; line-height: 1.7em;}
   h3.sec-title {margin-bottom:0; font-weight: bold; text-transform: uppercase;}
 
   .book-header2 {@include sec-default(); position: relative; 
-    min-height:451px;@include sec-bgimage('dana-bio3.jpg'); background-size:48%; background-position: bottom left;
+    min-height:451px;@include sec-bgimage('dana-bio3.jpg'); background-size:50%; background-position: bottom left;
     
     .text {width:50%; position: relative; float: right; text-align: center;
-      padding:70px 30px 70px;
+      padding:70px 30px;
       background-image: url(image_path('quote1.png')), url(image_path('quote2.png'));
       background-size:60px, 60px; background-position: top left, bottom right;
       background-repeat: no-repeat, no-repeat;
-      margin-top:8%;
+      margin-top:6%;margin-bottom: 3%;
     }
-
-    .quote1, .quote2{width:60px; position: absolute; display: none;}
-    .quote1{margin-left: -10%; margin-top: -6%}
-    .quote2 {left:100%;}
-
-
-    background-size:50%;
-    .text {margin-top:6%; margin-bottom: 3%;}
   }
 
   .overview {@include sec-default(); padding:$pad; 
@@ -663,8 +468,8 @@ h2 {line-height: 1.35rem;}
   }
 
   .bulk.top-blk {@include sec-default(); padding:$pad; text-align: center; 
-  .intro {@include sec-default(); margin-bottom: 25px; }
-    .image, .text {display: inline-block; float: right; width:54%;}
+    .intro {@include sec-default(); margin-bottom: 25px; }
+    .image, .text {display: inline-block; float: right; width:50%;}
     .text {float:left; width:43%; text-align: center; margin-top: 12%;}
 
     .full.book-pkg {padding-top:40px;}
@@ -677,12 +482,7 @@ h2 {line-height: 1.35rem;}
     .option {@include sec-default();}
     .option.o2{margin-top: 20px;}
 
-
-
-
-    .boxes {display:inline-block; float:left; width:45%; margin-top:4.5%;}
-    .image{width:50%;}
-    .boxes {width:50%;}
+    .boxes {display:inline-block; float:left; width:50%; margin-top:4.5%;}
     .book-pkgs{display: inline-block; float: none; width:48%; font-size:18px; background-color: $black;
       margin-bottom: 8px; padding:40px 10px;
       &:nth-child(2n+2) {float:right;}
@@ -693,20 +493,36 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-
   @include bp(tb) {
-    // h2.about {font-size:1.5rem;}
-    // h1.about {font-size: 1.8rem;}
-    // .book-header2 {
-    //   .image{max-height:400px; width:48%;}
-    //   .text { width:45%; margin-top: 8%; margin-left: 3%;}
-    // }
-
-    .purchase2 {
-      .option, .option.o2 {width: 40%; margin: 0 20px;}
+    h3.sec-title{font-size:1.4rem;}
+    .book-header2 {
+      h1{font-size:1.75rem;}
+      .text {width:50%;
+        padding:50px 30px;
+        background-size:45px, 45px;
+      }
     }
 
-    .overview {padding:60px 0 30px;
+    .purchase2 {
+      h2{font-size: 1.5rem;}
+      h3{font-size:1.35rem;}
+      .option, .option.o2 {width: 40%;}
+    }
+
+    .bulk.top-blk {@include sec-default(); padding:$pad-tb; text-align: center; 
+      .image {width:50%;}
+      .img1{ width:53%;}
+      .img2{margin-top:30px; width:52%; background-color: $white; padding:15px 15px 0 0; margin-right: -12%;}
+
+      h4 {font-size: 1rem;}
+
+      .boxes {width:50%; margin-top:4.5%;
+        .inside {width:95%;}
+      }
+      .book-pkgs{padding:35px 10px;}
+    }
+
+    .overview {padding:30px 0 20px;
       p{font-size: 16px;}
       .inside.med{width:85%;}
       .text, .image {width: 35%;}
@@ -715,12 +531,27 @@ h2 {line-height: 1.35rem;}
     }
   }
 
+  @include bp(nn) {
+    .book-header2 {min-height:400px;
+      h1{font-size:1.6rem;}
+      .text {width:50%;
+        padding:50px 30px;
+        background-size:35px, 35px;
+      }
+      br.nn-hide{display: none;}
+    }
+  }
+
+// LEFT OFF HERE
   @include bp(tn) {
-    // h2.about {font-size:1.35rem;}
-    // h1.about {font-size: 1.6rem;}
-    // .book-header2 {
-    //   .image{max-height:320px;}
-    // }
+    .book-header2 {min-height:350px;
+      h1{font-size:1.4rem;}
+      .text {width:54%;
+        padding:30px;
+        background-size:25px, 25px;
+      }
+      br.md-hide{display: none;}
+    }
 
     .purchase2 {
       .option, .option.o2 {width: 43%; margin: 0 1%;}
@@ -728,9 +559,18 @@ h2 {line-height: 1.35rem;}
       .ds-link {font-size:14px;}
     }
 
-    .overview {padding:60px 0 30px;
+    .bulk.top-blk { padding:$pad-tn;
+      .intro{margin-bottom: 10px;}
+      .image {display: none;}
+
+      .boxes {width:80%; margin-top:0; @include center-block();}
+      .book-pkgs{padding:25px 10px;
+        p{font-size:16px;}
+      }
+    }
+
+    .overview {padding:10px 0 20px;
       p{font-size: 15px;}
-      .inside.med{width:85%;}
       .text, .image {width:80%; @include center-block();}
       .image{ width:45%; margin-top: 30px; }
       .uk-slideshow{ height:450px;}
@@ -738,14 +578,6 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(md) {
-    // h2.about {font-size:1.2rem;}
-    // h1.about {font-size: 1.4rem;}
-
-    // .book-header2 {
-    //   .image{max-height:290px;}
-    //   .text { margin-left: 7%; margin-top:11%;}
-    // }
-
     .overview {padding:40px 0 15px;
       .inside.med{width:85%;}
       .text {width:99%;}
@@ -760,22 +592,9 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  @include bp(mb) {
-    // h2.about {font-size:1.1rem;}
-    // h1.about {font-size: 1.3rem;}
-
-    // .book-header2 {
-    //   .image{max-height:255px;}
-    // }
-  }
+  @include bp(mb) {}
 
   @include bp(oc) {
-    // .book-header2 {
-    //   h1.about,span.lmargin{margin-left: 0;}
-    //   .image{max-height:255px;}
-    //   .text { margin-left: 0; width:52%; text-align:center; margin-top:11%;}
-    // }
-
     .overview {padding:40px 0 15px;
       .inside.med{width:85%;}
       .text {width:99%;}
@@ -790,12 +609,7 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  @include bp(ph) {
-    // .book-header2 {padding:15px 0 30px;
-    //   .image{display: none;}
-    //   .text {@include sec-default();margin-top:0;}
-    // }
-  }
+  @include bp(ph) {}
 }
 
 
@@ -883,18 +697,25 @@ h2 {line-height: 1.35rem;}
     fieldset {margin-top: 0; padding-top:0;}
   }
 
-  @include bp(tb) {
+  @include bp(md) {
     .bi-head {
-      h1 {font-size: 1.45rem;}
-    }
-
-    .cat-sec {
-      h2 {font-size:1rem;}
+      h1 {font-size: 1.3rem;}
     }
 
     .form-section {
       form {width:95%; }
       p.print{ @include sec-default();}
+    }
+  }
+
+  @include bp(ph) {
+    .bi-head {
+      h1 {font-size: 1.2rem;}
+    }
+
+    .cat-sec {
+      .inside.med-def{width:80%;}
+      .cat{@include sec-default(); margin:7px 0;}
     }
   }
 }
