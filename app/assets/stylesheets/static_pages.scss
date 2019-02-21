@@ -524,6 +524,7 @@ h2 {line-height: 1.35rem;}
 
     .overview {padding:30px 0 20px;
       p{font-size: 16px;}
+      p.first {margin-top:7px;}
       .inside.med{width:85%;}
       .text, .image {width: 35%;}
       .text{ width:60%; margin-top:0; }
@@ -542,20 +543,25 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-// LEFT OFF HERE
   @include bp(tn) {
-    .book-header2 {min-height:350px;
-      h1{font-size:1.4rem;}
+    h3.sec-title{font-size:1.2rem;}
+
+    .book-header2 {
+      min-height:300px; 
+      background-size: 42%;
+
+      h1{font-size:1.25rem;}
+
       .text {width:54%;
         padding:30px;
         background-size:25px, 25px;
+        margin-top:9%;margin-bottom: 0;
       }
-      br.md-hide{display: none;}
     }
 
     .purchase2 {
       .option, .option.o2 {width: 43%; margin: 0 1%;}
-      h3{font-size: 1.25rem;}
+      h3{font-size: 1.2rem;}
       .ds-link {font-size:14px;}
     }
 
@@ -569,47 +575,74 @@ h2 {line-height: 1.35rem;}
       }
     }
 
-    .overview {padding:10px 0 20px;
+    .overview {padding:10px 0 20px;text-align: center;
+      h3.sec-title{text-align: center;}
       p{font-size: 15px;}
-      .text, .image {width:80%; @include center-block();}
+      .text, .image {width:95%; @include center-block();}
       .image{ width:45%; margin-top: 30px; }
       .uk-slideshow{ height:450px;}
     }
   }
 
   @include bp(md) {
-    .overview {padding:40px 0 15px;
-      .inside.med{width:85%;}
-      .text {width:99%;}
+    .book-header2{min-height: 285px;}
+    .bulk.top-blk { 
+      .boxes {width:95%; margin-top:0; @include center-block();}
+      h4{font-size:15.5px;}
+    }
+
+    .overview {
       .image{ width:300px;}
       .uk-slideshow{ height:430px;}
     }
 
     .purchase2 {padding-bottom: 10px;
-      .option, .option.o2 {width: auto; float:none; margin: 0px 10px 20px; }
+      .option, .option.o2 {width: 55%; float:none; margin: 0px 10px 20px; }
       h3{font-size: 1.15rem;}
-      .ds-link {font-size:14px;padding:10px 30px;}
+      .ds-link {padding:10px 30px;}
     }
   }
-
-  @include bp(mb) {}
 
   @include bp(oc) {
-    .overview {padding:40px 0 15px;
-      .inside.med{width:85%;}
-      .text {width:99%;}
-      .image{ width:300px;}
-      .uk-slideshow{ height:430px;}
+    .book-header2 {
+      min-height:auto; background-image:none; padding:15px 0 30px;
+
+      h1{font-size:1.25rem;}
+
+      .text {width:90%;@include center-block();
+        br{display: none;}
+        padding:30px 30px 10px;
+        background-size:25px, 25px;
+        margin:0 auto;
+      }
     }
 
-    .purchase2 {padding-bottom: 10px;
-      .option, .option.o2 {width: auto; float:none; margin: 0px 10px 20px; }
-      h3{font-size: 1.15rem;}
-      .ds-link {font-size:14px;padding:10px 30px;}
+    .purchase2 {
+      .option, .option.o2 {width:60%;}
+      h3{font-size: 1.1rem;}
+    }
+
+    .bulk.top-blk { 
+      .boxes {@include sec-default();}
+      h4{font-size:15.5px;}
+
+      .book-pkgs{width:70%; float: none; @include center-block();
+        padding:15px 0;
+        &:nth-child(2n+2) {float:none;}
+
+        p{color: $white; margin:0;
+          span{font-weight: bold;}
+        }
+      }
     }
   }
 
-  @include bp(ph) {}
+  @include bp(ph) {
+    .purchase2 {
+      .option, .option.o2 {width:85%;}
+    }
+    .bulk.top-blk .book-pkgs{width:85%; }
+  }
 }
 
 
