@@ -6,21 +6,15 @@
       <li><%= link_to "About", about_path %></li>
       <!-- <li><%= link_to "Events", events_path %></li> -->
 
-      <li class="uk-nav-header">Speaking</li>
+      <!-- <li class="uk-nav-header">Speaking</li> -->
+      <li><%= link_to "Speaking Information", speaking_path %></li>
       <li><%= link_to "Past Events", past_events_path %></li>
-      <li><%= link_to "Request to Book Dana", speaking_path %></li>
-      <li><%= link_to "Packages & Information", speaking_info_path %></li>
+      <li><%= link_to "Speaking Packages", speaking_info_path %></li>
 
-      <li class="uk-nav-header">Book</li>
-      <li><%= link_to "About the Book", love_what_you_do_path %></li>
-      <li><%= link_to "Buy the Book", buy_the_book_path %></li>
+      <li><%= link_to "Book", love_what_you_do_path %></li>
       
       <li><%= link_to "Press", press_path %></li>
-
-      <li class="uk-nav-header">Heart</li>
-      <li><%= link_to "Asher", '/asher', target: '_blank' %></li>
-      <li><%= link_to "free fab'rik", '/ff', target: '_blank', class: 'norm' %></li>
-
+      <li><%= link_to "Heart", heart_path %></li>
       <li class="fab"><%= link_to(image_tag('fabrik-white.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
     </ul>
   </div>

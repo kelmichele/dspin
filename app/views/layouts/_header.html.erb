@@ -21,12 +21,9 @@
     <div class="navbar-center">
       <div class="nb-logo">
         <%= link_to(image_tag('ds-logo.png', class: 'img-resonsive', alt: ''), root_path, class: 'logo-name') %>
-          <!-- Dana Spinola. -->
-        <!-- < end %> -->
       </div>
 
       <div class="navstick">
-        <!-- <div class="navstick"  uk-sticky="sel-target: .inline-header; cls-active: uk-navbar-sticky"> -->
         <ul class="uk-navbar-nav">
           <li><%= link_to "About", about_path %></li>
           <!-- <li><%= link_to "Events", events_path %></li> -->
@@ -36,30 +33,16 @@
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li><%= link_to "Past Events", past_events_path %></li>
-                <li><%= link_to "Packages & Information", speaking_info_path %></li>
+                <li><%= link_to "Speaking Packages", speaking_info_path %></li>
               </ul>
             </div>
               
           </li>
 
           <li><%= link_to "Book", love_what_you_do_path %></li>
-            <!-- <div class="uk-navbar-dropdown">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li><%= link_to "About the Book", love_what_you_do_path %></li>
-                <li><%= link_to "Buy the Book", buy_the_book_path %></li>
-              </ul>
-            </div> -->
-          
           <li><%= link_to "Press", press_path %></li>
-
           <li><%= link_to "Heart", heart_path %></li>
-            <!-- <div class="uk-navbar-dropdown">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li><%= link_to "Asher", '/asher', target: '_blank' %></li>
-                <li><%= link_to "free fab'rik", '/ff', target: '_blank' %></li>
-              </ul>
-            </div> -->
-
+           
           <li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
         </ul>
       </div>
