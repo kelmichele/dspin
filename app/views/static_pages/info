@@ -1,5 +1,38 @@
-ABOUT LAYOUTS 
-	
+HEART LAYOUTS 
+	<div class="ab-sec ash">
+		<div class="inside">
+			<div class="text">
+				<%= image_tag('asher-lt.png', alt: '', class: 'img-responsive logo') %>
+				<p>
+					Asher is a collection of women’s clothing born out of a deep-seeded love for extraordinary fashion. As the brand grew, we were moved to serve greater purpose with our products. We found that purpose in Asher Babies, a partnership that faces the reality of childhood abandonment in Africa.
+				</p>
+
+				<p class="more">
+					On average, hundreds of babies are abandoned by their mothers each month in African hospitals, clinics, police stations and even outdoors. 
+					Proceeds from every Asher purchase help provide a loving home, basic needs, healthcare and educational fees for African children who have been abandoned. Each garment from the Asher Collection is paired with a specific child to fund his or her specialized needs.
+				</p>
+				<%= link_to "Meet the Asher Babies", 'https://shopasher.com/blogs/asher-babies', target: '_blank', class: 'ds-link' %>
+				<%= link_to "Shop Asher Collection", 'https://fabrikstyle.com/collections/asher-collection', target: '_blank', class: 'ds-link ' %>
+			</div>
+
+			<div class="image"></div>
+		</div>
+	</div>
+
+	<div class="ab-sec free">
+		<div class="inside">
+			<div class="image"></div>
+
+			<div class="text">
+				<%= image_tag('free-fabrik.png', alt: '', class: 'img-responsive logo free') %>
+					<p>free fab'rik is a non-profit that hosts free shopping sprees for young ladies in need. Founded in 2009 by Dana Spinola, CEO & founder of fab’rik, free fab'rik's mission is to restore strength, dignity, and hope to women who have lost theirs as a result of depression, poverty, exploitation, and abuse.</p>
+
+					<p class="more">free fab'rik shopping sprees are a chance for these ladies to experience the thrill of boutique shopping, without the pressure of price tags. Women from all over the area volunteer to visit shelters and homes -- to talk, share stories, and spend time getting to know these women. The goal is to remind them just how beautiful they are, and cheer them on as they dress for success.</p>
+					<%= link_to "Donate to free fab'rik", ff_path, target: '_blank', class: 'ds-link' %>
+			</div>
+		</div>
+	</div>
+
 	<div class="clearfix" style="margin:100px 0;"></div>
 	<div class="inside med">
 		<div class="package p1">
@@ -79,12 +112,19 @@ ABOUT LAYOUTS
 	</div>
 
 
+Events..kind of
+	http://www.facsuniversity.com/national-tour/
+		Atlanta, GA March 1-2 | Washington, D.C. March 15-17 | Detroit, MI March 29-30
+		Sarasota Bradenton April 11 – 13 | Pittsburgh, PA September 12- 14
 
-Bulk
-	- Buy 50 books: 10% off 
-	- Buy 100 books: 20% off 
-	- Buy 250 books: 30% off 
-	- Buy 1000 books: 40% off 
+
+	https://promaxbda.org/events/current-events/2019-promax-conference
+		Promax 2019 will take place June 3-6, 2019.
+
+
+	https://www.turknett.com/women-in-leadership/women-in-leadership-seminar/
+		10/18
+
 
 
 Copy

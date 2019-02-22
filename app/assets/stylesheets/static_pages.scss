@@ -219,6 +219,33 @@ h2 {line-height: 1.35rem;}
     .textbox, img, iframe {display: inline-block; float:left; width:50%;}
     .textbox{float:right; width:45%; margin-top: 8%;}
   }
+
+
+  @include bp(tn) {
+    h1{font-size:1.7rem;}
+    .event-fw {padding-bottom: 40px; margin-bottom: 40px;
+      .textbox{ margin-top: 3%;}
+      p{font-size: 15px;}
+      h4{font-size: 1.15rem;}
+      .ds-link{width:auto;}
+    }
+  }
+
+  @include bp(oc) {
+    h1{font-size:1.5rem;}
+    .event-fw {
+      text-align: center;
+      img {width:80%; @include center-block();}
+      .textbox{ @include sec-default();margin-top: 20px;}
+    }
+  }
+
+  @include bp(sm) {
+    h1{font-size:1.35rem;}
+    .event-fw {
+      img {width:90%;}
+    }
+  }
 }
 
 
@@ -232,6 +259,13 @@ h2 {line-height: 1.35rem;}
     .ehead{padding-bottom: 0px;}
     .event-list {@include sec-default(); position: relative; z-index: 0; padding-top:0;
       &::before{@include before(); width:90%; left:5%; height: 55px; background-color: $black;}
+    }
+
+    @include bp(tn) {
+      .ehead {padding-top:25px;}
+      .event-list{padding:30px 0 0;
+        &::before{display: none;}
+      }
     }
   }
 
