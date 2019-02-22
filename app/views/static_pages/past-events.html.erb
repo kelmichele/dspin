@@ -7,17 +7,35 @@
 	<div class="event-list">
 		<div class="inside med-def">
 			<div class="intro">
-				<!-- <h3>Check out our collection of videos and podcasts from some of Dana's previous speaking engagements. 
-					Are you interested in booking Dana for an upcoming event? <%= link_to "Click here", speaking_path, class: 'text-link' %> to provide us with a few details.
-				</h3> -->
-
-				<h1 class="text-center" style="margin-bottom: 5px;"><%= @page_title %></h1>
-				<h3 style="margin-top: 0;">Dana is a leader, a business person, and a working mom. She speaks on business, faith, LWYD, and what breaks your heart. If you are interested in booking Dana to speak at an event or function, <%= link_to "click here", speaking_path, class: 'text-link' %> to provide us with a few details. </h3>
-				<!-- Select a category from the list below to watch/listen to some of Dana's previous speaking engagements. -->
+				<h1>Your front-row seat to past events.</h1>
+				<!-- <h3>Dana is a leader, a business person, and a working mom. She speaks on business, faith, LWYD, and what breaks your heart. If you are interested in booking Dana to speak at an event or function, <%= link_to "click here", speaking_path, class: 'text-link' %> to provide us with a few details. </h3> -->
+				<h3>Here's a closer look at Dana's previous speaking engagements. Get a better feel for Dana's message. From keynote speaker at UGA 40 Under 40, to "Imagine If" Innovation Conference.</h3>
 			</div>
+		</div>
 
+		<div class="cat-sec">
+			<div class="inside alt">
+				<div class="cat conf">
+					<a href="/past-events#conferences" class="link-title">Conferences</a>
+				</div>
+
+				<div class="cat pod">
+					<a href="/past-events#podcasts" class="link-title">Podcasts</a>
+				</div>
+
+				<div class="cat comp">
+					<a href="/past-events#company" class="link-title">Company/<br>Organizations</a>
+				</div>
+
+				<div class="cat dream">
+					<a href="/past-events#dream-sessions" class="link-title">Dream<br class="noshow"> Sessions</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="inside med-def">
 			<div id="conferences" class="cat-list">
-				<div class="border-row more"></div> 
+				<!-- <div class="border-row more"></div>  -->
 				<h3 class="sec-title">Conferences</h3>
 
 				<div class="event-hlf">
@@ -42,20 +60,36 @@
 			<div id="podcasts" class="cat-list">
 				<h3 class="sec-title">Podcasts</h3>
 
-				<%= link_to "Carey Nieuwhof Leadership Podcast", "https://careynieuwhof.com/episode208/", target: '_blank', class: 'event-fw' %>
+				<%= link_to "https://careynieuwhof.com/episode208/", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-carey.jpg', class: 'img-responsive', alt: '' %>
+					<h4>Carey Nieuwhof Leadership Podcast</h4>
+				<% end %>
 
-				<%= link_to "Imagine More", "https://www.imaginemorepodcast.com/episodes/dana-spinola", target: '_blank', class: 'event-fw' %>
+				<%= link_to "https://www.imaginemorepodcast.com/episodes/dana-spinola", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-imagine.png', class: 'img-responsive', alt: '' %>
+					<h4>Imagine More</h4>
+				<% end %>
 
-				<%= link_to "Launch Youniveristy", "https://launchyouniversity.com/podcast/069-when-passion-and-heart-lead-the-way-dana-spinola-of-fabrik/", target: '_blank', class: 'event-fw' %>
 
-				<%= link_to "CEO Exclusive Radio", "https://businessradiox.com/podcast/ceoexclusive/fabrik/", target: '_blank', class: 'event-fw' %>
+				<%= link_to "https://launchyouniversity.com/podcast/069-when-passion-and-heart-lead-the-way-dana-spinola-of-fabrik/", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-launch.jpg', class: 'img-responsive', alt: '' %>
+					<h4>Launch Youniversity</h4>
+				<% end %>
 
-				<%= link_to "Love or Work", "https://simplecast.com/s/168bffc8 ", target: '_blank', class: 'event-fw' %>
+				<%= link_to "https://businessradiox.com/podcast/ceoexclusive/fabrik/", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-ceo.jpg', class: 'img-responsive', alt: '' %>
+					<h4>CEO Exclusive Radio</h4>
+				<% end %>
+
+				<%= link_to "https://simplecast.com/s/168bffc8 ", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-love.jpg', class: 'img-responsive', alt: '' %>
+					<h4>Love or Work</h4>
+				<% end %>
 			</div>
 			<div class="border-row"></div>
 
 			<div id="company" class="cat-list">
-				<h3 class="sec-title">Company</h3>
+				<h3 class="sec-title">Company/Organizations</h3>
 				<!-- imagine if vid, boosterthon? -->
 				<div class="event-fw">
 					<iframe src="https://drive.google.com/file/d/1nCIhXMid3IAVCn7XAEvBMMPxK8lTLVR3/preview"></iframe>
@@ -67,8 +101,8 @@
 			</div>
 			<div class="border-row"></div>
 
-			<div id="organizations" class="cat-list">
-				<h3 class="sec-title">Organizations</h3>
+			<div id="dream-sessions" class="cat-list">
+				<h3 class="sec-title">Dream Sessions</h3>
 				<!-- fgi (don't have), fab'rik 2min conference vid (don't have) -->
 				<!-- <p>Church, philanthropy, etc...</p> -->
 			</div>

@@ -1,4 +1,23 @@
 HEART LAYOUTS 
+
+<div class="heart-gram">
+	<div class="inside med2-def">
+		<div class="layer1">
+			<p>Asher Clothing Line</p>
+		</div>
+		
+		<div class="layer2">
+			<p>free fab'rik</p>
+		</div>
+
+		<div class="layer3">
+			<p>fab'rik</p>
+		</div>
+
+		<%= image_tag('heartagram.png', alt: '', class: 'img-responsive gram') %>
+	</div>
+</div>
+
 	<div class="ab-sec ash">
 		<div class="inside">
 			<div class="text">

@@ -2,23 +2,10 @@
 <% @page_description = "" %>
 
 <%= render 'shared/collage-hd' %>
-<div class="heart-gram">
-	<div class="inside med2-def">
-		<!-- <div class="layer1">
-			<p>Asher Clothing Line</p>
-		</div>
-		
-		<div class="layer2">
-			<p>free fab'rik</p>
-		</div>
 
-		<div class="layer3">
-			<p>fab'rik</p>
-		</div> -->
-
-		<%= image_tag('heartagram.png', alt: '', class: 'img-responsive gram') %>
-	</div>
-</div>
+<div class="inside"><div class="title">
+	<h1>Meaning is found when passion and purpose collide.</h1>
+</div></div>
 
 <div class="boxes">
 		<div class="inside">
@@ -53,7 +40,8 @@
 					<p>free fab'rik is a non-profit that hosts free shopping sprees for young ladies in need. Founded in 2009 by Dana Spinola, CEO & founder of fab’rik, free fab'rik's mission is to restore strength, dignity, and hope to women who have lost theirs as a result of depression, poverty, exploitation, and abuse.</p>
 
 					<p class="more">free fab'rik shopping sprees are a chance for these ladies to experience the thrill of boutique shopping, without the pressure of price tags. Women from all over the area volunteer to visit shelters and homes -- to talk, share stories, and spend time getting to know these women. The goal is to remind them just how beautiful they are, and cheer them on as they dress for success.</p>
-					<%= link_to "Donate to free fab'rik", ff_path, target: '_blank', class: 'ds-link' %>
+					<%= link_to "Donate to free fab'rik", "http://www.freefabrik.org/donate/", target: '_blank', class: 'ds-link' %>
+					<%= link_to "Learn More about free fab'rik", ff_path, target: '_blank', class: 'ds-link alt' %>
 				</div>
 
 				<div class="image"><%= image_tag('ff-group.jpg', alt: '', class: 'img-responsive') %></div>

@@ -10,39 +10,37 @@
       <div class="notice"><%= flash[:alert] %></div>
     <% end %>
 
-    <!-- <p class="print">* indicates required field</p> -->
+    <!-- <p class="print">indicates required field</p> -->
     <!-- <div class="clearfix"></div><hr> -->
 
-  	<h4>Personal Details</h4>    
+    <h4>Tell us about your event.</h4>  
     <div class="form-group name">
-      <label>* Full Name:</label><br>
+      <label>Contact Name:</label><br>
       <%= f.text_field :name %>
     </div>
 
     <div class="form-group email">
-      <label>* Email: </label><br>
+      <label>Email: </label><br>
       <%= f.text_field :email %>
     </div>
 
     <div class="form-group phone">
-      <label>* Phone: </label><br>
+      <label>Phone: </label><br>
       <%= f.text_field :phone %>
     </div>
-
-
-  	<h4 class="second">Event Details</h4>    
+ 
     <div class="form-group eventfg event_name">
-      <label>* Event Name:</label><br>
+      <label>Event Name:</label><br>
       <%= f.text_field :event_name %>
     </div>
 
     <div class="form-group eventfg event_date">
-      <label>* Event Date: </label><br>
+      <label>Event Date: </label><br>
       <%= f.date_field :event_date %>
     </div>
 
     <div class="form-group eventfg event_location">
-      <label>* Event Location: </label><br>
+      <label>Event Location: </label><br>
       <%= f.text_field :event_location %>
     </div>
 
@@ -52,12 +50,12 @@
     </div>
 
     <div class="form-group eventfg event_message">
-      <label>* Event Message: </label><br>
+      <label>Event Message: </label><br>
       <%= f.text_field :event_message %>
     </div>
 
     <div class="form-group eventfg event_type">
-      <label>* Event Type: </label><br>
+      <label>Event Type: </label><br>
       <%= f.select(:event_type) do %>
         <% [['Select Answer', ''], ['Keynote', 'Keynote'], ['Fireside chat', 'Fireside chat'], ['Panel', 'Panel'], ['Other', 'Other']].each do |c| -%>
           <%= content_tag(:option, c.first, value: c.last) %>
@@ -84,7 +82,7 @@
     <div class="form-group eventfg submit">
       <%= f.submit "Submit", :class=> "send-message" %>
     </div>
-    <p class="print">* indicates required field</p>
+    <p class="print">ALL fields are required</p>
 
   </fieldset>
 <% end %>

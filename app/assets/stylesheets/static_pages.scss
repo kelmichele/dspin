@@ -55,6 +55,10 @@
 }
 
 .collage-img {margin-bottom: 40px;}
+.title {@include sec-default(); border-bottom: $border; margin-bottom: 60px;
+  h1{margin-bottom: 7px;}
+  h3 {}
+}
 //*************************************//
 //************* HOME ******************//
 //************************************//
@@ -82,7 +86,7 @@ h2 {line-height: 1.35rem;}
       &:hover {color: $black;}
 
       h4{font-weight: bold; letter-spacing: 1px; margin-bottom: 0; text-transform: uppercase;}
-      p{font-size: 16px; letter-spacing: 0; margin-top: 7px;}
+      p{font-size: 16px; letter-spacing: .3px; margin-top: 7px;}
       p span {text-transform: none; font-style: italic; font-weight: bold;}
     }
   }
@@ -248,7 +252,6 @@ h2 {line-height: 1.35rem;}
   }
 }
 
-
 .events{
   .form-group.image {
     label{@include sec-default();}
@@ -283,19 +286,13 @@ h2 {line-height: 1.35rem;}
 }
 
 .past-events {
-  // .ehead, .event-list::before{background-color: $gold;}
-  // .ehead{padding-bottom:30px; 
-  //   // padding:15px 0 0;
-  //   // width:90%; @include center-block(); background-color:$white;border-bottom: 1px solid rgba($black,.4);padding-bottom:0; padding-left:0;
-  //   // h1{color:$black;}
-  // }
-
   .event-list{ 
     &::before {display: none;}
-    h3.sec-title{font-weight: bold;}
+    h3.sec-title{font-weight: bold; text-transform: uppercase; letter-spacing: .3px;}
   }
 
   .cat-list {@include sec-default();}
+  #conferences{margin-top: 40px;}
 
   .event-fw{
     padding-bottom: 0;border-bottom: none; padding-top:60px;border-top:$border;
@@ -311,6 +308,12 @@ h2 {line-height: 1.35rem;}
     &:nth-child(2n+2) {float:right;}
   }
 
+  .event-thr {text-align: center;
+    display: inline-block; float: left; width:30%; margin-left:3%;margin-bottom: 40px;
+    h4{margin-top:15px;}
+    .textbox, iframe {@include sec-default();}
+  }
+
   .event-vid{@include sec-default();margin-bottom: 60px;
     // padding-bottom: 40px;border-bottom: $border;
     // width:640px; height:480px;
@@ -324,20 +327,17 @@ h2 {line-height: 1.35rem;}
     .event-fw{margin-bottom:15px; padding-bottom:15px;}
   }
 
-  .intro {@include sec-default(); padding:0px 0 40px;
-    text-align: center;
+  .intro {@include sec-default(); padding:0px 0 20px;
+    text-align: justify;
     @include center-block(); width:80%;
 
     .border-row{margin-top:15px;}
     h1{margin:0 0 5px;}
-    h3{font-size:1.1rem;margin-top:0;}
+    h3{font-size:1.1rem;margin-top:0;letter-spacing: .2px;}
   }
 }
 
 .press {
-  .title {@include sec-default(); border-bottom: $border; margin-bottom: 60px;}
-  h1{margin-bottom: 7px;}
-
   .event-li {display: inline-block; float: left; margin-bottom: 40px; border:$border;
     // width:45%; margin-left: 3.5%;
     width:48%; 
@@ -368,7 +368,7 @@ h2 {line-height: 1.35rem;}
   h2{margin-top: 0px; font-size:1.25rem;}
 
   h1,h2,h3 {
-    &.as-title {font-weight: bold; font-size: 1.3rem;margin-bottom: 7px; text-transform: uppercase; letter-spacing: 1px;}
+    &.as-title {font-weight: bold; font-size: 1.7rem;margin-bottom: 7px; text-transform: uppercase; letter-spacing: 1px;}
     &.as-title span.norm {letter-spacing: .3px;}
   }
 
@@ -697,23 +697,81 @@ h2 {line-height: 1.35rem;}
 //*************************************//
 //************* REQUESTS **************//
 //************************************//
+.cat-sec{@include sec-default(); 
+  .cat {display: inline-block; float: none; width:23.5%;  margin:10px .5%;
+    background-color: $gold; padding:30px; text-align: center;
+    br.noshow{display: none;}
+    .link-title{@include sec-default(); background-color:$black; color: $white;
+      box-shadow:0px 5px 8px rgba($black,.25); text-align: center;
+      text-transform: uppercase; font-weight: $semi; letter-spacing: .3px;
+
+      min-height:78px; padding:27px 0px 0;
+    }
+    &.comp .link-title {padding-top:15px;}
+  }
+
+  @media screen and (max-width:1255px) {
+    .cat {padding:20px;
+      br.noshow{display: block;}
+      &.dream .link-title{padding-top:15px;}
+    }
+  }
+
+  @include bp(tb) {
+    .cat .link-title{font-size: 15px;}
+  }
+
+  @include bp(br) {
+    text-align: center;
+    .cat { width:45%; float: none; margin: 8px 1%;
+      br, br.noshow {display: none;}
+      .link-title, &.comp .link-title, &.dream .link-title {min-height: auto;padding:10px 0;}
+    }
+  }
+
+  @include bp(md) {
+    .inside.alt{width:90%;}
+    .cat { width:47%; margin: 8px 1%;
+      br, br.noshow {display: none;}
+      .link-title, &.comp .link-title, &.dream .link-title {min-height: auto;padding:10px 0;}
+    }
+  }
+
+  @include bp(oc) {
+    .inside.alt{width:80%;}
+    .cat{@include sec-default(); width: 75%; margin-left: 12.5%; margin-right:0; padding:12px;}
+  }
+
+  @include bp(ph) {
+    .cat{width: 90%; margin-left: 5%; }
+  }
+
+  @include bp(sm) {
+    .cat{@include sec-default(); margin-left: 0; }
+  }
+}
+
 .booking-info{ @include sec-default();
-  .bi-head {@include sec-default(); text-align: center; 
+  .bi-head {@include sec-default(); 
     h1, h2{margin:0;}
     h1{font-size: 1.8rem;}
     h2{font-size: 1.2rem; margin-bottom: 35px;} 
-    .text {@include sec-default(); margin-top: 0px;}
+    .text {@include sec-default(); margin-top: 0px;
+
+    }
+  }
+
+  .cat-sec{
+    h1{margin:0;}
+    h2{margin: 5px 0 20px; font-size: 1.15rem; text-align: justify;}
   }
 
   .form-section {@include sec-default(); padding:30px 0 0;
     p.print{margin:0; color: darken($gold, 10%); float: right; margin-top: -45px;}
-    h4{font-weight: bold; border-bottom:$border;}
+    h4{font-weight: bold; border-bottom:$border; text-transform: uppercase;letter-spacing: .3px;}
 
-    .image, .form-side {display: inline-block; float: left; width: 50%;}
-    .form-side{ width:45%; float:right; }
+    form {padding:15px; border:$border;}
 
-    // label {font-weight: 600;}
-    // input, textarea {border-color:$black;}
     .form-group{
       &.name, &.email, &.phone {width:31%; display: inline-block; float: none; margin: 0 1% 20px;}
       &.eventfg{width:47%; display: inline-block; }
@@ -721,37 +779,19 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  .cat-sec{@include sec-default(); 
-    h2{margin: 10px 0 20px; font-size: 1.15rem; text-align: center;}
-    .cat {display: inline-block; float: none; 
-      width:23.5%;  margin:10px .5%;
-      background-color: $gold; padding:30px; text-align: center;
-      .link-title{@include sec-default(); background-color:$black; color: $white; padding:15px 0;
-        box-shadow:0px 5px 8px rgba($black,.25); text-align: center;
-        text-transform: uppercase; font-weight: $semi; letter-spacing: .4px;
-      }
-    }
-  }
+  // .lform, .cat-sec.inline{display: inline-block; float: left; width:74%;}
+  // .cat-sec.inline{float: right; width:24%;
+  //   .cat {@include sec-default(); margin:8px 0;}
+  // }
 
-  @media screen and (max-width:1100px) {
-    .cat-sec .cat {
-      padding: 20px;
-      .link-title{padding: 15px 0px;}
-    }
-  }
+  .full-img {@include sec-default(); margin-top:15px; margin-bottom:30px;}
 
   @include bp(tb) {
     .bi-head {
       h1 {font-size: 1.65rem;}
     }
 
-    .cat-sec {
-      h2 {font-size:1.1rem;}
-      .cat {padding: 15px;
-        .link-title{padding: 10px 0px; font-size: 15px;}
-      }
-    }
-
+    .cat-sec h2 {font-size:1.1rem;}
     .form-section {padding:0px 0;
       form {width:85%; @include center-block();}
       p.print{ margin-top: 15px;}
@@ -770,11 +810,7 @@ h2 {line-height: 1.35rem;}
       h1 {font-size: 1.4rem;}
     }
 
-    .cat-sec {text-align: center;
-      h2 {font-size:1rem;}
-      .cat { width:45%; float: none; margin: 15px 1%;}
-    }
-
+    .cat-sec h2 {font-size:1rem;}
     fieldset {margin-top: 0; padding-top:0;}
   }
 
@@ -793,11 +829,6 @@ h2 {line-height: 1.35rem;}
     .bi-head {
       h1 {font-size: 1.2rem;}
     }
-
-    .cat-sec {
-      .inside.med-def{width:80%;}
-      .cat{@include sec-default(); margin:7px 0;}
-    }
   }
 }
 
@@ -806,11 +837,12 @@ h2 {line-height: 1.35rem;}
 //************* PACKAGES **************//
 //*************************************//
 .spk-info {
-  h1{font-size:1.7rem;margin-bottom: 0;}
-  h2{font-size:1.1rem; margin-top: 8px;}
+  h1{font-size:1.8rem;margin-bottom: 0;}
+  h2{font-size:1.1rem; margin-top: 8px; margin-bottom: 25px;}
 
   .spk-hd{@include sec-default(); margin-bottom: 50px;
-    .text{width:80%; @include center-block(); text-align: center; }
+    // .text{width:80%; @include center-block(); text-align: justify; }
+    .text {@include sec-default(); text-align: justify;}
   }
 
   .package{@include sec-default(); margin:50px 0 100px;
