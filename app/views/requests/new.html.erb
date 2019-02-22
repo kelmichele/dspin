@@ -2,17 +2,6 @@
 <% @page_description = "" %>
 
 <div class="booking-info">
-	<%= render 'shared/collage-hd' %>
-
-	<!-- <div class="bi-head">
-		<div class="inside lg">
-			<div class="text">
-				<h1>Get ready to get inspired.</h1>
-			</div>
-		</div>
-	</div> -->
-
-	
 	<div class="cat-sec">
 		<div class="inside med-def">
 			<h1>Get ready to get inspired.</h1>
@@ -20,31 +9,36 @@
 				If you are interested in booking Dana to speak at an event or function, please fill out the form on this page and someone from our team will contact you as soon as possible. Select a category from the list below to watch/listen to some of Dana's previous speaking engagements.
 			</h2>
 		</div>
-
-		<div class="inside alt">
-			<%= image_tag('speak-hd.jpg', class: 'img-responsive full-img', alt: '') %>
-			<div class="cat conf">
-				<a href="/past-events#conferences" class="link-title">Conferences</a>
-			</div>
-
-			<div class="cat pod">
-				<a href="/past-events#podcasts" class="link-title">Podcasts</a>
-			</div>
-
-			<div class="cat comp">
-				<a href="/past-events#company" class="link-title">Company/<br>Organizations</a>
-			</div>
-
-			<div class="cat org">
-				<a href="/past-events#dream-sessions" class="link-title">Dream Sessions</a>
-			</div>
-		</div>
+		<div class="inside"><%= image_tag('speak-hd.jpg', class: 'img-responsive full-img', alt: '') %></div>
 	</div>
-
 
 	<div class="form-section">
-		<div class="inside med2-def">
-			<%= render 'form' %>
+		<div class="inside">
+			<div class="lform">
+				<%= render 'form' %>
+				<!-- 
+					place 4 - organization,
+					event name, location, date, time, link, audience, audience size, speaking format (change event type and 'select format'), 
+					speaker budget, message, other event details (additional comments)
+				 -->
+			</div>
+
+			<div class="cat-sec inline">
+				<div class="cat conf">
+					<a href="/past-events#conferences" class="link-title">Conferences</a>
+				</div>
+
+				<div class="cat pod">
+					<a href="/past-events#podcasts" class="link-title">Podcasts</a>
+				</div>
+
+				<div class="cat comp">
+					<a href="/past-events#company" class="link-title">Company/<br>Organizations</a>
+				</div>
+
+				<div class="cat dream">
+					<a href="/past-events#messages" class="link-title">Messages</a>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>

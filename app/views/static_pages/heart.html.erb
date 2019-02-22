@@ -1,17 +1,53 @@
 <% @page_title = "Heart" %>
 <% @page_description = "" %>
 
-<%= render 'shared/collage-hd' %>
-
 <div class="inside"><div class="title">
 	<h1>Meaning is found when passion and purpose collide.</h1>
 </div></div>
 
 <div class="boxes">
 		<div class="inside">
+			<div class="fabrik">
+				<div class="text">
+					<%= image_tag('fabrik.png', alt: '', class: 'img-responsive logo fab') %>
+					<div class="clearfix"></div>
+					<p>
+						This text will be all about fab'rik, but until then will just repeat the Asher copy. As the brand grew, we were moved to serve greater purpose with our products. We found that purpose in Asher Babies, a partnership that faces the reality of childhood abandonment in Africa.
+					</p>
+
+					<p class="more">
+						On average, hundreds of babies are abandoned by their mothers each month in African hospitals, clinics, police stations and even outdoors. 
+						Proceeds from every Asher purchase help provide a loving home, basic needs, healthcare and educational fees for African children who have been abandoned. Each garment from the Asher Collection is paired with a specific child to fund his or her specialized needs.
+					</p>
+
+					<%= link_to "Shop fab'rik", fab_path, target: '_blank', class: 'ds-link' %>
+					<%= link_to "Own a fab'rik Store", 'https://fabrikstyle.com/pages/own-a-store', target: '_blank', class: 'ds-link alt' %>
+				</div>
+
+				<div class="image">
+					<%= image_tag('asher-babes.jpg', alt: '', class: 'img-responsive') %>
+				</div>
+			</div>
+			
+			<div class="border-row"></div>
+
+			<div class="freefab">
+				<div class="text">
+					<%= image_tag('free-fabrik.png', alt: '', class: 'img-responsive logo') %>
+					<p>free fab'rik is a non-profit that hosts free shopping sprees for young ladies in need. Founded in 2009 by Dana Spinola, CEO & founder of fab’rik, free fab'rik's mission is to restore strength, dignity, and hope to women who have lost theirs as a result of depression, poverty, exploitation, and abuse.</p>
+
+					<p class="more">free fab'rik shopping sprees are a chance for these ladies to experience the thrill of boutique shopping, without the pressure of price tags. Women from all over the area volunteer to visit shelters and homes -- to talk, share stories, and spend time getting to know these women. The goal is to remind them just how beautiful they are, and cheer them on as they dress for success.</p>
+					<%= link_to "Donate to free fab'rik", "http://www.freefabrik.org/donate/", target: '_blank', class: 'ds-link' %>
+					<%= link_to "Learn More about free fab'rik", ff_path, target: '_blank', class: 'ds-link alt' %>
+				</div>
+
+				<div class="image"><%= image_tag('ff-group.jpg', alt: '', class: 'img-responsive') %></div>
+			</div>
+			
+			<div class="border-row"></div>
+
 			<div class="asher">
 				<div class="text">
-					<!-- <h2>Asher Collection</h2> -->
 					<%= image_tag('asher.png', alt: '', class: 'img-responsive logo') %>
 					<p>
 						Asher is a collection of women’s clothing born out of a deep-seeded love for extraordinary fashion. As the brand grew, we were moved to serve greater purpose with our products. We found that purpose in Asher Babies, a partnership that faces the reality of childhood abandonment in Africa.
@@ -29,22 +65,6 @@
 				<div class="image">
 					<%= image_tag('asher-babes.jpg', alt: '', class: 'img-responsive') %>
 				</div>
-			</div>
-			
-			<div class="border-row"></div>
-
-			<div class="freefab">
-				<div class="text">
-					<!-- <h2 class="norm">free fab'rik</h2> -->
-					<%= image_tag('free-fabrik.png', alt: '', class: 'img-responsive logo') %>
-					<p>free fab'rik is a non-profit that hosts free shopping sprees for young ladies in need. Founded in 2009 by Dana Spinola, CEO & founder of fab’rik, free fab'rik's mission is to restore strength, dignity, and hope to women who have lost theirs as a result of depression, poverty, exploitation, and abuse.</p>
-
-					<p class="more">free fab'rik shopping sprees are a chance for these ladies to experience the thrill of boutique shopping, without the pressure of price tags. Women from all over the area volunteer to visit shelters and homes -- to talk, share stories, and spend time getting to know these women. The goal is to remind them just how beautiful they are, and cheer them on as they dress for success.</p>
-					<%= link_to "Donate to free fab'rik", "http://www.freefabrik.org/donate/", target: '_blank', class: 'ds-link' %>
-					<%= link_to "Learn More about free fab'rik", ff_path, target: '_blank', class: 'ds-link alt' %>
-				</div>
-
-				<div class="image"><%= image_tag('ff-group.jpg', alt: '', class: 'img-responsive') %></div>
 			</div>
 		</div>
 	</div>

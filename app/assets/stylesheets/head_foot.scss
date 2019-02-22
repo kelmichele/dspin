@@ -38,6 +38,8 @@
 		&.fab {float:right; margin:0;
 			.nav-fab {height:17px;}
 		}
+
+		// &.active {border-bottom: 1.5px solid $black;}
 	}
 
 	.uk-navbar-dropdown{ padding: 10px 5px 15px 10px; margin-top: 15px;
@@ -119,7 +121,7 @@ footer {@include sec-default();
 	.btm-foot {@include sec-default(); padding: 10px; background-color: $black;
 		.copy, .hs {display: inline-block; float: left; width:50%;}
 		.hs {float: right; text-align: right;}
-		p, a {color: $white; font-size: 13px; letter-spacing: 1.2px; margin: 0;}
+		p, a {color: $white; font-size: 11px; letter-spacing: 1.2px; margin: 0;}
 	}
 
 

@@ -25,7 +25,9 @@
 
       <div class="navstick">
         <ul class="uk-navbar-nav">
-          <li><%= link_to "About", about_path %></li>
+          <% if current_page?('/contact') %>
+          <% end %>
+          <li class="active"><%= link_to "About", about_path %></li>
           <!-- <li><%= link_to "Events", events_path %></li> -->
 
           <li>
@@ -33,7 +35,7 @@
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li><%= link_to "Past Events", past_events_path %></li>
-                <li><%= link_to "Dream Sessions", speaking_info_path %></li>
+                <li><%= link_to "Messages", speaking_info_path %></li>
               </ul>
             </div>
               
@@ -50,3 +52,7 @@
     </div>
   </nav>
 </header>
+
+<% unless current_page?(root_path) %>
+<%= render 'shared/collage-hd' %>
+<% end %>

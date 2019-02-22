@@ -6,10 +6,9 @@
 			<div class="ft-block one">
 				<h4>Speaking</h4>
 				<ul>
-          <!-- <li><%= link_to "Events", events_path %></li> -->
+					<li><%= link_to "Request Dana", speaking_path %></li>
 					<li><%= link_to "Past Events", past_events_path %></li>
-					<li><%= link_to "Book Dana", speaking_path %></li>
-					<li><%= link_to "Dream Sessions", speaking_info_path %></li>
+					<li><%= link_to "Messages", speaking_info_path %></li>
 				</ul>
 			</div>
 
@@ -17,27 +16,27 @@
 				<h4>Book</h4>
 				<ul>
 					<li><%= link_to "About the Book", love_what_you_do_path %></li>
-					<li><%= link_to "Buy the Book", buy_the_book_path %></li>
+					<li><%= link_to "Buy the Book", 'https://fabrikstyle.com/products/love-what-you-do', target: '_blank' %></li>
 				</ul>
 			</div>
 
 			<div class="clearfix mobile"></div>
 
 			<div class="ft-block three">
-				<h4>Partners</h4>
-				<ul>
-					<li><%= link_to "Asher", '/asher', target: '_blank' %></li>
-					<li><%= link_to "free fab'rik", '/ff', target: '_blank', class: 'norm' %></li>
-					<li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
-				</ul>
-			</div>
-
-			<div class="ft-block four">
-				<h4>Company</h4>
+				<h4>About</h4>
 				<ul>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", about_path %></li>
           <li><%= link_to "Press", press_path %></li>
+				</ul>
+			</div>
+
+			<div class="ft-block three">
+				<h4>Heart</h4>
+				<ul>
+					<li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
+					<li><%= link_to "free fab'rik", '/ff', target: '_blank', class: 'norm' %></li>
+					<li><%= link_to "Asher", '/asher', target: '_blank' %></li>
 				</ul>
 			</div>
 		</div>

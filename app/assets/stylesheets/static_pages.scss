@@ -338,6 +338,11 @@ h2 {line-height: 1.35rem;}
 }
 
 .press {
+  h1, .btn-side {display: inline-block; float: left;}
+  .btn-side {float:right; margin-top: 10px;
+    .ds-link {text-transform: uppercase;}
+  }
+
   .event-li {display: inline-block; float: left; margin-bottom: 40px; border:$border;
     // width:45%; margin-left: 3.5%;
     width:48%; 
@@ -489,7 +494,8 @@ h2 {line-height: 1.35rem;}
 
   .overview {@include sec-default(); padding:$pad; 
     .text, .image {display: inline-block; float: left; width: 40%;}
-    .text{float: right; width:55%; margin-top:7.5%; }
+    .text{width:55%; margin-top:7.5%; }
+    .image{float:right;}
     p{text-transform: none;}
 
     .uk-slideshow{ height:600px;}
@@ -752,26 +758,17 @@ h2 {line-height: 1.35rem;}
 }
 
 .booking-info{ @include sec-default();
-  .bi-head {@include sec-default(); 
-    h1, h2{margin:0;}
-    h1{font-size: 1.8rem;}
-    h2{font-size: 1.2rem; margin-bottom: 35px;} 
-    .text {@include sec-default(); margin-top: 0px;
-
-    }
-  }
-
   .cat-sec{
     h1{margin:0;}
     h2{margin: 5px 0 20px; font-size: 1.15rem; text-align: justify;}
   }
 
-  .form-section {@include sec-default(); padding:30px 0 0;
+  .form-section {@include sec-default(); 
     p.print{margin:0; color: darken($gold, 10%); float: right; margin-top: -45px;}
     h4{font-weight: bold; border-bottom:$border; text-transform: uppercase;letter-spacing: .3px;}
 
     form {padding:15px; border:$border;}
-
+    fieldset {margin-bottom: 0;}
     .form-group{
       &.name, &.email, &.phone {width:31%; display: inline-block; float: none; margin: 0 1% 20px;}
       &.eventfg{width:47%; display: inline-block; }
@@ -779,17 +776,15 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  // .lform, .cat-sec.inline{display: inline-block; float: left; width:74%;}
-  // .cat-sec.inline{float: right; width:24%;
-  //   .cat {@include sec-default(); margin:8px 0;}
-  // }
+  .lform, .cat-sec.inline{display: inline-block; float: left; width:74%;}
+  .cat-sec.inline{float: right; width:24%;
+    .cat {@include sec-default(); margin:8px 0;}
+  }
 
   .full-img {@include sec-default(); margin-top:15px; margin-bottom:30px;}
 
   @include bp(tb) {
-    .bi-head {
-      h1 {font-size: 1.65rem;}
-    }
+    h1 {font-size: 1.65rem;}
 
     .cat-sec h2 {font-size:1.1rem;}
     .form-section {padding:0px 0;
@@ -806,18 +801,13 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(tn) {
-    .bi-head {
-      h1 {font-size: 1.4rem;}
-    }
-
+    h1 {font-size: 1.4rem;}
     .cat-sec h2 {font-size:1rem;}
     fieldset {margin-top: 0; padding-top:0;}
   }
 
   @include bp(md) {
-    .bi-head {
-      h1 {font-size: 1.3rem;}
-    }
+    h1 {font-size: 1.3rem;}
 
     .form-section {
       form {width:95%; }
@@ -826,9 +816,7 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(ph) {
-    .bi-head {
-      h1 {font-size: 1.2rem;}
-    }
+    h1 {font-size: 1.2rem;}
   }
 }
 
@@ -841,8 +829,8 @@ h2 {line-height: 1.35rem;}
   h2{font-size:1.1rem; margin-top: 8px; margin-bottom: 25px;}
 
   .spk-hd{@include sec-default(); margin-bottom: 50px;
-    // .text{width:80%; @include center-block(); text-align: justify; }
     .text {@include sec-default(); text-align: justify;}
+    .ds-link {text-transform: uppercase;}
   }
 
   .package{@include sec-default(); margin:50px 0 100px;
@@ -895,74 +883,20 @@ h2 {line-height: 1.35rem;}
   }
 
   .boxes {@include sec-default();}
-  .asher, .freefab {@include sec-default(); margin:30px 0 70px; 
+  .asher, .freefab, .fabrik {@include sec-default(); margin:30px 0 70px; 
     h2{margin-bottom: 7px; font-weight: $semi;}
     p{margin-top:0;}
     .text, .image {display: inline-block; float: left; width:44%;}
     .text {width: 53%; float: right;}
 
-    iframe {width:100%; min-height:375px;}
     .logo {width:200px; margin:15px 0;}
+    .logo.fab {width:175px;}
     //682 375 
   }
 
   .freefab{
     .text {float:left;}
     .image {float:right;}
-  }
-
-
-  .ab-sec {@include sec-default(); padding:50px 0; 
-    .text, .image { display: inline-block; float: left;}
-    .text {width:60%; padding:80px 0;}
-    .image {width:33%; float: right;}
-    .logo{width:200px;}
-    .logo.free{width:240px;}
-
-    position: relative; z-index: 0;
-    &::before {@include before();z-index: -1;width:8%;left:59%;}
-    &::after{@include after(); z-index: -2; width:40%; left:60%; @include sec-bgimage('zuri.jpg'); background-size: cover; }
-
-    $asher: lighten($gold, 15%);;
-    $ff: $white;
-
-    &.ash{background-color:$asher;
-      &::before {
-        background: -webkit-linear-gradient(-90deg, rgba($asher, 0) 10%, rgba($asher, .8) 40%, $asher 85%);
-        background: linear-gradient(-90deg, rgba($asher, 0) 10%, rgba($asher, .8) 40%, $asher 85%);
-      }
-    }
-
-    &.free{
-      background-color: $ff;
-      &::after {background-image: url(image_path('ff-group.jpg')); left:0;}
-      &::before {left:34%;
-        background: -webkit-linear-gradient(90deg, rgba($ff, 0) 10%, rgba($ff, .8) 40%, $ff 65%);
-        background: linear-gradient(90deg, rgba($ff, 0) 10%, rgba($ff, .8) 40%, $ff 65%);
-      }
-
-      .text{float:right;}
-    }
-  }
-
-
-  .package{@include sec-default(); margin:50px 0 100px;
-    position: relative; z-index: 0;
-    &::before {@include before(); border:5px double $black; width:90%;}
-    .dets, .image {display: inline-block; float: left; width:59%;}
-    .image {width:40%; float: right; margin-top: -5%;}
-    .dets {padding: 55px 0px 65px;}
-
-    &.p1{
-      .dets{margin-left:4%; width:60%;}
-      .image{margin-right: -8%;}
-    }
-
-    &.p2{
-      .dets {float:right; margin-right: 6%;}
-      .image{float: left; margin-left: -8%;}
-      &::before{left:10%;}
-    }
   }
 }
 
