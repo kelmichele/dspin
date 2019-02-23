@@ -2,22 +2,40 @@
 <% @page_description = "" %>
 
 <div class="book">
-	<div class="inside med2-def">
+	<!-- <div class="inside med2-def">
 		<div class="book-header2">
 			<div class="text">
 				<h1>What you do is<br class="md-hide"> not your job title;<br> it's the good work you put into<br class="nn-hide"> this world.</h1>
 				<span class="sign">- Dana Spinola</span>
 			</div>
 		</div>
+	</div> -->
+	<div class="inside med-def"><div class="title"><h1 class="norm">love what you do.</h1></div></div>
+
+	<div class="inside med2-def">
+		<div class="book-header3">
+      <div class="image"><%= image_tag('dbook3.jpg', class: 'img-responsive', alt: '') %></div>
+
+			<div class="open">	
+				<p>For anyone asking the question: do you really love what you do, not just your job, but your whole life? Does it make you happy, proud, and serve those around you? In love what you do, Dana Spinola will help you create a plan for your life providing unaltered, focused, exhilarating clarity around your passion. After hundreds of coffee requests to meet and discuss this topic of getting unstuck in a life that lacks meaning or slowing down an overwhelmed and over scheduled life, Dana has put this onto paper to help guide you to loving what you do.</p>
+			</div>
+		</div>
 	</div>
 
-	<div class="purchase2">
+
+	<!-- <div class="purchase2">
 		<div class="inside">
       <h2>love what you do.</h2>
       <h3>Order your copy today!</h3>
 			<%= render 'book-options' %>
 		</div>
-	</div>
+	</div> -->
+
+		<div class="btn-section">
+			<div class="inside">
+				<%= render 'book-options' %>
+			</div>
+		</div>
 
 	<div class="overview">
 		<div class="inside med">
@@ -39,31 +57,15 @@
 		</div>
 	</div>
 
-  <div class="inside"><div class="border-row"></div></div>
-	<!-- for special rates for your organization, contact LWYD@fabrikstyle.com -->
+  <!-- <div class="inside"><div class="border-row"></div></div> -->
+	<div class="inside">
+		<div class="rates">	
+			<h3>For special rates for your organization, contact:<br>
+				<a href="mailto:LWYD@fabrikstyle.com"> LWYD@fabrikstyle.com</a>
+			</h3>
+		</div>
+	</div>
 
-	<!-- <div class="bulk top-blk">
-	  <div class="inside med2-def">
-	  	<div class="intro">
-	      <h3 class="sec-title">Bulk Pricing Rates</h3>
-	      <h4>Books retail for $22, but we also offer the group rates listed below for anyone interested in providing every member of their team with a gift that will inspire and refuel them. Purchase 100 or more books, and Dana will come lead a dream session for you and your team! </h4>
-	    </div>
-
-	    <div class="image">
-	      <%= image_tag('reader2.jpg', class: 'img-responsive img1', alt: '') %>
-	      <%= image_tag('reader3.jpg', class: 'img-responsive img2', alt: '') %>
-	    </div>  
-
-	    <div class="boxes">
-	      <div class="inside">
-	        <div class="book-pkgs"><p><span>Buy 50 books:</span><br> 10% off order</p></div>
-	        <div class="book-pkgs"><p><span>Buy 100 books:</span><br> 20% off order</p></div>
-	        <div class="book-pkgs"><p><span>Buy 250 books:</span><br> 30% off order</p></div>
-	        <div class="book-pkgs"><p><span>Buy 1000 books:</span> <br>40% off order</p></div>
-	      </div>
-	    </div>
-	  </div>
-	</div> -->
 </div>
 
 
