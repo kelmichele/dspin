@@ -344,9 +344,7 @@ h2 {line-height: 1.35rem;}
   }
 
   .event-li {display: inline-block; float: left; margin-bottom: 40px; border:$border;
-    // width:45%; margin-left: 3.5%;
-    width:48%; 
-    margin:0 1% 40px; min-height: 502px;
+    width:48%; margin:0 1% 40px; min-height: 502px;
     // &:nth-child(2n+2){float:right;}
 
     .article-img{border-bottom:$border;}
@@ -354,13 +352,19 @@ h2 {line-height: 1.35rem;}
       &:hover {text-decoration: none;}
     }
     
-    .event-image{margin-bottom: 20px;}
+    .event-image{margin-bottom: 20px; }
     .event-box {@include sec-default();}
 
-    // p.pub {margin-bottom: 0; font-size:15px; }
     p{font-size:15px; margin-bottom: 0;}
     p.text-link{color: $dgold; margin-top:10px;}
     h4{margin-top: 5px; font-size:1.2rem; letter-spacing: .3px;}
+
+    &.podcast{
+      .article-img {height:345px; padding-top:40px;
+        img{height:260px;@include center-block();}
+      }
+      // .textbox{border-top:$border;}
+    }
   }
 }
 

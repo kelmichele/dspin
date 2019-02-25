@@ -31,13 +31,17 @@
 				</ul>
 			</div>
 
-			<div class="ft-block three">
+			<div class="ft-block four">
 				<h4>Heart</h4>
 				<ul>
 					<li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
 					<li><%= link_to "free fab'rik", '/ff', target: '_blank', class: 'norm' %></li>
 					<li><%= link_to "Asher", '/asher', target: '_blank' %></li>
 				</ul>
+			</div>
+
+			<div class="ft-block soc">
+				<ul class="social"><%= render 'shared/social' %></ul>
 			</div>
 		</div>
 	</div>
