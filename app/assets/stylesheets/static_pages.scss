@@ -288,14 +288,15 @@ h2 {line-height: 1.35rem;}
 .past-events {
   .event-list{ 
     &::before {display: none;}
-    h3.sec-title{font-weight: bold; text-transform: uppercase; letter-spacing: .3px;}
+    h3.sec-title{font-weight: bold; text-transform: uppercase; letter-spacing: .3px; border-bottom:$border; padding-bottom: 7px; margin:20px 0 50px;}
+    h4{letter-spacing: .3px;}
   }
 
   .cat-list {@include sec-default();}
   #conferences{margin-top: 40px;}
 
   .event-fw{
-    padding-bottom: 0;border-bottom: none; padding-top:60px;border-top:$border;
+    padding-bottom: 0;border-bottom: none; padding-top:60px;
     iframe {min-height:350px; margin-bottom: 15px; width:60%;}
     .textbox{width:35%;}
   }
@@ -309,9 +310,11 @@ h2 {line-height: 1.35rem;}
   }
 
   .event-thr {text-align: center;
-    display: inline-block; float: left; width:30%; margin-left:3%;margin-bottom: 40px;
+    display: inline-block; float: left; width:30%; margin-left:3%; margin-bottom: 40px;
+    min-height:360px;
     h4{margin-top:15px;}
     .textbox, iframe {@include sec-default();}
+    img{@include center-block(); height:280px;}
   }
 
   .event-vid{@include sec-default();margin-bottom: 60px;
