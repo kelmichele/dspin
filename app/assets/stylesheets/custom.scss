@@ -5,20 +5,20 @@
 
 @font-face {
   font-family: 'Silver South Serif';
-  src: url('SilverSouthSerif.eot');
-  src: url('SilverSouthSerif.eot?#iefix') format('embedded-opentype'),
-      url('SilverSouthSerif.woff2') format('woff2'),
-      url('SilverSouthSerif.woff') format('woff');
+  src: font-url('SilverSouthSerif.eot');
+  src: font-url('SilverSouthSerif.eot?#iefix') format('embedded-opentype'),
+      font-url('SilverSouthSerif.woff2') format('woff2'),
+      font-url('SilverSouthSerif.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Silver South Script';
-  src: url('SilverSouthScript.eot');
-  src: url('SilverSouthScript.eot?#iefix') format('embedded-opentype'),
-      url('SilverSouthScript.woff2') format('woff2'),
-      url('SilverSouthScript.woff') format('woff');
+  src: font-url('SilverSouthScript.eot');
+  src: font-url('SilverSouthScript.eot?#iefix') format('embedded-opentype'),
+      font-url('SilverSouthScript.woff2') format('woff2'),
+      font-url('SilverSouthScript.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
