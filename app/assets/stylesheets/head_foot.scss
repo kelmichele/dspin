@@ -112,14 +112,13 @@ footer {@include sec-default();
 			// width:18%; float: none; vertical-align: top;
 			// &.one {margin-left: 3%;}
 			// &.three, &.four, &.soc {width:12%;}
-			ul.social li {display: inline-block; float: none; margin: 7px 10px 0;}
+			ul.social li {display: inline-block; float: none; margin: 7px 5px 0;}
 
 			// newest 
-			width:18%; float: none; vertical-align: top;
+			width:17.5%; float: left; vertical-align: top;
 			h4,p,li, &.soc{text-align: left;}
-
-			// &.one {margin-left: 1%;}
-			&.three, &.four {width:14%;}
+			&.one {margin-left: 5%; }
+			&.three, &.four, &.icons {width:14%;}
 			&.soc{
 				input {@include sec-default(); margin-bottom: 15px; height:35px;}
 				.ds-link{font-size: 14px;}

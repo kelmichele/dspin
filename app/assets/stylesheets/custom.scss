@@ -1,14 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,500,600|Montserrat:400,600,700|Lato:400,700|Qwigley');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Lato:400,700');
+// Prata 'Prata', serif;
 @import "mixins";
 @import "variables";
+
+@font-face {
+  font-family: 'Silver South Serif';
+  src: url('SilverSouthSerif.eot');
+  src: url('SilverSouthSerif.eot?#iefix') format('embedded-opentype'),
+      url('SilverSouthSerif.woff2') format('woff2'),
+      url('SilverSouthSerif.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Silver South Script';
+  src: url('SilverSouthScript.eot');
+  src: url('SilverSouthScript.eot?#iefix') format('embedded-opentype'),
+      url('SilverSouthScript.woff2') format('woff2'),
+      url('SilverSouthScript.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
-}
-
-@font-face {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -125,7 +143,7 @@ body {
   p{font-size: 14px;}
   h1{font-size: 2rem; font-weight: bold; text-transform: uppercase;font-family: $didot;
     font-weight: normal; letter-spacing: .2px; text-align: center;
-    span {font-family: $quig; text-transform: none; font-size:3.3rem;}
+    span {font-family: $quig; text-transform: none; font-size:3.4rem;}
   }
   h2{font-size: 1.75rem;}
   h2, h3, h4, h5 {font-family: $lato;}

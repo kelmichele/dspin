@@ -795,8 +795,8 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  .lform, .cat-sec.inline{display: inline-block; float: right; width:74%;}
-  .cat-sec.inline{float: left; width:24%;
+  .lform, .cat-sec.inline{display: inline-block; float: left; width:74%;}
+  .cat-sec.inline{float: right; width:24%;
     .cat {@include sec-default(); margin:8px 0;}
   }
 
