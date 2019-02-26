@@ -335,13 +335,14 @@ h2 {line-height: 1.35rem;}
 }
 
 .press {
-  h1, .btn-side {display: inline-block; float: left;}
-  .btn-side {float:right; margin-top: 10px;
-    .ds-link {text-transform: uppercase;}
+  // h1, .btn-side {display: inline-block; float: left;}
+  h1{margin-bottom: 0;}
+  .btn-side {@include sec-default(); margin: 10px 0 70px;
+    .ds-link {text-transform: uppercase; @include center-block(); width:20%;}
   }
 
   .event-li {display: inline-block; float: left; margin-bottom: 40px; border:$border;
-    width:48%; margin:0 1% 40px; min-height: 502px;
+    width:48%; margin:0 1% 40px; min-height: 503px;
     // &:nth-child(2n+2){float:right;}
 
     .article-img{border-bottom:$border;}
@@ -480,7 +481,7 @@ h2 {line-height: 1.35rem;}
 //************************************//
 .book {
   h2,h1{text-transform: uppercase;}
-  h1{font-weight: $semi; margin:0;font-size:1.9rem; line-height: 1.7em;}
+  // h1{font-weight: $semi; margin:0;font-size:1.9rem; line-height: 1.7em;}
   h3.sec-title {margin-bottom:0; font-weight: bold; text-transform: uppercase;}
 
   .book-header2 {@include sec-default(); position: relative; 

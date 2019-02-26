@@ -141,9 +141,9 @@ body {
   }
   p,li{font-weight: 300;}
   p{font-size: 14px;}
-  h1{font-size: 2rem; font-weight: bold; text-transform: uppercase;font-family: $didot;
+  h1{font-size: 2rem; text-transform: uppercase;font-family: $didot;
     font-weight: normal; letter-spacing: .2px; text-align: center;
-    span {font-family: $quig; text-transform: none; font-size:3.4rem;}
+    span {font-family: $quig; text-transform: none; font-size:3.4rem; }
   }
   h2{font-size: 1.75rem;}
   h2, h3, h4, h5 {font-family: $lato;}

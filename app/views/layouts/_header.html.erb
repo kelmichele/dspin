@@ -25,12 +25,10 @@
 
       <div class="navstick">
         <ul class="uk-navbar-nav">
-          <% if current_page?('/contact') %>
-          <% end %>
-          <li class="active"><%= link_to "About", about_path %></li>
+          <li class="<% if current_page?('/about') %>active<% end %>"><%= link_to "About", about_path %></li>
           <!-- <li><%= link_to "Events", events_path %></li> -->
 
-          <li>
+          <li class="<% if current_page?('/speaking') || current_page?('/past-events') || current_page?('/speaking-info') %>active<% end %>">
             <%= link_to "Speaking", speaking_path %>
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -38,12 +36,11 @@
                 <li><%= link_to "Messages", speaking_info_path %></li>
               </ul>
             </div>
-              
           </li>
 
-          <li><%= link_to "Book", love_what_you_do_path %></li>
-          <li><%= link_to "Press", press_path %></li>
-          <li><%= link_to "Heart", heart_path %></li>
+          <li class="<% if current_page?('/love-what-you-do') %>active<% end %>"><%= link_to "Book", love_what_you_do_path %></li>
+          <li class="<% if current_page?('/press') %>active<% end %>"><%= link_to "Press", press_path %></li>
+          <li class="<% if current_page?('/heart') %>active<% end %>"><%= link_to "Heart", heart_path %></li>
            
           <li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>
         </ul>

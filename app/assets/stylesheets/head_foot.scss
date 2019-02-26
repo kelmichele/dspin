@@ -31,6 +31,10 @@
 
 	.uk-navbar-nav li{
 		display: inline-block; float: none;margin: 0px 1.5%;
+		border-bottom: 2px solid transparent;
+
+		&.active {border-color: $black;}
+
 		a {font-size: 16px; font-family: $lato; color: $black; text-transform: uppercase; 
 			letter-spacing: .8px;padding:0; min-height: auto;}
 
