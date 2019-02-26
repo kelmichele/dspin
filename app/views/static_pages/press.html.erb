@@ -1,11 +1,12 @@
 <% @page_title = "Press" %>
 <% @page_description = "" %>
 
+<!-- https://www.bizjournals.com/bizwomen/news/profiles-strategies/2017/10/fabrik-founder-wins-with-the-wow-factor.html?page=all  -->
 
 <div class="event-lay press">
 	<div class="inside">
 		<div class="title">
-			<h1>Haute off the Press.</h1>
+			<h1><span>Haute</span> off the Press.</h1>
 
 			<div class="btn-side">
 				<%= link_to "Feature Dana", press_form_path, class: 'ds-link' %>
@@ -104,7 +105,7 @@
 
 			<!-- #9 pod -->
 			<%= link_to "https://simplecast.com/s/168bffc8 ", target: '_blank', class: 'event-li podcast' do %>
-				<div class="article-img"><%= image_tag 'pod-love.jpg', class: 'img-responsive', alt: '' %></div>
+				<div class="article-img"><%= image_tag 'pod-lovework.png', class: 'img-responsive', alt: '' %></div>
 				<div class="textbox">
 					<h4>Love or Work</h4>
 					<p class="text-link">Visit Podcast</p>
@@ -123,7 +124,7 @@
 
 			<!-- #11 -->
 			<%= link_to "https://www.ajc.com/blog/atlanta-restaurants/dining-with-the-stars-dana-spinola-favorite-atlanta-restaurants/DMtZMV8PTn4WHQbVnJAycL/", class: 'event-li article', target: '_blank' do %>
-				<%= image_tag 'press-ajc.jpg', class: 'img-responsive article-img', alt: '' %>
+				<%= image_tag 'press-ajc2.png', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">AJC</p>
 					<h4>Dining With the Stars: Dana Spinola’s favorite Atlanta restaurants</h4>
@@ -177,12 +178,12 @@
 				</div>
 			<% end %>
 
-			<!-- #17 Last -->
-			<%= link_to "https://www.fsunews.com/story/news/2018/04/01/fabrik-founder-speaks-fsu-college-business/476100002/", class: 'event-li article', target: '_blank' do %>
-				<%= image_tag 'press-fsu.jpg', class: 'img-responsive article-img', alt: '' %>
+			<!-- no number -->
+			<%= link_to "https://www.bizjournals.com/bizwomen/news/profiles-strategies/2017/10/fabrik-founder-wins-with-the-wow-factor.html?page=all", class: 'event-li article', target: '_blank' do %>
+				<%= image_tag 'press-main3.jpg', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
-					<p class="pub">FSUNews.com</p>
-					<h4>Fab’rik founder speaks at FSU College of Business</h4>
+					<p class="pub">bizwomen</p>
+					<h4>Fab'rik founder wins with the wow factor</h4>
 					<p class="text-link">View Article</p>
 				</div>
 			<% end %>
@@ -193,6 +194,16 @@
 				<div class="textbox">
 					<p class="pub">Atlanta Daybook</p>
 					<h4>October 2018 Atlanta Apparel Market Showcases Spring / Summer 2019 Trends</h4>
+					<p class="text-link">View Article</p>
+				</div>
+			<% end %>
+
+			<!-- #17 Last -->
+			<%= link_to "https://www.fsunews.com/story/news/2018/04/01/fabrik-founder-speaks-fsu-college-business/476100002/", class: 'event-li article', target: '_blank' do %>
+				<%= image_tag 'press-fsu.jpg', class: 'img-responsive article-img', alt: '' %>
+				<div class="textbox">
+					<p class="pub">FSUNews.com</p>
+					<h4>Fab’rik founder speaks at FSU College of Business</h4>
 					<p class="text-link">View Article</p>
 				</div>
 			<% end %>

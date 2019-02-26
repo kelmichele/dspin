@@ -18,7 +18,7 @@
 	&:hover {text-decoration: none; color: $black; opacity: .7;}
 }
 
-.inline-header {@include sec-default();background-color: $white; padding:50px 0 40px;
+.inline-header {@include sec-default();background-color: $white; padding:50px 0 70px;
 	.uk-navbar-container.inside{width:90%;background-color: $white;}
 	.nb-logo, .uk-navbar-nav { width:270px; width:22%; display: inline-block; float: left;}
 	.nb-logo{padding:20px 0px 0;}
@@ -31,7 +31,7 @@
 
 	.uk-navbar-nav li{
 		display: inline-block; float: none;margin: 0px 1.5%;
-		a {font-size: 16px; font-family: $monte; color: $black; text-transform: uppercase; 
+		a {font-size: 16px; font-family: $lato; color: $black; text-transform: uppercase; 
 			letter-spacing: .8px;padding:0; min-height: auto;}
 
 		&:first-child{margin-left: 0;}
@@ -48,7 +48,7 @@
 		background-color: $f9;
 		.uk-nav.uk-navbar-dropdown-nav {text-align: left;
 			li {@include sec-default(); padding:5px 0;
-				a{font-weight: normal;text-transform: uppercase; font-size: 14.5px; letter-spacing: .2px; }
+				a{font-weight: normal;text-transform: none; font-size: 14px; letter-spacing: .2px; }
 			}
 		}
 	}
@@ -105,25 +105,35 @@ footer {@include sec-default();
 	.top-foot {@include sec-default(); padding:30px 0 20px;
 		text-align: center;
 		.ft-block {display: inline-block; float: left; width:20%;
-			&.one {margin-left: 15%;}
+			// &.one {margin-left: 15%;}
 
 
 			// new
+			// width:18%; float: none; vertical-align: top;
+			// &.one {margin-left: 3%;}
+			// &.three, &.four, &.soc {width:12%;}
+			ul.social li {display: inline-block; float: none; margin: 7px 10px 0;}
+
+			// newest 
 			width:18%; float: none; vertical-align: top;
-			&.one {margin-left: 3%;}
-			&.three, &.four, &.soc {width:12%;}
-			// &.soc {float: right; width:5%;}
+			h4,p,li, &.soc{text-align: left;}
 
-			ul.social li {display: inline-block; float: none; margin: 0 10px;}
-
+			// &.one {margin-left: 1%;}
+			&.three, &.four {width:14%;}
+			&.soc{
+				input {@include sec-default(); margin-bottom: 15px; height:35px;}
+				.ds-link{font-size: 14px;}
+				p{margin-top: 0;}
+			}
 		}
 
 		h4, p, a {text-transform: uppercase; letter-spacing: .3px;}
-		h4{margin-bottom: 0px; font-size:1.15rem;font-weight: 600;}
+		h4{margin-bottom: 0px; font-size:1.15rem;font-weight: 600; 
+			font-family: $quig; text-transform: none; font-size: 2.2rem; letter-spacing: 1px;
+		}
 		ul {margin-top:10px; padding:0;}
-		li{margin-bottom: 7px;}
+		li{margin-bottom: 7px; font-size: 15px;}
 		li.fab .nav-fab {height:16px;}
-		h4, li{text-align: left;}
 	}
 
 	.btm-foot {@include sec-default(); padding: 10px; background-color: $black;

@@ -5,7 +5,7 @@
 	<div class="event-list">
 		<div class="inside med-def">
 			<div class="intro">
-				<h1>Your front-row seat to past events.</h1>
+				<h1>Your <span>front-row</span> seat to past events.</h1>
 				<!-- <h3>Dana is a leader, a business person, and a working mom. She speaks on business, faith, LWYD, and what breaks your heart. If you are interested in booking Dana to speak at an event or function, <%= link_to "click here", speaking_path, class: 'text-link' %> to provide us with a few details. </h3> -->
 				<h3>Here's a closer look at Dana's previous speaking engagements. Get a better feel for Dana's message. From keynote speaker at UGA 40 Under 40, to "Imagine If" Innovation Conference.</h3>
 			</div>
@@ -13,28 +13,28 @@
 
 		<div class="cat-sec">
 			<div class="inside alt">
-				<div class="cat conf">
-					<a href="/past-events#conferences" class="link-title">Conferences</a>
+				<div class="cat key">
+					<a href="/past-events#keynotes" class="link-title">Keynotes</a>
 				</div>
 
-				<div class="cat pod">
+				<div class="cat chat">
+					<a href="/past-events#chats" class="link-title">Fireside Chats</a>
+				</div>
+
+				<div class="cat pods">
 					<a href="/past-events#podcasts" class="link-title">Podcasts</a>
 				</div>
 
-				<div class="cat comp">
-					<a href="/past-events#company" class="link-title">Company/<br>Organizations</a>
-				</div>
-
-				<div class="cat dream">
+				<div class="cat msg">
 					<a href="/past-events#messages" class="link-title">Messages</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="inside med-def">
-			<div id="conferences" class="cat-list">
+			<div id="keynotes" class="cat-list">
 				<!-- <div class="border-row more"></div>  -->
-				<h3 class="sec-title">Conferences</h3>
+				<h3 class="sec-title">Keynotes</h3>
 
 				<div class="event-hlf">
 					<iframe src="https://www.youtube.com/embed/H3gJtV6Cy-0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -80,14 +80,14 @@
 				<% end %>
 
 				<%= link_to "https://simplecast.com/s/168bffc8 ", target: '_blank', class: 'event-thr' do %>
-					<%= image_tag 'pod-love.jpg', class: 'img-responsive', alt: '' %>
+					<%= image_tag 'pod-lovework.png', class: 'img-responsive', alt: '' %>
 					<h4>Love or Work</h4>
 				<% end %>
 			</div>
 			<div class="border-row"></div>
 
-			<div id="company" class="cat-list">
-				<h3 class="sec-title">Company/Organizations</h3>
+			<div id="chats" class="cat-list">
+				<h3 class="sec-title">Fireside Chats</h3>
 				<!-- imagine if vid, boosterthon? -->
 				<div class="event-fw">
 					<iframe src="https://drive.google.com/file/d/1nCIhXMid3IAVCn7XAEvBMMPxK8lTLVR3/preview"></iframe>

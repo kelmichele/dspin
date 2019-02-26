@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,500,600|Montserrat:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,500,600|Montserrat:400,600,700|Lato:400,700|Qwigley');
 @import "mixins";
 @import "variables";
 
@@ -122,10 +122,13 @@ body {
     &.semi {font-weight: $semi;}
   }
   p,li{font-weight: 300;}
-  p{font-size: 17px;}
-  h1{font-size: 2rem; font-weight: bold; text-transform: uppercase;}
+  p{font-size: 14px;}
+  h1{font-size: 2rem; font-weight: bold; text-transform: uppercase;font-family: $didot;
+    font-weight: normal; letter-spacing: .2px; text-align: center;
+    span {font-family: $quig; text-transform: none; font-size:3.3rem;}
+  }
   h2{font-size: 1.75rem;}
-  h1, h2, h3, h4, h5 {font-family: $monte;}
+  h2, h3, h4, h5 {font-family: $lato;}
   span.norm{text-transform: none;}
 }
 .bmargin0 {margin-bottom: 0;}
@@ -174,7 +177,7 @@ form{
   &.admin-form .form-group {margin-bottom: 30px;}
   .form-group.submit{@include sec-default();
     input.send-message, input[type=submit] { width:auto; height:auto; background-color: $black; font-size: 15px; color: $white; 
-      font-weight: 600; text-transform: uppercase; letter-spacing: .7px;font-family: $monte; padding: 8px 30px;
+      font-weight: 600; text-transform: uppercase; letter-spacing: .7px;font-family: $lato; padding: 8px 30px;
     }
   }
 }

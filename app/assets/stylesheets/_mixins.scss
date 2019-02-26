@@ -50,7 +50,7 @@
 @mixin link($size, $color) {
   width: $size; padding: 10px 20px; text-align: center;
   font-size: 15px; color: $color; letter-spacing: .8px;
-  font-family: $monte;
+  font-family: $lato;
 
   &:hover {text-decoration: none; @include ease(.3s); opacity: .7; color: $color;}
 }

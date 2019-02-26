@@ -6,7 +6,7 @@
 
 .honey {position: absolute;left: -9999px;}
 .ds-link {@include link(30%, $white); background-color: $black; @include tshadowl(rgba($black, .3));
-  // text-transform: uppercase;
+  text-transform: uppercase;
   &.autoh {height:auto; max-height: auto;}
   &.alt {background-color:$dgold;}
 }
@@ -54,7 +54,7 @@
   //@include sec-bgimage('speak-hd.jpg'); height: 350px;
 }
 
-.collage-img {margin-bottom: 40px;}
+.collage-img {margin-bottom: 70px;}
 .title {@include sec-default(); border-bottom: $border; margin-bottom: 60px;
   h1{margin-bottom: 7px;}
   h3 {}
@@ -65,12 +65,9 @@
 h2 {line-height: 1.35rem;}
 .home {
   .color-text{@include sec-default(); text-align: center; padding: 50px 0 30px;
-    h1{
-      font-size: 1.6rem;
-      font-weight: 500; 
-      line-height: 3em;
-      text-transform: uppercase;
-      span {background-color: $black; color:$white; padding:10px 20px;}
+    h1.full-h1, h1.mobile-h1{ 
+      span {background-color: $black; color:$white; padding:10px 20px;font-family: $monte;
+        font-size: 1.6rem;font-weight: 500; line-height: 3em;text-transform: uppercase;} 
     }
     h1.mobile-h1 {display: none;}
   }
@@ -104,8 +101,10 @@ h2 {line-height: 1.35rem;}
     &::before{@include before(); background-color: $cream; width:95%; left:2.5%;}
     .title-line {width:10%; opacity: .55;}
     input{width:35%; height: 40.5px; }
-    h4{font-weight: 600; font-size: 19px; letter-spacing: 1px; font-family: $monte; margin-bottom: 7px;}
-    h4,a {text-transform: uppercase;}   
+    h4{font-weight: 600; font-size: 19px; letter-spacing: 1px; margin-bottom: 7px;}
+    // font-family: $monte;
+    h4,a {text-transform: uppercase;}
+    p{font-size: 16px;}   
     li {display: inline-block;}
     ul {padding-left: 0; margin-left: 0; margin-bottom: 0; margin-top:25px;} 
     .socials {width:35%; float:right;}
@@ -210,7 +209,7 @@ h2 {line-height: 1.35rem;}
 //************************************//
 .event-lay {
   h4 {font-weight: bold;letter-spacing: 1px; margin-bottom: 1px;}
-  p{font-size: 1rem; margin-top: 0; letter-spacing: .2px;}
+  p{font-size: 1rem; margin-top: 0; letter-spacing: .2px;  font-size: 14px; letter-spacing: 0;}
   .event-box{
     h3, h4, p{margin: 10px 0;}
   }
@@ -293,7 +292,7 @@ h2 {line-height: 1.35rem;}
   }
 
   .cat-list {@include sec-default();}
-  #conferences{margin-top: 40px;}
+  #conferences, #keynotes{margin-top: 40px;}
 
   .event-fw{
     padding-bottom: 0;border-bottom: none; padding-top:60px;
@@ -323,20 +322,15 @@ h2 {line-height: 1.35rem;}
     iframe {@include sec-default(); min-height:320px; margin-bottom: 15px;}
   }
 
-  .e-list, .p-list {display: inline-block; float:left; width:60%; }
-  .e-list h4{padding-left:15px;}
-  .p-list {width:28%; float:right; 
-    h4{color: darken($gold, 20%);}
-    .event-fw{margin-bottom:15px; padding-bottom:15px;}
-  }
-
   .intro {@include sec-default(); padding:0px 0 20px;
     text-align: justify;
     @include center-block(); width:80%;
 
     .border-row{margin-top:15px;}
     h1{margin:0 0 5px;}
-    h3{font-size:1.1rem;margin-top:0;letter-spacing: .2px;}
+    h3{font-size:1.1rem;margin-top:0;letter-spacing: .2px; 
+      font-size: 14px; letter-spacing: 0;
+    }
   }
 }
 
@@ -376,12 +370,12 @@ h2 {line-height: 1.35rem;}
 //************************************//
 .about {
   .inside.lg.collage{@include sec-default();}
-  h1, p{margin-top: 0;}
-  h1{margin-bottom: 7px;}
+  p{margin-top: 0;}
+  h1{margin-bottom: 40px;}
   h2{margin-top: 0px; font-size:1.25rem;}
 
-  h1,h2,h3 {
-    &.as-title {font-weight: bold; font-size: 1.7rem;margin-bottom: 7px; text-transform: uppercase; letter-spacing: 1px;}
+  h3 {
+    &.as-title {font-size: 1.85rem;margin-bottom: 7px; text-transform: uppercase;font-family: $didot;}
     &.as-title span.norm {letter-spacing: .3px;}
   }
 
@@ -436,7 +430,8 @@ h2 {line-height: 1.35rem;}
       .image {float: left;}
     }
 
-    p{font-size: 16px; letter-spacing: .3px; margin-bottom: 20px;}
+    // p{font-size: 16px; letter-spacing: .3px; margin-bottom: 20px;}
+    p{ margin-bottom: 20px;}
     .logo.fab {width:130px;}
     .logo.inline {height:55px; display: inline-block; margin: 5px 20px;}
     .logo.inline.free {height:70px; }
@@ -784,7 +779,7 @@ h2 {line-height: 1.35rem;}
 .booking-info{ @include sec-default();
   .cat-sec{
     h1{margin:0;}
-    h2{margin: 5px 0 20px; font-size: 1.15rem; text-align: justify;}
+    h2{margin: 5px 0 20px; font-size: 1.15rem; text-align: justify; font-size: 14px;}
   }
 
   .form-section {@include sec-default(); 
@@ -800,8 +795,8 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  .lform, .cat-sec.inline{display: inline-block; float: left; width:74%;}
-  .cat-sec.inline{float: right; width:24%;
+  .lform, .cat-sec.inline{display: inline-block; float: right; width:74%;}
+  .cat-sec.inline{float: left; width:24%;
     .cat {@include sec-default(); margin:8px 0;}
   }
 
@@ -850,12 +845,22 @@ h2 {line-height: 1.35rem;}
 //*************************************//
 .spk-info {
   h1{font-size:1.8rem;margin-bottom: 0;}
-  h2{font-size:1.1rem; margin-top: 8px; margin-bottom: 25px;}
+  h2{font-size:1.1rem; margin-top: 8px; margin-bottom: 25px; font-size: 14px;}
 
   .spk-hd{@include sec-default(); margin-bottom: 50px;
     .text {@include sec-default(); text-align: justify;}
     .ds-link {text-transform: uppercase;}
   }
+
+  .box-sec{@include sec-default(); margin:50px 0; text-align: center;
+    .box {display: inline-block; float: none; width:40%; margin: 30px 4%;}
+    .quote {@include sec-default(); background-color: $black; min-height: 208px;
+      padding:30px; margin:13px 0;
+      p{color: $white; font-family: $didot; font-size: 21px; line-height: 2rem;}
+    }
+    h4 {font-family: $quig; font-size: 2.3rem; margin-bottom: 0;}
+  }
+  
 
   .package{@include sec-default(); margin:50px 0 100px;
     position: relative; z-index: 0;

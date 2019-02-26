@@ -3,17 +3,36 @@
 
 <div class="booking-info">
 	<div class="cat-sec">
-		<div class="inside med-def">
-			<h1>Get ready to get inspired.</h1>
-			<h2>Dana is a leader, a business person, and a working mom. She speaks on business, faith, LWYD, and what breaks your heart.
+		<div class="inside">
+			<h1>Get ready to get <span>inspired</span>.</h1>
+			<!-- <h2>Dana is a leader, a business person, and a working mom. She speaks on business, faith, LWYD, and what breaks your heart.
 				If you are interested in booking Dana to speak at an event or function, please fill out the form on this page and someone from our team will contact you as soon as possible. Select a category from the list below to watch/listen to some of Dana's previous speaking engagements.
-			</h2>
+			</h2> -->
+			<h2>Motivational and inspirational speaker, Dana Spinola, is committed to reminding people to dream big and then chase those dreams relentlessly. As a business leader, philanthropist and working mom, Dana speaks to a wide range of audiences around her message of inspiring a culture of people to weave purpose into their companies and their lives. Take a look at some of her past events to see her in action. To request Dana to speak at your next event, fill out the form below and someone from our team will be in touch soon.</h2>
 		</div>
 		<div class="inside"><%= image_tag('speak-hd.jpg', class: 'img-responsive full-img', alt: '') %></div>
 	</div>
 
 	<div class="form-section">
 		<div class="inside">
+			<div class="cat-sec inline">
+				<div class="cat key">
+					<a href="/past-events#conferences" class="link-title">Keynotes</a>
+				</div>
+
+				<div class="cat chat">
+					<a href="/past-events#podcasts" class="link-title">Fireside Chats</a>
+				</div>
+
+				<div class="cat pods">
+					<a href="/past-events#company" class="link-title">Podcasts</a>
+				</div>
+
+				<div class="cat msg">
+					<a href="/past-events#messages" class="link-title">Messages</a>
+				</div>
+			</div>
+
 			<div class="lform">
 				<%= render 'form' %>
 				<!-- 
@@ -21,24 +40,6 @@
 					event name, location, date, time, link, audience, audience size, speaking format (change event type and 'select format'), 
 					speaker budget, message, other event details (additional comments)
 				 -->
-			</div>
-
-			<div class="cat-sec inline">
-				<div class="cat conf">
-					<a href="/past-events#conferences" class="link-title">Conferences</a>
-				</div>
-
-				<div class="cat pod">
-					<a href="/past-events#podcasts" class="link-title">Podcasts</a>
-				</div>
-
-				<div class="cat comp">
-					<a href="/past-events#company" class="link-title">Company/<br>Organizations</a>
-				</div>
-
-				<div class="cat dream">
-					<a href="/past-events#messages" class="link-title">Messages</a>
-				</div>
 			</div>
 		</div>
 	</div>
