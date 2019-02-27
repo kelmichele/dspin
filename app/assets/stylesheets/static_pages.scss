@@ -294,7 +294,7 @@ h2 {line-height: 1.35rem;}
     h4{letter-spacing: .3px;}
   }
 
-  .cat-list {@include sec-default();}
+  .cat-list {@include sec-default(); }
   #conferences, #keynotes{margin-top: 40px;}
 
   .event-fw{
@@ -305,12 +305,15 @@ h2 {line-height: 1.35rem;}
 
   .event-hlf {
     display: inline-block; float: left; width:47%; margin-bottom: 40px;
+    // float: none; text-align: left; margin:0 1.4% 40px;
+    min-height: 458px;
+    &:nth-child(2n+2) {float:right;}
+
     .textbox, iframe, .image {@include sec-default();}
     .image, iframe {margin-bottom: 15px;}
     iframe {min-height:350px;}
     .image {max-height: 350px; overflow: hidden;}
 
-    &:nth-child(2n+2) {float:right;}
   }
 
   .event-thr {text-align: center;
@@ -380,7 +383,7 @@ h2 {line-height: 1.35rem;}
   .inside.lg.collage{@include sec-default();}
   p{margin-top: 0;}
   h1{margin-bottom: 40px;
-    span{font-size: 4.2rem;}
+    span{font-size: 2.3rem;}
   }
   h2{margin-top: 0px; font-size:1.25rem;}
 
@@ -815,12 +818,13 @@ h2 {line-height: 1.35rem;}
   }
 
   .box-sec{@include sec-default(); text-align: center;
-    // .box {display: inline-block; float: none; width:40%; margin: 30px 4%;}
     .box{@include sec-default(); margin:30px 0;}
     .quote {@include sec-default();
-     // background-color: $black; min-height: 208px; padding:30px; 
-      p{color: $white; font-family: $didot; 
-        span {background-color: $black; padding:15px;line-height: 4rem;font-size: 21px; }
+      p{color: $white; font-family: $didot; text-transform: uppercase; 
+        line-height: 3.7rem; font-size: 17px;
+        span {background-color: $black; padding:15px; }
+
+        b {font-family: $quig; text-transform: none; font-size: 2.4rem;}
       }
     }
     h4 {font-family: $quig; font-size: 2.9rem; margin-bottom: 0;}
