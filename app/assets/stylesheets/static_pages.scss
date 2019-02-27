@@ -55,7 +55,8 @@
 }
 
 .collage-img {margin-bottom: 70px;}
-.title {@include sec-default(); border-bottom: $border; margin-bottom: 60px;
+.title {@include sec-default(); border-bottom: $border; 
+  margin-bottom: 30px;padding-bottom: 7px;
   h1{margin-bottom: 7px;}
   h3 {}
 }
@@ -66,8 +67,10 @@ h2 {line-height: 1.35rem;}
 .home {
   .color-text{@include sec-default(); text-align: center; padding: 50px 0 30px;
     h1.full-h1, h1.mobile-h1{ 
-      span {background-color: $black; color:$white; padding:10px 20px;font-family: $monte;
-        font-size: 1.6rem;font-weight: 500; line-height: 3em;text-transform: uppercase;} 
+      span.color {background-color: $black; color:$white; padding:10px 20px; font-family: $didot;
+        font-size: 2rem;font-weight: 500; line-height: 3em;text-transform: uppercase;
+      }
+      span.fancy {font-family: $quig; text-transform: none; font-size: 3.8rem;}
     }
     h1.mobile-h1 {display: none;}
   }
@@ -337,7 +340,7 @@ h2 {line-height: 1.35rem;}
 .press {
   // h1, .btn-side {display: inline-block; float: left;}
   h1{margin-bottom: 0;}
-  .btn-side {@include sec-default(); margin: 10px 0 70px;
+  .btn-side {@include sec-default(); margin: 0px 0 70px;
     .ds-link {text-transform: uppercase; @include center-block(); width:20%;}
   }
 
@@ -372,7 +375,9 @@ h2 {line-height: 1.35rem;}
 .about {
   .inside.lg.collage{@include sec-default();}
   p{margin-top: 0;}
-  h1{margin-bottom: 40px;}
+  h1{margin-bottom: 40px;
+    span{font-size: 4.2rem;}
+  }
   h2{margin-top: 0px; font-size:1.25rem;}
 
   h3 {
@@ -480,91 +485,43 @@ h2 {line-height: 1.35rem;}
 //************* BOOK ***************//
 //************************************//
 .book {
-  h2,h1{text-transform: uppercase;}
-  // h1{font-weight: $semi; margin:0;font-size:1.9rem; line-height: 1.7em;}
-  h3.sec-title {margin-bottom:0; font-weight: bold; text-transform: uppercase;}
+  h1 {text-transform: none;}
+  h3.sec-title {margin-bottom:0; text-transform: uppercase;}
 
-  .book-header2 {@include sec-default(); position: relative; 
-    min-height:451px;@include sec-bgimage('dana-bio3.jpg'); background-size:50%; background-position: bottom left;
-    
-    .text {width:50%; position: relative; float: right; text-align: center;
-      padding:70px 30px;
-      background-image: url(image_path('quote1.png')), url(image_path('quote2.png'));background-size:60px, 60px; background-position: top left, bottom right;background-repeat: no-repeat, no-repeat;
-      margin-top:6%;margin-bottom: 3%;
-    }
-  }
+  .book-header3 {@include sec-default();margin:30px 0;
+    text-align: center;
+    .image,.open{float: none; display: inline-block; vertical-align: top;}
+    .image{width:27%; }
+    .open {width:48%; margin-left: 3%; margin-top:30px; text-align: justify;}
 
-  .book-header3 {@include sec-default(); position: relative; 
-    // min-height:451px;@include sec-bgimage('dbook3.jpg'); background-size:40%; background-position: bottom left;
-    .image{width:33%; float: left; margin-left: 6%}
-    .open {width:55%; margin-top:130px; float: left;}
-    p{font-size: 17px;}
-  }
-
-  .overview {@include sec-default(); padding:$pad; 
-    .text, .image {display: inline-block; float: left; width: 40%;}
-    .text{width:55%; margin-top:7.5%; }
-    .image{float:right;}
-    p{text-transform: none;}
-
-    .uk-slideshow{ height:600px;}
+    .uk-slideshow{ height:510px;}
     .uk-slideshow-items{max-height:100%; height:100%;}
     .uk-slideshow-nav.uk-dotnav {@include sec-default(); text-align: center; margin-left: none;}
     .uk-dotnav>* {display:inline-block; float:none; margin:auto;}
     .uk-dotnav>.uk-active>* {background-color:$black;}
   }
 
-  .purchase2 {@include sec-default();
-    .option{display: inline-block; float: left; width:45%;}
-    .option.o2 {float: right;}
-    .ds-link {@include sec-default(); font-size: 16px; letter-spacing: 0;}
-
-    background-color: $black; padding:30px 0; text-align: center;
-    h3, h2{color:$white; margin-top: 0;}
-    h2{text-transform: lowercase; margin:0;}
-    .option, .option.o2 {width: 30%; float: none; margin: 0 20px;}
-    .ds-link {background-color:$white; color:$black; font-weight: bold; @include tshadowl(rgba($black, .1));}
+  .btn-section{@include sec-default(); text-align: center;
+    margin-bottom: 60px;
+    .option{display: inline-block; float: none; width:35%; margin:0 15px;}
+    .ds-link {@include sec-default(); font-size: 15px; letter-spacing: 0;}
   }
 
-  .btn-section{@include sec-default();
-    padding:40px 0 0; text-align: center;
-    .option{display: inline-block; float: none; width:35%;}
-    .ds-link {@include sec-default(); font-size: 17px; letter-spacing: 0;}
+  .covers{@include sec-default(); text-align: center; margin-bottom: 60px;
+    .front,.back{display: inline-block; float: none; width:45%; }
   }
 
   p.book-pkgs{display: inline-block; float: none; width:24%; font-size:18px; color: $white;
     span{font-weight: bold;}
   }
 
-  .bulk.top-blk {@include sec-default(); padding:$pad; text-align: center; 
-    .intro {@include sec-default(); margin-bottom: 25px; }
-    .image, .text {display: inline-block; float: right; width:50%;}
-    .text {float:left; width:43%; text-align: center; margin-top: 12%;}
+  .rates {@include sec-default(); padding: 55px 0 30px; text-align:center;
+    // background-color: darken($cream,1%);
+    h3{font-size: 1.4rem; text-transform: uppercase; margin-bottom: 0;}
+    h4{margin: 5px 0 30px; font-size: 1.15rem;}
 
-    .full.book-pkg {padding-top:40px;}
-    .img1, .img2 {display: inline-block; width:53%;}
-    .img1 {float: right;}
-    .img2{margin-top:30px; width:52%; background-color: $white; padding:15px 15px 0 0; margin-right: -12%;}
-
-    h4 {font-size: 1.15rem; margin-top: 7px;}
-
-    .option {@include sec-default();}
-    .option.o2{margin-top: 20px;}
-
-    .boxes {display:inline-block; float:left; width:50%; margin-top:4.5%;}
-    .book-pkgs{display: inline-block; float: none; width:48%; font-size:18px; background-color: $black;
-      margin-bottom: 8px; padding:40px 10px;
-      &:nth-child(2n+2) {float:right;}
-
-      p{color: $white; margin:0;
-        span{font-weight: bold;}
-      }
-    }
-  }
-
-  .rates {@include sec-default(); padding: 55px 0 30px; text-align:center;background-color: lighten($gold, 17%);
-    h3{font-size: 1.3rem; font-weight: $semi; text-transform: uppercase; letter-spacing: .3px}
-    a {font-weight: bold; text-transform: none;}
+    .uk-slider-items li img{width:90%;}
+    .uk-slidenav {color:$black;}
   }
 
   @include bp(tb) {
@@ -848,43 +805,23 @@ h2 {line-height: 1.35rem;}
   h1{font-size:1.8rem;margin-bottom: 0;}
   h2{font-size:1.1rem; margin-top: 8px; margin-bottom: 25px; font-size: 14px;}
 
-  .spk-hd{@include sec-default(); margin-bottom: 50px;
+  .spk-hd{@include sec-default(); margin-bottom: 0px;
     .text {@include sec-default(); text-align: justify;}
     .ds-link {text-transform: uppercase;}
   }
 
-  .box-sec{@include sec-default(); margin:50px 0; text-align: center;
-    .box {display: inline-block; float: none; width:40%; margin: 30px 4%;}
-    .quote {@include sec-default(); background-color: $black; min-height: 208px;
-      padding:30px; margin:13px 0;
-      p{color: $white; font-family: $didot; font-size: 21px; line-height: 2rem;}
+  .box-sec{@include sec-default(); text-align: center;
+    // .box {display: inline-block; float: none; width:40%; margin: 30px 4%;}
+    .box{@include sec-default(); margin:30px 0;}
+    .quote {@include sec-default();
+     // background-color: $black; min-height: 208px; padding:30px; 
+      p{color: $white; font-family: $didot; 
+        span {background-color: $black; padding:15px;line-height: 4rem;font-size: 21px; }
+      }
     }
-    h4 {font-family: $quig; font-size: 2.3rem; margin-bottom: 0;}
+    h4 {font-family: $quig; font-size: 2.9rem; margin-bottom: 0;}
   }
   
-
-  .package{@include sec-default(); margin:50px 0 100px;
-    position: relative; z-index: 0;
-    &::before {@include before(); border:5px double $black; width:90%;}
-    .dets, .image {display: inline-block; float: left; width:55%;}
-    .image {width:40%; float: right;  margin-top: -8%;}
-    .dets {padding: 55px 0px 65px;}
-
-    &.p1, &.p3{
-      .dets{margin-left:6%;}
-      .image{margin-right: -8%;}
-    }
-
-    &.p2, &.p4{
-      .dets {float:right; margin-right: 6%;}
-      .image{float: left; margin-left: -8%;}
-      &::before{left:10%;}
-    }
-
-    h3.pk-title{font-family: $didot; font-size: 2.7rem; margin-bottom: 5px; letter-spacing: 1px; text-transform: uppercase;}
-    h4{margin: 0; font-size:1.1rem; font-weight: $semi; }
-    p{margin-top:6px;}
-  }
 }
 
 

@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get '/asher', to: 'links#asher'
   get '/ff', to: 'links#ff'
   get '/fab', to: 'links#fab'
+  get '/twitter', to: 'links#twitter'
 
 
 

@@ -116,7 +116,7 @@ footer {@include sec-default();
 			// width:18%; float: none; vertical-align: top;
 			// &.one {margin-left: 3%;}
 			// &.three, &.four, &.soc {width:12%;}
-			ul.social li {display: inline-block; float: none; margin: 7px 5px 0;}
+			ul.social li {display: inline-block; float: none; margin: 7px 1px 0;}
 
 			// newest 
 			width:17.5%; float: left; vertical-align: top;
@@ -125,7 +125,7 @@ footer {@include sec-default();
 			&.three, &.four, &.icons {width:14%;}
 			&.soc{
 				input {@include sec-default(); margin-bottom: 15px; height:35px;}
-				.ds-link{font-size: 14px;}
+				.ds-link{font-size: 14px; margin-left: 45%}
 				p{margin-top: 0;}
 			}
 		}

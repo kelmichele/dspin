@@ -26,4 +26,8 @@ class LinksController < ApplicationController
 	def fab
 	  redirect_to('https://fabrikstyle.com')
 	end
+
+	def twitter
+		redirect_to('https://twitter.com/search?q=dana%20spinola&src=typd')
+	end
 end
