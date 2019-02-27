@@ -510,7 +510,7 @@ h2 {line-height: 1.35rem;}
   }
 
   .covers{@include sec-default(); text-align: center; margin-bottom: 60px;
-    .front,.back{display: inline-block; float: none; width:45%; }
+    .front,.back{display: inline-block; float: none; width:40%; }
   }
 
   p.book-pkgs{display: inline-block; float: none; width:24%; font-size:18px; color: $white;
