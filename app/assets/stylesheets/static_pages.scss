@@ -345,7 +345,7 @@ h2 {line-height: 1.35rem;}
   }
 
   .event-li {display: inline-block; float: left; margin-bottom: 40px; border:$border;
-    width:48%; margin:0 1% 40px; min-height: 503px;
+    width:48%; margin:0 1% 40px; min-height: 521px;
     // &:nth-child(2n+2){float:right;}
 
     .article-img{border-bottom:$border;}
@@ -357,7 +357,9 @@ h2 {line-height: 1.35rem;}
     .event-box {@include sec-default();}
 
     p{font-size:15px; margin-bottom: 0;}
-    p.text-link{color: $dgold; margin-top:10px;}
+    p.desc{margin-bottom: 10px;}
+    .text-link{color: $dgold; margin-top:10px; font-size: 14px;}
+    .text-link.dub {margin-left: 20px;}
     h4{margin-top: 5px; font-size:1.2rem; letter-spacing: .3px;}
 
     &.podcast{

@@ -13,105 +13,120 @@
 
 	<div class="event-list">
 		<div class="inside med-def">
-			<%= link_to 'https://www.forbes.com/sites/robertreiss/2018/01/16/five-great-american-entrepreneurs-you-havent-yet-heard-of-but-should-know/#ce825a755d71', class: 'event-li article', target: '_blank' do %>
-				<%= image_tag 'press-ph.jpg', class: 'img-responsive', alt: '' %>
+			<div class="event-li article">
+				<%= image_tag 'press-forbes1.jpg', class: 'img-responsive', alt: '' %>
 				<div class="textbox">
 					<p class="pub">Forbes</p>
-					<h4>Five Great American Entrepreneurs You Haven't Yet Heard Of But Should Know</h4>
-					<p class="text-link">View Article</p>
+					<h4>Five Great American Entreprenuers</h4>
+					<p class="desc">Five Great American Entrepreneurs You Haven't Yet Heard Of But Should Know</p>
+					<%= link_to "View Article", 'https://www.forbes.com/sites/robertreiss/2018/01/16/five-great-american-entrepreneurs-you-havent-yet-heard-of-but-should-know/#ce825a755d71', class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<%= link_to "https://www.youtube.com/watch?v=Zw8k2LMxYxw", class: 'event-li article', target: '_blank' do %>
+			<div class="event-li article">
 				<%= image_tag 'press-mainimg.jpg', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
-					<p class="pub">CNN*</p>
-					<h4>Dana Spinola is inviting those in need into her stores for free shopping sprees</h4>
-					<p class="text-link">View Article</p>
+					<p class="pub">CNN</p>
+					<h4>The Power of an Outfit</h4>
+					<p class="desc">Atlanta boutique owner invites girls in need into her boutique for free shopping sprees</p>
+					<%= link_to "View Video", "https://www.youtube.com/watch?v=Zw8k2LMxYxw", class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<!-- ENTREPRENEUR ARTICLE? -->
-			<%= link_to "link", class: 'event-li article', target: '_blank' do %>
-				<%= image_tag 'press-mainimg.jpg', class: 'img-responsive article-img', alt: '' %>
+			<div class="event-li article">
+				<%= image_tag 'press-ent.jpg', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
-					<p class="pub">Entreprenuer Magzaine *</p>
+					<p class="pub">Entreprenuer Magzaine</p>
 					<h4>Top 500 Franchises</h4>
-					<p class="desc">fab'rik named Top Franchises</p>
-					<p class="text-link">View Article</p>
+					<p class="desc">fab'rik named Top 500 Franchises</p>
+					<%= link_to "View Article", "https://www.entrepreneur.com/franchises/fabrik/334105", class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<%= link_to "https://www.youtube.com/watch?v=Mh74JATSLD0", class: 'event-li article', target: '_blank' do %>
-				<%= image_tag 'press-ajc2.png', class: 'img-responsive article-img', alt: '' %>
+			<div class="event-li article">
+				<%= image_tag 'press-ajcx.png', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">AJC</p>
-					<h4>Pitfalls of having it all</h4>
-					<p class="text-link">View Article</p>
+					<h4>The fab'rik of Life</h4>
+					<p class="desc">The pitfalls of having it all and the power of living in the now</p>
+					<%= link_to "View Article", "http://specials.myajc.com/fabrik/", class: 'text-link', target: '_blank' %>
+					<%= link_to "View Video", "https://www.youtube.com/watch?v=Mh74JATSLD0", class: 'text-link dub', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<!-- HUFFPOST ARTICLE? -->
-			<%= link_to "link", class: 'event-li article', target: '_blank' do %>
+			<!-- what is free fabrik photo -->
+			<div class="event-li article">
 				<%= image_tag 'press-mainimg.jpg', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">Huffington Post *</p>
-					<h4>Paradigm Shifter: Dana Spinola shares the essence of fab'rik</h4>
-					<p class="text-link">View Article</p>
+					<h4>Paradigm Shifter</h4>
+					<p class="desc">Dana Spinola shares the essence of fab'rik</p>
+					<%= link_to "View Article", "https://www.huffingtonpost.com/renata-m-black/dana-spinola--the-essence_b_10324046.html", class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<%= link_to "https://www.forbes.com/sites/toriutley/2018/01/30/how-one-atlanta-boutique-is-using-fashion-to-help-survivors-of-sex-trafficking/#173d2a1c4c2b", class: 'event-li article', target: '_blank' do %>
+			<div class="event-li article">
 				<%= image_tag 'press-mainimg.jpg', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">Forbes</p>
-					<h4>free fab'rik</h4>
+					<h4>Fashion Fighting Sex Trafficking</h4>
 					<p class="desc">How One Atlanta Boutique Is Using Fashion To Help Survivors Of Sex Trafficking</p>
-					<p class="text-link">View Article</p>
+					<%= link_to "View Article", "https://www.forbes.com/sites/toriutley/2018/01/30/how-one-atlanta-boutique-is-using-fashion-to-help-survivors-of-sex-trafficking/#173d2a1c4c2b", class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<%= link_to "https://www.bizjournals.com/bizwomen/news/profiles-strategies/2017/10/fabrik-founder-wins-with-the-wow-factor.html?page=all", class: 'event-li article', target: '_blank' do %>
+			<div class="event-li article">
 				<%= image_tag 'press-main3.jpg', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">Atlanta Business Chronicle</p>
 					<h4>Business Person of the Year</h4>
 					<p class="desc">Fab'rik founder wins with the wow factor</p>
-					<p class="text-link">View Article</p>
+					<%= link_to "View Article", "https://www.bizjournals.com/bizwomen/news/profiles-strategies/2017/10/fabrik-founder-wins-with-the-wow-factor.html?page=all", class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<%= link_to 'https://digital.modernluxury.com/publication/?i=522504&ver=html5&p=60#{%22page%22:60,%22issue_id%22:522504}', class: 'event-li article', target: '_blank' do %>
+			<div class="event-li article">
 				<%= image_tag 'ml-jez.png', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">Modern Luxury</p>
 					<h4>Wonder Woman</h4>
-					<!-- <p class="sub">fab'rik's fab leading lady, Dana Spinola, shows us how she wears a hero piece three ways for the ultimate fall-style inspo.</p> -->
-					<p class="text-link">View Article</p>
+					<p class="desc">fab'rik's FAB leading lady</p>
+					<%= link_to "View Article", 'https://digital.modernluxury.com/publication/?i=522504&ver=html5&p=60#{%22page%22:60,%22issue_id%22:522504}', class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<%= link_to "https://www.atl.com/skypointemagazine/", class: 'event-li article', target: '_blank' do %>
+			<div class="event-li article">
 				<%= image_tag 'press-delta.png', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">Skypointe Magazine</p>
-					<h4>What is this title?</h4>
-					<p class="text-link">View Article</p>
+					<h4>Keeping Atlanta Fly</h4>
+					<p class="desc">The Top Atlanta Influencers that keep the City Fly</p>
+					<%= link_to "View Article", "https://www.atl.com/skypointemagazine/", class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
 			<!-- KD Angelos -->
 		
-			<%= link_to "https://digital.modernluxury.com/publication/?i=462307&ver=html5&p=34#%7B%22page%22:34,%22issue_id%22:462307%7D", class: 'event-li article', target: '_blank' do %>
+			<div class="event-li article">
 				<%= image_tag 'press-mainimg.jpg', class: 'img-responsive article-img', alt: '' %>
 				<div class="textbox">
 					<p class="pub">Atlantan</p>
 					<h4>Biz Whiz</h4>
-					<p class="text-link">View Article</p>
+					<p class="desc">This business woman continues to find new ways to give back</p>
+					<%= link_to "View Article", "https://digital.modernluxury.com/publication/?i=462307&ver=html5&p=34#%7B%22page%22:34,%22issue_id%22:462307%7D", class: 'text-link', target: '_blank' %>
 				</div>
-			<% end %>
+			</div>
 
-			<!--  free spree filming from august -->
+			<div class="event-li article">
+				<%= image_tag 'press-11alive.png', class: 'img-responsive article-img', alt: '' %>
+				<div class="textbox">
+					<p class="pub">11alive</p>
+					<h4>Changing lives through clothes: Nonprofit supports women in need with free shopping sprees</h4>
+					<p class="desc">Free Fab'rik aims to change lives through clothes.</p>
+					<%= link_to "View Article", "https://www.11alive.com/article/news/local/features/changing-lives-through-clothes-nonprofit-supports-women-in-need-with-free-shopping-sprees/85-592609812", class: 'text-link', target: '_blank' %>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
