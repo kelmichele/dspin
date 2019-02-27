@@ -35,6 +35,6 @@ class RequestsController < ApplicationController
 	  end
 
     def request_params
-      params.require(:request).permit(:name,:email,:phone,:comments,:event_name,:event_date,:event_location,:event_link,:event_message,:event_type,:honoriam,:honey)
+      params.require(:request).permit(:name,:email,:phone, :org_name, :event_time, :audience, :aud_size, :comments,:event_name,:event_date,:event_location,:event_link,:event_message,:event_type,:honoriam,:honey)
     end
 end

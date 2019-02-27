@@ -14,8 +14,11 @@
 		<p><b>Email:</b><br>
 		<%= @request.email %></p>
 
-		<p><b>Phone Number:</b><br>
+		<p><b>Phone number:</b><br>
 		<%= @request.phone %></p>
+
+		<p><b>Organization name:</b><br>
+		<%= @request.org_name %></p>
 
 		<hr>
 		<h3>Event Information:</h3>
@@ -23,25 +26,31 @@
 		<p><b>Event name:</b><br>
 		<%= @request.event_name %></p>
 
+		<p><b>Location:</b><br>
+		<%= @request.event_location %></p>
+
 		<p><b>Event date:</b><br>
 		<%= @request.event_date %></p>
 
-		<p><b>Location:</b><br>
-		<%= @request.event_location %></p>
+		<p><b>Event time:</b><br>
+		<%= @request.event_time %></p>
 
 		<p><b>Link to event:</b><br>
 		<%= @request.event_link %></p>
 
-		<p><b>Event Message:</b><br>
-		<%= @request.event_message %></p>
+		<p><b>Audience:</b><br>
+		<%= @request.audience %></p>
 
-		<p><b>Type of event:</b><br>
+		<p><b>Audience size:</b><br>
+		<%= @request.aud_size %></p>
+
+		<p><b>Speaking format:</b><br>
 		<%= @request.event_type %></p>
 
-		<p><b>Honoriam Range:</b><br>
+		<p><b>Speaker budget:</b><br>
 		<%= @request.honoriam %></p>
 
-		<p><b>Additional Comments:</b><br>
+		<p><b>Other event details:</b><br>
 		<%= @request.comments %></p>
 	</body>
 </html>

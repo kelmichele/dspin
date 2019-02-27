@@ -107,31 +107,35 @@ footer {@include sec-default();
 		border-top: $border; border-bottom: $border; border-color: rgba($black,.4);
 	}
 	.top-foot {@include sec-default(); padding:30px 0 20px;
-		text-align: center;
-		.ft-block {display: inline-block; float: left; width:20%;
-			// &.one {margin-left: 15%;}
+		// text-align: center;
+		ul.social, .ft-block.soc h4 {display: inline-block; float: left; width:50%;}
+		ul.social{width:35%; float: none; 
+			// position: absolute; right:5%; width:200px; margin-top:0;
+			li {position:relative; display: inline-block; float: none; margin: 2px 1px 0;}
+		}
 
 
-			// new
-			// width:18%; float: none; vertical-align: top;
-			// &.one {margin-left: 3%;}
-			// &.three, &.four, &.soc {width:12%;}
-			ul.social li {display: inline-block; float: none; margin: 7px 1px 0;}
+		.ft-block {display: inline-block; 
+			// ul.social li {display: inline-block; float: none; margin: 7px 1px 0;}
+			width:18%; float: left; vertical-align: top;
 
-			// newest 
-			width:17.5%; float: left; vertical-align: top;
-			h4,p,li, &.soc{text-align: left;}
-			&.one {margin-left: 5%; }
+			&.one {margin-left: 6%; }
 			&.three, &.four, &.icons {width:14%;}
-			&.soc{
-				// input {@include sec-default(); margin-bottom: 15px; height:35px;}
-				// .ds-link{font-size: 14px; margin-left: 45%}
+			&.soc {width:24%;
 				p{margin-top: 0;}
 			}
-			#mc-embedded-subscribe-form{padding-top: 0;}
-			#mc_embed_signup input.email {@include sec-default(); margin:0 0 8px;  border-radius: 0;}
-			#mc_embed_signup .button {background-color: $black; font-family: $lato; font-size: 14px; border-radius: 0; float:right; padding:5px 20px;
-				height:auto; width:auto;
+			// h4,p,li, &.soc{text-align: left;}
+
+			#mc-embedded-subscribe-form{padding-top: 0;@include sec-default();}
+			// #mc_embed_signup input.email {@include sec-default(); margin:0 0 8px;  border-radius: 0;}
+			// .button {background-color: $black; font-family: $lato; font-size: 14px; border-radius: 0; float:right; padding:5px 20px;height:auto; width:auto;}
+			#mc_embed_signup {@include sec-default();
+				form{padding:0;@include sec-default();}
+				input.email, .button {display: inline-block; float: left; margin:0; min-width:auto; font-size: 14px;}
+				input.email {border-radius: 0; width:67%;}
+				.button {background-color: $black; font-family: $lato; text-transform:uppercase; font-size: 13px; border-radius: 0; padding:7.7px 10px;
+					height:auto; float:right; width:33%;min-height: auto; line-height: 1rem;
+				}
 			}
 		}
 
