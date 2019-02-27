@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get '/speaking', to: 'requests#new', as: 'speaking'
   post '/speaking', to: 'requests#create'
 
+  resources :features
   resources :events do 
     member do
       delete :delete_image_attachment

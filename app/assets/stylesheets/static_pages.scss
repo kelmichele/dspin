@@ -376,6 +376,21 @@ h2 {line-height: 1.35rem;}
   }
 }
 
+.features {
+  .form-section {@include sec-default(); 
+    p.print{margin:0; color: darken($gold, 10%); @include sec-default();}
+    h4{font-weight: bold; border-bottom:$border; text-transform: uppercase;letter-spacing: .3px;}
+
+    form {padding:15px; border:$border;}
+    fieldset {margin-bottom: 0;}
+    .form-group{
+      width:47%; display: inline-block; float: left;
+      &:nth-child(2n+2) {float: right;}
+      &.details, &.submit {float: left; display: block;}
+    }
+  }
+}
+
 //*************************************//
 //************* ABOUT ***************//
 //************************************//

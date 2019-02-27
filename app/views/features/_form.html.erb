@@ -1,0 +1,66 @@
+<%= render 'shared/errors', obj: @feature %>
+  <%= form_for(@feature, :html => {class: "form-horizontal", role: "form" }) do |f| %>
+  <fieldset>
+    <% if flash[:alert] %>
+      <div class="notice"><%= flash[:alert] %></div>
+    <% end %>
+
+    <div class="form-group name">
+      <label>Name:</label><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="form-group email">
+      <label>Email: </label><br>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="form-group phone">
+      <label>Phone: </label><br>
+      <%= f.text_field :phone %>
+    </div>
+
+    <div class="form-group eventfg org">
+      <label>Organization:</label><br>
+      <%= f.text_field :organization %>
+    </div>
+
+    <div class="form-group link">
+      <label>Website Link: </label><br>
+      <%= f.text_field :link %>
+    </div>
+
+    <div class="form-group deadline">
+      <label>Deadline: </label><br>
+      <%= f.text_field :deadline %>
+    </div>
+
+    <div class="form-group eventfg type">
+      <label>Feature Type: </label><br>
+      <%= f.select(:feat_type) do %>
+        <% [['Select Type', ''], ['In Person', 'In Person'], ['Phone', 'Phone'], ['Email', 'Email']].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="form-group details">
+      <label>Feature Details: </label><br>
+      <%= f.text_area :details %>
+    </div>
+
+    <div class="form-group honey">
+      <%= label_tag :honey %>
+      <%= f.text_field :honey %>
+      <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="form-group eventfg submit">
+      <%= f.submit "Submit", :class=> "send-message" %>
+    </div>
+    <p class="print">ALL fields are required</p>
+
+  </fieldset>
+<% end %>
