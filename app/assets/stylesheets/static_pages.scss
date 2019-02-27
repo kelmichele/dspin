@@ -304,10 +304,10 @@ h2 {line-height: 1.35rem;}
   }
 
   .event-hlf {
-    display: inline-block; float: left; width:47%; margin-bottom: 40px;
+    display: inline-block; float: right; width:47%; margin-bottom: 40px;
     // float: none; text-align: left; margin:0 1.4% 40px;
     min-height: 458px;
-    &:nth-child(2n+2) {float:right;}
+    &:nth-child(2n+2) {float:left;}
 
     .textbox, iframe, .image {@include sec-default();}
     .image, iframe {margin-bottom: 15px;}

@@ -37,7 +37,10 @@ Rails.application.routes.draw do
   get '/speaking', to: 'requests#new', as: 'speaking'
   post '/speaking', to: 'requests#create'
 
-  resources :features
+  resources :features, :except => [:new]
+  get '/feature-dana', to: 'features#new', as: 'feature-dana'
+  post '/feature-dana', to: 'features#create'
+
   resources :events do 
     member do
       delete :delete_image_attachment
