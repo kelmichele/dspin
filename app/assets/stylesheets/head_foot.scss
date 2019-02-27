@@ -124,9 +124,14 @@ footer {@include sec-default();
 			&.one {margin-left: 5%; }
 			&.three, &.four, &.icons {width:14%;}
 			&.soc{
-				input {@include sec-default(); margin-bottom: 15px; height:35px;}
-				.ds-link{font-size: 14px; margin-left: 45%}
+				// input {@include sec-default(); margin-bottom: 15px; height:35px;}
+				// .ds-link{font-size: 14px; margin-left: 45%}
 				p{margin-top: 0;}
+			}
+			#mc-embedded-subscribe-form{padding-top: 0;}
+			#mc_embed_signup input.email {@include sec-default(); margin:0 0 8px;  border-radius: 0;}
+			#mc_embed_signup .button {background-color: $black; font-family: $lato; font-size: 14px; border-radius: 0; float:right; padding:5px 20px;
+				height:auto; width:auto;
 			}
 		}
 
