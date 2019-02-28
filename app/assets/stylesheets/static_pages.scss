@@ -167,8 +167,10 @@ h2 {line-height: 1.35rem;}
   @include bp(oc) {
     .color-text {
       .inside.med2-def{width:95%;}
-      h1.full-h1 {display: none;}
-      h1.mobile-h1 {display: block; margin-top: 0;}
+      h1.full-h1, h1.mobile-h1{ 
+        span.color { font-size: 1.2rem;}
+        span.fancy { font-size: 2.4rem;}
+      }
     }
 
     .laysec2 {
@@ -970,6 +972,8 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(tn) {
+    h1 {font-size: 1.5rem;}
+    h1 span {font-size: 2.65rem;}
     .boxes .inside {width:90%;}
     .asher, .freefab, .fabrik {margin:10px 0 15px;
       .image {display: none;}
@@ -983,12 +987,17 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(ph) {
+    h1 {font-size: 1.35rem;}
+    h1 span {font-size: 2.35rem;}
+
     .boxes .inside {width:95%;}
     .ds-link {width:90%; }
   }
 
   @include bp(sm) {
-    .ds-link {width:95%; }
+    h1 {font-size: 1.2rem;}
+    h1 span {font-size: 2.15rem;}
+    .ds-link, .freefab .ds-link {@include sec-default();}
   }
 }
 

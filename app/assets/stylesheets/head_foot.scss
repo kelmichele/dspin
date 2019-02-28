@@ -63,7 +63,8 @@
 	display: none;
 
 	.nb-logo.mobile, .mobile-nav {display: inline-block; float: left;}
-	.mobile-nav {float: right;}
+	.nb-logo.mobile{width:250px;}
+	.mobile-nav {float: right; margin-top:-5px;}
 }
 
 .uk-offcanvas-bar {
@@ -82,18 +83,22 @@
 	}
 }
 
-@include bp(tb) {
+@include bp(br) {
 	.inline-header {display: none;}
 	.mobile-above{display:block;}
 }
 
 @include bp(oc) {
 	.logo-name {font-size: 29px;}
-	.mobile-nav {margin-top: -5px;}
+	.mobile-above .inside{width: 90%}
 }
 
 @include bp(ph) {
 	.logo-name {font-size: 25px;}
+}
+
+@include bp(sm) {
+	.mobile-above .mobile-nav {margin-top: -7px;}
 }
 
 
