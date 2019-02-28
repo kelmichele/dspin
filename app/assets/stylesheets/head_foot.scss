@@ -102,21 +102,17 @@
 //*********************************//
 
 footer {@include sec-default();
-	.clearfix.mobile{display: none;}
+	.clearfix.mobile,.clearfix.mob{display: none;}
 	.border-row{@include sec-default(); height:6px; margin-bottom: 30px;
 		border-top: $border; border-bottom: $border; border-color: rgba($black,.4);
 	}
 	.top-foot {@include sec-default(); padding:30px 0 20px;
-		// text-align: center;
 		ul.social, .ft-block.soc h4 {display: inline-block; float: left; width:50%;}
 		ul.social{width:35%; float: none; 
-			// position: absolute; right:5%; width:200px; margin-top:0;
 			li {position:relative; display: inline-block; float: none; margin: 2px 1px 0;}
 		}
 
-
 		.ft-block {display: inline-block; 
-			// ul.social li {display: inline-block; float: none; margin: 7px 1px 0;}
 			width:18%; float: left; vertical-align: top;
 
 			&.one {margin-left: 6%; }
@@ -124,11 +120,7 @@ footer {@include sec-default();
 			&.soc {width:24%;
 				p{margin-top: 0;}
 			}
-			// h4,p,li, &.soc{text-align: left;}
-
 			#mc-embedded-subscribe-form{padding-top: 0;@include sec-default();}
-			// #mc_embed_signup input.email {@include sec-default(); margin:0 0 8px;  border-radius: 0;}
-			// .button {background-color: $black; font-family: $lato; font-size: 14px; border-radius: 0; float:right; padding:5px 20px;height:auto; width:auto;}
 			#mc_embed_signup {@include sec-default();
 				form{padding:0;@include sec-default();}
 				input.email, .button {display: inline-block; float: left; margin:0; min-width:auto; font-size: 14px;}
@@ -156,10 +148,20 @@ footer {@include sec-default();
 
 
 	@include bp(tb) {
+		.clearfix.mob{display: block;}
 		.top-foot {
-			h4{font-size:1rem;}
+			h4{font-size:1.8rem;}
 			li {font-size: 14px;}
 			li.fab .nav-fab {height:15px;}
+
+			.ft-block {
+				// width:20%;
+				// &.three, &.four{width:15%;}
+				&.one {margin-left: 15%;}
+				&.one, &.two{width:22%;}
+				&.three, &.four{width:15%;}
+				&.soc {width:50%; @include center-block(); margin-top: 30px;}
+			}
 		}
 	}
 
