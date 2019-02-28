@@ -26,12 +26,13 @@
           <li class="<% if current_page?('/about') %>active<% end %>"><%= link_to "About", about_path %></li>
           <!-- <li><%= link_to "Events", events_path %></li> -->
 
-          <li class="<% if current_page?('/speaking') || current_page?('/past-events') || current_page?('/speaking-info') %>active<% end %>">
+          <li class="<% if current_page?('/speaking') || current_page?('/past-events') || current_page?('/messages') %>active<% end %>">
             <%= link_to "Speaking", speaking_path %>
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li><%= link_to "Past Events", past_events_path %></li>
-                <li><%= link_to "Messages", speaking_info_path %></li>
+                <li><%= link_to "Messages", messages_path %></li>
+                <li><%= link_to "Event Request", speaking_path %></li>
               </ul>
             </div>
           </li>
@@ -41,7 +42,6 @@
           <li class="<% if current_page?('/press') || current_page?('/feature-dana') %>active<% end %>"><%= link_to "Press", press_path %>
             <div class="uk-navbar-dropdown">
               <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li><%= link_to "Press", press_path %></li>
                 <li><%= link_to "Feature Dana", feature_dana_path %></li>
               </ul>
             </div>

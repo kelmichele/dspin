@@ -5,6 +5,10 @@
 	<div class="cat-sec">
 		<div class="inside">
 			<div class="title"><h1>Get ready to get <span class="lspace">inspired.</span></h1></div>
+			<div class="btn-side">
+				<!-- <= link_to "Event Request", feature_dana_path, class: 'ds-link' %> -->
+				<a href="#form" class="ds-link">Event Request</a>
+			</div>
 			<h2>Motivational and inspirational speaker, Dana Spinola, is committed to reminding people to dream big and then chase those dreams relentlessly. As a business leader, philanthropist and working mom, Dana speaks to a wide range of audiences around her message of inspiring a culture of people to weave purpose into their companies and their lives. Take a look at some of her past events to see her in action. To request Dana to speak at your next event, fill out the form below and someone from our team will be in touch soon.</h2>
 		</div>
 		<div class="inside"><%= image_tag('speak-hd.jpg', class: 'img-responsive full-img', alt: '') %></div>
@@ -26,11 +30,11 @@
 				</div>
 
 				<div class="cat msg">
-					<a href="/speaking-info" class="link-title">Messages</a>
+					<a href="/messages" class="link-title">Messages</a>
 				</div>
 			</div>
 
-			<div class="lform">
+			<div id="form" class="lform">
 				<%= render 'form' %>
 			</div>
 		</div>

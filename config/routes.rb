@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
   get 'about', to: 'static_pages#about'
-  get 'speaking-info', to: 'static_pages#speaking-info'
+  get 'messages', to: 'static_pages#messages'
   get 'love-what-you-do', to: 'static_pages#love-what-you-do'
   get 'buy-the-book', to: 'static_pages#buy-the-book'
   get 'past-events', to: 'static_pages#past-events'
