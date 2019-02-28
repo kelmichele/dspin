@@ -5,7 +5,7 @@ class FeatureMailer < ApplicationMailer
 	def new_feature(feature)
 	  @feature = feature
 
-	  mail(to: "kelli@hsdesignhouse.com", subject: "Feature Request") do |format|
+	  mail(to: "elizabeth.gagen@fabrikstyle.com", subject: "Feature Request") do |format|
   	  format.html
   	  format.text
     end

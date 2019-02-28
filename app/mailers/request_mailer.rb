@@ -5,7 +5,7 @@ class RequestMailer < ApplicationMailer
 	def new_request(request)
 	  @request = request
 
-	  mail(to: "kelli@hsdesignhouse.com", subject: "Speaking Engagement Request") do |format|
+	  mail(to: "elizabeth.gagen@fabrikstyle.com", subject: "Speaking Engagement Request") do |format|
   	  format.html
   	  format.text
     end

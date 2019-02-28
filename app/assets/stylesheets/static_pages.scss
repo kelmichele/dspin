@@ -319,6 +319,8 @@ h2 {line-height: 1.35rem;}
     .image, iframe {margin-bottom: 15px;}
     iframe {min-height:350px;}
     .image {max-height: 350px; overflow: hidden;}
+
+    &.lwyd iframe {height:350px;background-color:$black;}
   }
 
   .event-thr {text-align: center;
@@ -592,28 +594,29 @@ h2 {line-height: 1.35rem;}
 //************* BOOK ***************//
 //************************************//
 .book {
-  // h1 {text-transform: none;}
   h3.sec-title {margin-bottom:0; text-transform: uppercase; font-weight: bold; letter-spacing: .3px;}
+  .inside.med-def.cst {width:1000px;}
 
   .book-header3 {@include sec-default();margin:30px 0;
     text-align: center;
     .image,.open{float: none; display: inline-block; vertical-align: top;}
-    // .image{width:33%; }
-    // .open {width:48%; margin-left: 3%; margin-top:30px; text-align: justify;}
-    // .uk-slideshow{ height:470px; margin-bottom: 15px;}
 
-    .image{width:37%; float:left;}
-    .open {width:54%; float: right; margin-top:50px; text-align: justify;}
+    // .image{width:37%; float:left;}
+    // .open {width:54%; float: right; margin-top:50px; text-align: justify;}
 
-    .uk-slideshow{ height:520px; margin-bottom: 15px;}
+    // .uk-slideshow{ height:450px; margin-bottom: 15px;}
     .uk-slideshow-items{max-height:100%; height:100%;}
     .uk-slideshow-nav.uk-dotnav {@include sec-default(); text-align: center; margin-left: none;}
     .uk-dotnav>* {display:inline-block; float:none; margin:auto;}
     .uk-dotnav>.uk-active>* {background-color:$black;}
+   
+    .uk-slideshow{ height:430px; margin-bottom: 15px;}
+    .image{width:40%; float:left; margin-left: 2%}
+    .open {width:52%; float: right; text-align: justify;}
   }
 
   .btn-section{@include sec-default(); text-align: center;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     .option{display: inline-block;
       // width:35%; margin:0 15px; float: none; 
       width:48%;float: left;
@@ -636,8 +639,7 @@ h2 {line-height: 1.35rem;}
     h4{margin: 5px 0 30px; font-size: 1.15rem;}
 
     .uk-slider {margin-bottom: 30px;}
-    .uk-slider-items li img{padding:0 7px; height:310px; width:auto;}
-    // .uk-slider-items li img{width:90%;}
+    .uk-slider-items li img{padding:0 7px;}
     .uk-slidenav {color:$black;}
   }
 
@@ -645,27 +647,22 @@ h2 {line-height: 1.35rem;}
     h1 {font-size: 1.6rem;}
     h3.sec-title{font-size:1.3rem;}
 
+    .inside.med-def.cst {width:88%;}
     .inside.med2-def.small {width:90%;}
     .book-header3 {
-      .uk-slideshow{ height:380px; }
-      .image{width:27%; }
-      .open {width:60%; margin-left: 3%;}
-    }
-
-    .purchase2 {
-      h2{font-size: 1.5rem;}
-      h3{font-size:1.35rem;}
-      .option, .option.o2 {width: 40%;}
+      .uk-slideshow{ height:450px; }
+      h3.sec-title{font-size:1.2rem; margin-bottom: 0;}
+      .image{width:48%; margin-left: 0;}
+      .open {width:48%; }
+      .btn-section {
+        .option {width:75%; @include center-block(); }
+        .ds-link{margin-bottom: 15px;}
+      }
     }
   }
 
   @include bp(nn) {
     h3.sec-title{font-size:1.2rem; margin-bottom: 0;}
-    .book-header3 {
-      .uk-slideshow{ height:340px; }
-      .image{width:25%; }
-      .open {width:63%; margin-left: 3%; margin-top:14px;}
-    }
   }
 
 
@@ -674,17 +671,15 @@ h2 {line-height: 1.35rem;}
 
     h3.sec-title{font-size:1.1rem;}
     .inside.med2-def.small {width:95%;}
-    .book-header3 {
-      .uk-slideshow{ height:320px; }
-      .image{width:26%; margin-left: -1%}
-      .open {margin-left: 2%; margin-top: 0px; }
+    .book-header3 { margin-top: 0;
       p{margin-top:5px;}
-    }
-  
-    .purchase2 {
-      .option, .option.o2 {width: 43%; margin: 0 1%;}
-      h3{font-size: 1.2rem;}
-      .ds-link {font-size:14px;}
+
+      .uk-slideshow{ height:380px;}
+      .uk-slideshow-items {width:50%; @include center-block();}
+      .open {width:85%; @include center-block();}
+      .image { @include sec-default(); margin-top: 30px;}
+
+      .btn-section{margin-top: 15px;}
     }
 
     .rates {padding:30px 20px 10px;
@@ -693,31 +688,15 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  @include bp(md) {
-    .book-header3 {margin-top: 0;
-      .image {display: none;}
-      .open {width:90%; @include center-block();
-        p{margin-bottom: 5px;}
-      }
-    }
-    .purchase2 {padding-bottom: 10px;
-      .option, .option.o2 {width: 55%; float:none; margin: 0px 10px 20px; }
-      h3{font-size: 1.15rem;}
-      .ds-link {padding:10px 30px;}
-    }
-  }
+
 
   @include bp(oc) {
     h1 {font-size: 1.2rem;}
 
-    .btn-section{margin-bottom: 15px;
-      .option.o1, .option.o2{width:80%; @include center-block();}
-      .ds-link {margin-bottom: 20px;}
-    }
-
-    .purchase2 {
-      .option, .option.o2 {width:60%;}
-      h3{font-size: 1.1rem;}
+    .book-header3{
+      .uk-slideshow{ height:400px;}
+      .uk-slideshow-items {width:70%;}
+      .open {width:94%;}
     }
 
     .rates {padding-bottom:30px;
@@ -727,11 +706,19 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(ph) {
-    .purchase2 {
-      .option, .option.o2 {width:85%;}
+    .book-header3{
+      .uk-slideshow{ height:400px;}
+      .uk-slideshow-items {width:80%;}
     }
+
     .rates h3{font-size:1.1rem;}
     .rates h4{font-size:1rem;}
+  }
+
+  @include bp(sm) {
+    .book-header3{
+      .uk-slideshow{ height:300px;}
+    }
   }
 }
 
@@ -887,6 +874,7 @@ h2 {line-height: 1.35rem;}
   }
 
   .box-sec{@include sec-default(); text-align: center;
+    a:hover {text-decoration: none;}
     .box{@include sec-default(); margin:30px 0;}
     .quote {@include sec-default();
       p{color: $white; font-family: $didot; text-transform: uppercase; 
@@ -895,7 +883,6 @@ h2 {line-height: 1.35rem;}
         span {position: relative; z-index: 0;padding:15px; 
           &::before {@include before();background-color: $black;}
         }
-
 
         b {font-family: $quig; text-transform: none; font-size: 2.4rem;}
       }
