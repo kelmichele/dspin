@@ -174,11 +174,10 @@ h2 {line-height: 1.35rem;}
     }
 
     .laysec2 {
-      // .box.one, .box.two { 
-      //   width:80%; @include center-block(); margin-top: 20px;
-      //   h4{font-size: 17px;}
-      // }
-      // .box.two {margin-top: 70px;}
+      .box.one, .box.two {width:95%;
+        h4{font-size: 16px;}
+        p{font-size:15px;}
+      }
     }
   }
 }
