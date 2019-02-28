@@ -69,6 +69,11 @@
       <%= f.text_field :aud_size %>
     </div>
 
+    <div class="form-group eventfg honoriam">
+      <label>Speaker Budget: </label><br>
+      <%= f.text_field :honoriam %>
+    </div>
+
     <div class="form-group eventfg event_type">
       <label>Speaking Format: </label><br>
       <%= f.select(:event_type) do %>
@@ -77,12 +82,7 @@
         <% end %>
       <% end %>
     </div>
-
-    <div class="form-group eventfg honoriam">
-      <label>Speaker Budget: </label><br>
-      <%= f.text_field :honoriam %>
-    </div>
-
+    
     <div class="clearfix"></div>
     <div class="form-group comments">
       <label>Other Event Details: </label><br>

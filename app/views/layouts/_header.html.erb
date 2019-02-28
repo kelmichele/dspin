@@ -32,13 +32,21 @@
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <li><%= link_to "Past Events", past_events_path %></li>
                 <li><%= link_to "Messages", speaking_info_path %></li>
-                <li><%= link_to "Feature Dana", feature_dana_path %></li>
               </ul>
             </div>
           </li>
 
           <li class="<% if current_page?('/love-what-you-do') %>active<% end %>"><%= link_to "Book", love_what_you_do_path %></li>
-          <li class="<% if current_page?('/press') %>active<% end %>"><%= link_to "Press", press_path %></li>
+          
+          <li class="<% if current_page?('/press') || current_page?('/feature-dana') %>active<% end %>"><%= link_to "Press", press_path %>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><%= link_to "Press", press_path %></li>
+                <li><%= link_to "Feature Dana", feature_dana_path %></li>
+              </ul>
+            </div>
+          </li>
+
           <li class="<% if current_page?('/heart') %>active<% end %>"><%= link_to "Heart", heart_path %></li>
            
           <li class="fab"><%= link_to(image_tag('fabrik.png', alt: "fab'rik logo", class: 'nav-fab'), '/fab', target: '_blank') %></li>

@@ -67,9 +67,10 @@
 	.mobile-nav {float: right; margin-top:-5px;}
 }
 
-.uk-offcanvas-bar {
+.uk-offcanvas-bar.mnav {background-color: $black;
 	.uk-nav-header{border-bottom: $border; font-weight: bold; margin-bottom: 10px; color:$white; border-color: $white; font-weight: $semi; letter-spacing: 1px;}
 	.uk-nav li.fab img {height:16px;}
+	li{border-bottom: 1px solid rgba($white, .2); margin-bottom: 15px; padding-bottom: 6px;}
 }
 
 @include bp(tb) {

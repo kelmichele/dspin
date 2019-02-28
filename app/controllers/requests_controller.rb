@@ -14,7 +14,7 @@ class RequestsController < ApplicationController
 
     if @request.valid? && @request.save
       RequestMailer.new_request(@request).deliver unless request_params[:honey].present?
-      redirect_to speaking_path, notice: "Your form has been sent. Thank you for reaching out."
+      redirect_to speaking_path, notice: "Your request has been sent! We’ll be in touch soon."
     else
       render :new
     end
