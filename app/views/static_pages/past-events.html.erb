@@ -1,6 +1,6 @@
 <% @page_title = "Dana's Past Events" %>
 <% @page_description = "" %>
-
+<!-- <iframe src="https://player.vimeo.com/video/312517433?color=b51f24&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 <div class="event-lay">
 	<div class="event-list">
 		<div class="inside med-def">
@@ -34,12 +34,12 @@
 			<div id="keynotes" class="cat-list">
 				<h3 class="sec-title">Keynotes</h3>
 
-				<div class="event-hlf">
+				<div id="plywood" class="event-hlf">
 					<iframe src="https://www.youtube.com/embed/H3gJtV6Cy-0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 					<div class="textbox">
 						<h4>Plywood Presents</h4>
-						<p>Loving Disruption:How to weave heart into your passion</p>
+						<p>Loving Disruption: How to weave heart into your passion</p>
 					</div>
 				</div>
 					
@@ -52,7 +52,8 @@
 				</div>
 
 				<div class="event-hlf">
-					<div class="image"><%= image_tag('past/lwyd.jpg', class: 'img-responsive', alt: '') %></div>
+					<!-- <div class="image"><= image_tag('past/lwyd.jpg', class: 'img-responsive', alt: '') %></div> -->
+					<iframe src="https://player.vimeo.com/video/313245554?color=b51f24&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					<div class="textbox">
 						<h4>LWYD Book Launch Fashion Show </h4>
 						<p>The fab'rik Story from the runway</p>
@@ -101,37 +102,6 @@
 			</div>
 			<div class="border-row"></div>
 
-			<div id="podcasts" class="cat-list pods">
-				<h3 class="sec-title">Podcasts</h3>
-
-				<%= link_to "https://careynieuwhof.com/episode208/", target: '_blank', class: 'event-thr' do %>
-					<%= image_tag 'pod-carey.jpg', class: 'img-responsive', alt: '' %>
-					<h4>Carey Nieuwhof Leadership Podcast</h4>
-				<% end %>
-
-				<%= link_to "https://www.imaginemorepodcast.com/episodes/dana-spinola", target: '_blank', class: 'event-thr' do %>
-					<%= image_tag 'pod-imagine2.jpg', class: 'img-responsive', alt: '' %>
-					<h4>Imagine More</h4>
-				<% end %>
-
-
-				<%= link_to "https://launchyouniversity.com/podcast/069-when-passion-and-heart-lead-the-way-dana-spinola-of-fabrik/", target: '_blank', class: 'event-thr launch' do %>
-					<%= image_tag 'pod-launch.jpg', class: 'img-responsive', alt: '' %>
-					<h4>Launch Youniversity</h4>
-				<% end %>
-
-				<%= link_to "https://businessradiox.com/podcast/ceoexclusive/fabrik/", target: '_blank', class: 'event-thr ceo' do %>
-					<%= image_tag 'pod-ceo2.jpg', class: 'img-responsive', alt: '' %>
-					<h4>CEO Exclusive Radio</h4>
-				<% end %>
-
-				<%= link_to "https://simplecast.com/s/168bffc8 ", target: '_blank', class: 'event-thr' do %>
-					<%= image_tag 'pod-lovework.png', class: 'img-responsive', alt: '' %>
-					<h4>Love or Work</h4>
-				<% end %>
-			</div>
-			<div class="border-row"></div>
-
 			<div id="chats" class="cat-list">
 				<h3 class="sec-title">Fireside Chats</h3>
 				
@@ -166,7 +136,37 @@
 						<p>Sat with Jeff Henderson to inspire their team around core values. </p>
 					</div>
 				</div>
+			</div>
+			<div class="border-row"></div>
 
+			<div id="podcasts" class="cat-list pods">
+				<h3 class="sec-title">Podcasts</h3>
+
+				<%= link_to "https://careynieuwhof.com/episode208/", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-carey.jpg', class: 'img-responsive', alt: '' %>
+					<h4>Carey Nieuwhof Leadership Podcast</h4>
+				<% end %>
+
+				<%= link_to "https://www.imaginemorepodcast.com/episodes/dana-spinola", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-imagine2.jpg', class: 'img-responsive', alt: '' %>
+					<h4>Imagine More</h4>
+				<% end %>
+
+
+				<%= link_to "https://launchyouniversity.com/podcast/069-when-passion-and-heart-lead-the-way-dana-spinola-of-fabrik/", target: '_blank', class: 'event-thr launch' do %>
+					<%= image_tag 'pod-launch.jpg', class: 'img-responsive', alt: '' %>
+					<h4>Launch Youniversity</h4>
+				<% end %>
+
+				<%= link_to "https://businessradiox.com/podcast/ceoexclusive/fabrik/", target: '_blank', class: 'event-thr ceo' do %>
+					<%= image_tag 'pod-ceo2.jpg', class: 'img-responsive', alt: '' %>
+					<h4>CEO Exclusive Radio</h4>
+				<% end %>
+
+				<%= link_to "https://simplecast.com/s/168bffc8 ", target: '_blank', class: 'event-thr' do %>
+					<%= image_tag 'pod-lovework.png', class: 'img-responsive', alt: '' %>
+					<h4>Love or Work</h4>
+				<% end %>
 			</div>
 		</div>
 	</div>

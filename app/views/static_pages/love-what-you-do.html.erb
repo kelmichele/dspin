@@ -6,22 +6,29 @@
 
 	<div class="inside med2-def small">
 		<div class="book-header3">
-			<div class="image"><%= image_tag('dbook3.jpg', class: 'img-responsive', alt: '') %></div>
+			<!-- <div class="image"><%= image_tag('dbook3.jpg', class: 'img-responsive', alt: '') %></div> -->
+			<div class="image" tabindex="-1" uk-slideshow="autoplay: true; autoplay-interval: 5000;">
+		    <ul class="uk-slideshow-items">
+		    	<li><%= image_tag('dbook3.jpg', class: 'img-responsive', alt: '') %></li>
+	        <li><%= image_tag('front-cover2.jpg', class: 'img-responsive', alt: '') %></li>
+	        <li><%= image_tag('back-cover.png', class: 'img-responsive', alt: '') %></li>
+		    </ul>
+
+		    <ul class="uk-slideshow-nav uk-dotnav"></ul>
+		  </div>
 
 			<div class="open">	
 				<h3 class="sec-title">So here's the deal...</h3>
 				<p>I never set out to write a book. The plan was to build a business around doing something that I loved and I thought the world would love. As I grew fab’rik, I realized I was having more meetings around how to build a life that was filled with passion and that served a bigger purpose then I was about anything else. Coffee date after coffee date the question I watched so many struggle with was “Can you have both?” So because I was running out of time to schedule all of the meetings I wanted to have, I decided to write this book. While I don’t have it all figured out, I do see how God combined my love of clothing and my desire to help women dream again together to write an incredible story. My hope for this book is that it serves as a guide to remind you to dream big again for your life, lean into how you can make this world a better place and then weave those together to create a life you love. So join us in the #lovewhatyoudo movement alone or with a group and see how we can ignite a generation fueled by passion and filled with purpose. Are you in? </p>
+
+				<div class="btn-section">
+					<%= render 'book-options' %>
+				</div>
 			</div>
 		</div>
 
-		<div class="btn-section">
-			<%= render 'book-options' %>
-		</div>
-
-<!-- 		<div class="covers">
-			<%= image_tag('front-coverbow.jpg', class: 'img-responsive front', alt: '') %>
-			<%= image_tag('back-cover.png', class: 'img-responsive back', alt: '') %>
-		</div> -->
+	
+		<!-- 254x448 -->
 	</div>
 
   <!-- <div class="inside"><div class="border-row"></div></div> -->
@@ -37,21 +44,21 @@
 			                <li><%= image_tag('inf/influencer1.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer2.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer3.jpg', class: 'img-responsive', alt: '') %></li>
-			                <li><%= image_tag('inf/influencer4.png', class: 'img-responsive', alt: '') %></li>
+			                <li><%= image_tag('inf/influencer4.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer6.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer7.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer8.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer9a.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer9.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer10a.jpg', class: 'img-responsive', alt: '') %></li>
-			                <li><%= image_tag('inf/influencer10.png', class: 'img-responsive', alt: '') %></li>
+			                <li><%= image_tag('inf/influencer10.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer11.jpg', class: 'img-responsive', alt: '') %></li>
-			                <li><%= image_tag('inf/influencer12.png', class: 'img-responsive', alt: '') %></li>
+			                <li><%= image_tag('inf/influencer12.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer13.jpg', class: 'img-responsive', alt: '') %></li>
 			                <li><%= image_tag('inf/influencer14.jpg', class: 'img-responsive', alt: '') %></li>
-			                <li><%= image_tag('inf/influencer15.png', class: 'img-responsive', alt: '') %></li>
-			                <li><%= image_tag('inf/influencer16.png', class: 'img-responsive', alt: '') %></li>
-			                <li><%= image_tag('inf/influencer17.png', class: 'img-responsive', alt: '') %></li>
+			                <li><%= image_tag('inf/influencer15.jpg', class: 'img-responsive', alt: '') %></li>
+			                <li><%= image_tag('inf/influencer16.jpg', class: 'img-responsive', alt: '') %></li>
+			                <li><%= image_tag('inf/influencer17.jpg', class: 'img-responsive', alt: '') %></li>
 			            </ul>
 			        </div>
 
