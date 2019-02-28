@@ -345,6 +345,8 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(tb) {
+    h1{font-size: 1.55rem;}
+    h1 span{font-size: 2.7rem;}
     .event-list h4{font-size:1.1rem;}
     .event-hlf {margin-bottom: 25px;min-height: 390px;
       iframe {min-height:280px;}
@@ -358,6 +360,9 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(tn) {
+    h1{font-size: 1.4rem;}
+    h1 span{font-size: 2.5rem;}
+
     .event-list h4{font-size:1rem;}
     .inside.med-def.lists{width:60%;}
     .event-hlf {margin-bottom: 25px;min-height: 390px;
@@ -369,10 +374,15 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(md) {
+    h1{font-size: 1.25rem;}
+    h1 span{font-size: 2.2rem;}
     .event-thr {@include sec-default();min-height:auto; margin-bottom: 40px;}
   }
 
   @include bp(oc) {
+    h1{font-size: 1.2rem;}
+    h1 span{font-size: 1.85rem;}
+
     .inside.med-def.lists{width:80%;}
   }
 }
@@ -408,6 +418,41 @@ h2 {line-height: 1.35rem;}
       }
       // .textbox{border-top:$border;}
     }
+  }
+
+  @include bp(tb) {
+    .event-list {padding-bottom: 0;}
+    h1{font-size:1.5rem;}
+    h1 span {font-size:2.8rem;}
+    .btn-side .ds-link {width:30%;}
+    .event-li {min-height: 485px;
+      .event-image{margin-bottom: 20px; }
+      p{font-size:14px; }
+      h4{font-size:1.1rem;}
+    }
+  }
+
+  @include bp(tn) {
+    .event-li {min-height: 410px;}
+  }
+
+  @include bp(tn) {
+    h1{font-size:1.35rem;}
+    .btn-side .ds-link {width:40%;}
+    .event-list .inside.med-def{width:75%;}
+    .event-li {min-height: auto;@include sec-default();}
+  }
+
+  @include bp(ph) {
+    h1{font-size:1.2rem;}
+    h1 span{font-size:2.5rem;}
+    .btn-side .ds-link {width:60%;}
+    .event-list .inside.med-def{width:85%;}
+  }
+
+  @include bp(sm) {
+    .btn-side .ds-link {width:80%;}
+    .event-list .inside.med-def{width:90%;}
   }
 }
 
@@ -582,13 +627,13 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(tb) {
-    h3.sec-title{font-size:1.4rem;}
-    .book-header2 {
-      h1{font-size:1.75rem;}
-      .text {width:50%;
-        padding:50px 30px;
-        background-size:45px, 45px;
-      }
+    h1 {font-size: 1.6rem;}
+    h3.sec-title{font-size:1.3rem;}
+
+    .inside.med2-def.small {width:90%;}
+    .book-header3 {
+      .image{width:24%; }
+      .open {width:60%; margin-left: 3%;}
     }
 
     .purchase2 {
@@ -596,94 +641,33 @@ h2 {line-height: 1.35rem;}
       h3{font-size:1.35rem;}
       .option, .option.o2 {width: 40%;}
     }
-
-    .bulk.top-blk {@include sec-default(); padding:$pad-tb; text-align: center; 
-      .image {width:50%;}
-      .img1{ width:53%;}
-      .img2{margin-top:30px; width:52%; background-color: $white; padding:15px 15px 0 0; margin-right: -12%;}
-
-      h4 {font-size: 1rem;}
-
-      .boxes {width:50%; margin-top:4.5%;
-        .inside {width:95%;}
-      }
-      .book-pkgs{padding:35px 10px;}
-    }
-
-    .overview {padding:30px 0 20px;
-      p{font-size: 16px;}
-      p.first {margin-top:7px;}
-      .inside.med{width:85%;}
-      .text, .image {width: 35%;}
-      .text{ width:60%; margin-top:0; }
-      .uk-slideshow{ height:450px;}
-    }
   }
 
-  @include bp(nn) {
-    .book-header2 {min-height:400px;
-      h1{font-size:1.6rem;}
-      .text {width:50%;
-        padding:50px 30px;
-        background-size:35px, 35px;
-      }
-      br.nn-hide{display: none;}
-    }
-  }
 
   @include bp(tn) {
-    h3.sec-title{font-size:1.2rem;}
+    h1 {font-size: 1.4rem;}
 
-    .book-header2 {
-      min-height:300px; 
-      background-size: 42%;
-
-      h1{font-size:1.25rem;}
-
-      .text {width:54%;
-        padding:30px;
-        background-size:25px, 25px;
-        margin-top:9%;margin-bottom: 0;
-      }
+    h3.sec-title{font-size:1.2rem; margin-bottom: 0;}
+    .inside.med2-def.small {width:95%;}
+    .book-header3 {
+      .image{width:28%; }
+      .open {width:60%; margin-left: 0; margin-top: 15px;}
+      p{margin-top:5px;}
     }
-
+  
     .purchase2 {
       .option, .option.o2 {width: 43%; margin: 0 1%;}
       h3{font-size: 1.2rem;}
       .ds-link {font-size:14px;}
     }
 
-    .bulk.top-blk { padding:$pad-tn;
-      .intro{margin-bottom: 10px;}
-      .image {display: none;}
-
-      .boxes {width:80%; margin-top:0; @include center-block();}
-      .book-pkgs{padding:25px 10px;
-        p{font-size:16px;}
-      }
-    }
-
-    .overview {padding:10px 0 20px;text-align: center;
-      h3.sec-title{text-align: center;}
-      p{font-size: 15px;}
-      .text, .image {width:95%; @include center-block();}
-      .image{ width:45%; margin-top: 30px; }
-      .uk-slideshow{ height:450px;}
+    .rates {padding:30px 20px 10px;
+      h3{font-size: 1.25rem; }
+      h4{margin: 5px 0 10px; font-size: 1.1rem;}
     }
   }
 
   @include bp(md) {
-    .book-header2{min-height: 285px;}
-    .bulk.top-blk { 
-      .boxes {width:95%; margin-top:0; @include center-block();}
-      h4{font-size:15.5px;}
-    }
-
-    .overview {
-      .image{ width:300px;}
-      .uk-slideshow{ height:430px;}
-    }
-
     .purchase2 {padding-bottom: 10px;
       .option, .option.o2 {width: 55%; float:none; margin: 0px 10px 20px; }
       h3{font-size: 1.15rem;}
@@ -692,17 +676,17 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(oc) {
-    .book-header2 {
-      min-height:auto; background-image:none; padding:15px 0 30px;
-
-      h1{font-size:1.25rem;}
-
-      .text {width:90%;@include center-block();
-        br{display: none;}
-        padding:30px 30px 10px;
-        background-size:25px, 25px;
-        margin:0 auto;
+    h1 {font-size: 1.2rem;}
+    .book-header3 {margin-top:0;
+      .image{display: none; }
+      .open {width:90%; @include center-block();
+        p{margin-bottom: 5px;}
       }
+    }
+
+    .btn-section{margin-bottom: 15px;
+      .option.o1, .option.o2{width:80%; @include center-block();}
+      .ds-link {margin-bottom: 20px;}
     }
 
     .purchase2 {
@@ -710,18 +694,9 @@ h2 {line-height: 1.35rem;}
       h3{font-size: 1.1rem;}
     }
 
-    .bulk.top-blk { 
-      .boxes {@include sec-default();}
-      h4{font-size:15.5px;}
-
-      .book-pkgs{width:70%; float: none; @include center-block();
-        padding:15px 0;
-        &:nth-child(2n+2) {float:none;}
-
-        p{color: $white; margin:0;
-          span{font-weight: bold;}
-        }
-      }
+    .rates {padding-bottom:30px;
+      h3{margin-top: 10px;}
+      .uk-slider-items li img{margin-left: 5%}
     }
   }
 
@@ -729,7 +704,8 @@ h2 {line-height: 1.35rem;}
     .purchase2 {
       .option, .option.o2 {width:85%;}
     }
-    .bulk.top-blk .book-pkgs{width:85%; }
+    .rates h3{font-size:1.1rem;}
+    .rates h4{font-size:1rem;}
   }
 }
 
@@ -894,6 +870,41 @@ h2 {line-height: 1.35rem;}
     h4 {font-family: $quig; font-size: 2.9rem; margin-bottom: 0;}
   }
   
+  @include bp(tb) {
+    h1{font-size:1.5rem;}
+    h1 span {font-size: 2.4rem;}
+  }
+
+  @include bp(tn) {
+    h1{font-size:1.35rem;}
+    h1 span {font-size: 2.1rem;}
+
+    .box-sec{
+      .box{margin:10px 0;}
+      .quote {
+        p{line-height: 3.7rem; font-size: 16px;
+          b {font-size: 2.2rem;}
+        }
+      }
+      // h4 {font-size: 2.5rem;}
+    }
+  }
+
+  @include bp(oc) {
+    h1{font-size:1.15rem;}
+    h1 span {font-size: 1.8rem;}
+
+    .box-sec{
+      .inside.med2-def{width:94%;}
+      .box{margin:10px 0;}
+      .quote {
+        p{line-height: 3.7rem; font-size: 14px;
+          b {font-size: 1.8rem;}
+        }
+      }
+      h4 {font-size: 2.5rem;}
+    }
+  }
 }
 
 
@@ -929,13 +940,55 @@ h2 {line-height: 1.35rem;}
     .text {width: 53%; float: right;}
 
     .logo {width:200px; margin:15px 0;}
-    .logo.fab {width:175px;}
+    .logo.fab {width:160px;}
     //682 375 
   }
 
   .freefab{
     .text {float:left;}
     .image {float:right;}
+  }
+
+  @media screen and (max-width:1440px) {
+    .ds-link {font-size: 14px;}
+    .boxes .inside {width:90%;}
+
+    .freefab .ds-link{ width:75%; @include center-block(); margin-bottom: 15px;}
+
+    .asher, .freefab, .fabrik {
+      .image {width:40%;}
+      .text {width: 58%;}
+    }
+  }
+
+  @include bp(tb) {
+    .boxes .inside {width:85%;}
+    .asher, .freefab, .fabrik {
+      .image {width:35%;}
+      .text {width: 60%;}
+    }
+  }
+
+  @include bp(tn) {
+    .boxes .inside {width:90%;}
+    .asher, .freefab, .fabrik {margin:10px 0 15px;
+      .image {display: none;}
+      .text {width: 85%; @include center-block();}
+    }
+    .ds-link {width:65%; @include center-block(); margin-bottom: 15px;}
+  }
+
+  @include bp(oc) {
+    .ds-link {width:75%; }
+  }
+
+  @include bp(ph) {
+    .boxes .inside {width:95%;}
+    .ds-link {width:90%; }
+  }
+
+  @include bp(sm) {
+    .ds-link {width:95%; }
   }
 }
 
