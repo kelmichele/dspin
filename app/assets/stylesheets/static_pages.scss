@@ -718,6 +718,8 @@ h2 {line-height: 1.35rem;}
   @include bp(sm) {
     .book-header3{
       .uk-slideshow{ height:300px;}
+
+      .book-section .option{width:90%;}
     }
   }
 }
