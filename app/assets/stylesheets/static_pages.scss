@@ -55,6 +55,9 @@
 }
 
 .collage-img {margin-bottom: 70px;}
+@include bp(tb) { 
+  .collage-img {margin-bottom: 35px;}
+}
 .title {@include sec-default(); border-bottom: $border; 
   margin-bottom: 30px;padding-bottom: 7px;
   h1{margin-bottom: 7px;}
@@ -307,7 +310,6 @@ h2 {line-height: 1.35rem;}
 
   .event-hlf {
     display: inline-block; float: right; width:47%; margin-bottom: 40px;
-    // float: none; text-align: left; margin:0 1.4% 40px;
     min-height: 458px;
     &:nth-child(2n+2) {float:left;}
 
@@ -315,7 +317,6 @@ h2 {line-height: 1.35rem;}
     .image, iframe {margin-bottom: 15px;}
     iframe {min-height:350px;}
     .image {max-height: 350px; overflow: hidden;}
-
   }
 
   .event-thr {text-align: center;
@@ -341,6 +342,38 @@ h2 {line-height: 1.35rem;}
     h3{font-size:1.1rem;margin-top:0;letter-spacing: .2px; 
       font-size: 14px; letter-spacing: 0;
     }
+  }
+
+  @include bp(tb) {
+    .event-list h4{font-size:1.1rem;}
+    .event-hlf {margin-bottom: 25px;min-height: 390px;
+      iframe {min-height:280px;}
+      .image {max-height: 280px;}
+    }
+
+    .event-thr {
+      min-height:330px;
+      img{height:230px;}
+    }
+  }
+
+  @include bp(tn) {
+    .event-list h4{font-size:1rem;}
+    .inside.med-def.lists{width:60%;}
+    .event-hlf {margin-bottom: 25px;min-height: 390px;
+      @include sec-default();
+      iframe {min-height:300px;}
+      .image {max-height: 300px;}
+    }
+    .event-thr {width:45%; margin-left:5%; margin-bottom: 20px;}
+  }
+
+  @include bp(md) {
+    .event-thr {@include sec-default();min-height:auto; margin-bottom: 40px;}
+  }
+
+  @include bp(oc) {
+    .inside.med-def.lists{width:80%;}
   }
 }
 
@@ -772,9 +805,6 @@ h2 {line-height: 1.35rem;}
     fieldset {margin-bottom: 0;}
     .form-group{
       width:47%; display: inline-block; float: right;
-      // &.name, &.email, &.phone {width:31%; display: inline-block; float: none; margin: 0 1% 20px;}
-      // &.eventfg{width:47%; display: inline-block; }
-      // &.email, &.org, &.event_date, &.event_link, &.event_type {float: right;}
       &:nth-child(2n+2) {float: left;}
       &.comments, &.submit {float: left; display: block;}
     }
@@ -788,13 +818,16 @@ h2 {line-height: 1.35rem;}
   .full-img {@include sec-default(); margin-top:15px; margin-bottom:30px;}
 
   @include bp(tb) {
-    h1 {font-size: 1.65rem;}
+    h1 {font-size: 1.45rem;}
+    h1 span {font-size: 3rem;}
 
-    .cat-sec h2 {font-size:1.1rem;}
+    .lform{width:70%;}
+    .cat-sec.inline{width:29%;}
+
     .form-section {padding:0px 0;
       form {width:85%; @include center-block();}
       p.print{ margin-top: 15px;}
-      h4{margin-top: 30px;@include sec-default();}
+      h4{margin-top: 0px;@include sec-default();}
 
       .form-group{
         @include sec-default(); margin: 0 0 20px;
@@ -805,22 +838,33 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(tn) {
-    h1 {font-size: 1.4rem;}
-    .cat-sec h2 {font-size:1rem;}
-    fieldset {margin-top: 0; padding-top:0;}
+    h1 {font-size: 1.3rem;}
+    h1 span {font-size: 2.7rem;}
+
+    fieldset {padding-top:0;}
+
+    .cat-sec.inline,.lform{@include sec-default();
+      .cat {display: inline-block; width:45%; margin-left: 3.5%}
+    }
+    .lform{margin-top: 30px;}
+    .form-section h4{font-size: 1.1rem;}
   }
 
   @include bp(md) {
-    h1 {font-size: 1.3rem;}
+    h1 {font-size: 1.2rem;}
+    h1 span {font-size: 2.3rem;}
 
     .form-section {
+      h4{font-size: 1rem;}
       form {width:95%; }
       p.print{ @include sec-default();}
     }
   }
 
   @include bp(ph) {
-    h1 {font-size: 1.2rem;}
+    .cat-sec.inline {
+      .cat { @include sec-default(); margin-left: 0;}
+    }
   }
 }
 
