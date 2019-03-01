@@ -933,6 +933,14 @@ h2 {line-height: 1.35rem;}
       }
     }
   }
+  
+  @media screen and (max-width:700px) {
+    .box-sec .quote {
+        p{font-size: 14px;
+          b {font-size: 1.8rem;}
+        }
+      }
+  }
 
   @include bp(oc) {
     h1{font-size:1.15rem;}
@@ -942,9 +950,9 @@ h2 {line-height: 1.35rem;}
       .inside.med2-def{width:94%;}
       .box{margin:10px 0;}
       .quote {
-        p{line-height: 3.7rem; font-size: 14px;
-          b {font-size: 1.8rem;}
-        }
+        a.mobile-sp,p.mobile-sp{display: block;}
+        p.mobile-sp {margin-top: 0;}
+        a.fw-sp, p.fw-sp{display: none;}
       }
       h4 {font-size: 2.5rem;}
     }
@@ -954,11 +962,7 @@ h2 {line-height: 1.35rem;}
     br.mobile{display: block;}
     .box-sec{
       .inside.med2-def{width:85%;}
-      .quote {
-        a.mobile-sp,p.mobile-sp{display: block;}
-        p.mobile-sp {margin-top: 0;}
-        a.fw-sp, p.fw-sp{display: none;}
-      }
+      
       h4 {font-size: 2rem;}
     }
   }

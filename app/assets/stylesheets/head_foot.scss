@@ -103,6 +103,10 @@
 }
 
 @include bp(sm) {
+	.mobile-above {
+		.mobile-nav {margin-top: 0px;}
+		.nb-logo.mobile{margin-top: 10px;}
+	}
 }
 
 
