@@ -494,9 +494,9 @@ h2 {line-height: 1.35rem;}
   }
 
   .ab-sec {@include sec-default(); padding:50px 0; 
-    .text, .image { display: inline-block; float: left;}
+    .text { display: inline-block; float: left;}
     .text {width:60%; padding:80px 0;}
-    .image {width:33%; float: right;}
+    .image {display: none;}
 
 
     position: relative; z-index: 0;
@@ -541,7 +541,6 @@ h2 {line-height: 1.35rem;}
 
     &.message, &.rec {
       .text {float:right;}
-      .image {float: left;}
     }
 
     // p{font-size: 16px; letter-spacing: .3px; margin-bottom: 20px;}
@@ -573,17 +572,21 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(mb) {
-    .ab-sec {
+    .ab-sec { padding-bottom: 40px;
       .inside{width:85%;}
-      .text {padding:35px 0; @include sec-default();}
+      .text {padding:35px 0 15px; @include sec-default();}
       &::after, &::before {display: none;}
+      
+      .image {width:65%; @include center-block();}
     }
   }
 
   @include bp(sm) {
     .ab-sec {
       .inside{width:90%;}
-      .text {padding:35px 0; @include sec-default();}
+      .logo.inline {@include center-block();}
+      .logo.free{margin-top: 20px;}
+      .image {width:90%;}
     }
   }
 }
@@ -878,6 +881,7 @@ h2 {line-height: 1.35rem;}
     a:hover {text-decoration: none;}
     .box{@include sec-default(); margin:30px 0;}
     .quote {@include sec-default();
+      a.mobile-sp, p.mobile-sp{display: none;}
       p{color: $white; font-family: $didot; text-transform: uppercase; 
         line-height: 3.7rem; font-size: 17px;
         // span {background-color: $black; padding:15px; }
@@ -923,6 +927,18 @@ h2 {line-height: 1.35rem;}
         }
       }
       h4 {font-size: 2.5rem;}
+    }
+  }
+
+  @include bp(ph) {
+    br.mobile{display: block;}
+    .box-sec{
+      .inside.med2-def{width:85%;}
+      .quote {
+        a.mobile-sp,p.mobile-sp{display: block;}
+        a.fw-sp, p.fw-sp{display: none;}
+      }
+      h4 {font-size: 2rem;}
     }
   }
 }
@@ -988,6 +1004,10 @@ h2 {line-height: 1.35rem;}
     .asher, .freefab, .fabrik {
       .image {width:35%;}
       .text {width: 60%;}
+
+      .logo {margin:0px 0 15px;}
+      .logo.fab {width:130px;}
+      .logo.ash {width:155px;}
     }
   }
 
@@ -995,9 +1015,12 @@ h2 {line-height: 1.35rem;}
     h1 {font-size: 1.5rem;}
     h1 span {font-size: 2.65rem;}
     .boxes .inside {width:90%;}
-    .asher, .freefab, .fabrik {margin:10px 0 15px;
-      .image {display: none;}
-      .text {width: 85%; @include center-block();}
+    .asher, .freefab, .fabrik {margin:10px 0 15px;padding-bottom: 20px;
+      .image {width:70%; @include center-block();
+        .img-responsive{margin-top: 35px;}
+      }
+
+      .text {width: 85%; @include center-block(); }
     }
     .ds-link {width:65%; @include center-block(); margin-bottom: 15px;}
   }
