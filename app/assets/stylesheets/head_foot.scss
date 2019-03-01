@@ -205,8 +205,11 @@ footer {@include sec-default();
 
 	@include bp(oc) {
 		.clearfix.mobile{display: block;}
-		.top-foot {display: none;
-			// .ft-block.one,.ft-block.two,.ft-block.three,.ft-block.four{width:45%; float: left; margin-left:3%;}
+
+		.top-foot {
+			.ft-block{
+				&.soc{@include sec-default();}
+			}
 		}
 	}
 }

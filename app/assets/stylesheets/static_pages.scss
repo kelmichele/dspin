@@ -581,11 +581,16 @@ h2 {line-height: 1.35rem;}
     }
   }
 
+  @include bp(pl) {
+    .ab-sec {
+      .logo.inline {@include center-block();}
+      .logo.free{margin-top: 20px;}
+    }
+  }
+
   @include bp(sm) {
     .ab-sec {
       .inside{width:90%;}
-      .logo.inline {@include center-block();}
-      .logo.free{margin-top: 20px;}
       .image {width:90%;}
     }
   }
@@ -936,6 +941,7 @@ h2 {line-height: 1.35rem;}
       .inside.med2-def{width:85%;}
       .quote {
         a.mobile-sp,p.mobile-sp{display: block;}
+        p.mobile-sp {margin-top: 0;}
         a.fw-sp, p.fw-sp{display: none;}
       }
       h4 {font-size: 2rem;}
