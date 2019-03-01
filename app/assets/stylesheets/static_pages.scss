@@ -475,6 +475,14 @@ h2 {line-height: 1.35rem;}
       &.details, &.submit {float: left; display: block;}
     }
   }
+
+  @include bp(tn) {
+    .form-section{
+      .form-group{@include sec-default();
+        &:nth-child(2n+2) {float: left;}
+      }
+    }
+  }
 }
 
 //*************************************//
