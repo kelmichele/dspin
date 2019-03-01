@@ -355,7 +355,9 @@ h2 {line-height: 1.35rem;}
     h1{font-size: 1.55rem;}
     h1 span{font-size: 2.7rem;}
     .event-list h4{font-size:1.1rem;}
-    .event-hlf {margin-bottom: 25px;min-height: 390px;
+    .event-hlf {margin-bottom: 25px;
+      // min-height: 390px;
+      min-height: auto;
       iframe {min-height:280px;}
       .image {max-height: 280px;}
     }
@@ -372,7 +374,7 @@ h2 {line-height: 1.35rem;}
 
     .event-list h4{font-size:1rem;}
     .inside.med-def.lists{width:60%;}
-    .event-hlf {margin-bottom: 25px;min-height: 390px;
+    .event-hlf {
       @include sec-default();
       iframe {min-height:300px;}
       .image {max-height: 300px;}
@@ -394,7 +396,7 @@ h2 {line-height: 1.35rem;}
     h1 span{font-size: 1.85rem;}
 
     .inside.med-def.lists{width:80%;}
-    .event-hlf {margin-bottom: 10px;}
+    // .event-hlf {margin-bottom: 10px;}
   }
 }
 
