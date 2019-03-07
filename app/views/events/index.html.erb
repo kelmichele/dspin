@@ -36,7 +36,7 @@
 
 					<div class="textbox">
 						<h4><%= event.title %></h4>
-						<p><%= event.date %> &nbsp; | &nbsp; <%= event.time %></p>
+						<p><%= event.date.to_date.strftime("%m-%d-%Y") %> &nbsp; | &nbsp; <%= event.time %></p>
 					
 						<p class="desc"><%= event.description.truncate(60) %></p>
 
