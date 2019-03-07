@@ -212,7 +212,7 @@ h2 {line-height: 1.35rem;}
   .right {float: right;}
 
   h4{margin-bottom: 0; font-weight: bold; border-bottom: $border; padding-bottom:6px; color:$black;}
-  h3{margin:5px 0 10px; font-size: 1.3rem; font-weight: $semi;}
+  h3{margin:5px 0 10px; font-size: 1.3rem; font-weight: normal;}
 }
 
 
@@ -282,6 +282,8 @@ h2 {line-height: 1.35rem;}
 }
 
 .events{
+  .title .ds-link.admin {@include center-block(); width:210px; margin:20px auto; font-size:13px; padding:6px auto;}
+
   .form-group.image {
     label{@include sec-default();}
     #event_image{ width:60%; border:1px solid rgba($black,.1);padding:15px; height:auto;}    

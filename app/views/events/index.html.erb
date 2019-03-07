@@ -11,7 +11,12 @@
 	</div> -->
 	<div class="inside">
 		<!-- COPIED HEADLINE FROM SPEAKING PAGE -->
-		<div class="title"><h1>Get ready to get <span class="lspace">inspired.</span></h1></div>
+		<div class="title">
+			<h1>Get ready to get <span class="lspace">inspired.</span></h1>
+			<% if user_signed_in? && current_user.admin? %>
+				<%= link_to "Create New Event", new_event_path, class: 'ds-link admin' %>
+			<% end %>
+		</div>
 	</div>
 
 	<div class="event-list">
