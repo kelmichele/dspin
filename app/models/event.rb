@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  validates :event_type, presence: true
+  # validates :event_type, presence: true
   validates :title, presence: true
   validates :date, presence: true
   validates :time, presence: true

@@ -9,15 +9,18 @@
   text-transform: uppercase;
   &.autoh {height:auto; max-height: auto;}
   &.alt {background-color:$dgold;}
+  &.admin {background-color: $red;}
 }
 .text-link{font-weight: bold; color: $black;
   &.und {text-decoration: underline; }
+  &.admin {color: darken($red, 5%); font-size: 13px; text-transform: uppercase; letter-spacing: .2px;}
 }
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
+.clearfix.space{margin-bottom: 20px;}
 
 .full-sec{@include sec-default(); padding: 40px 0;
   &.less {padding:15px 0;}
@@ -217,7 +220,7 @@ h2 {line-height: 1.35rem;}
 //************* EVENTS ***************//
 //************************************//
 .event-lay {
-  h4 {font-weight: bold;letter-spacing: 1px; margin-bottom: 1px;}
+  h4 {font-weight: bold;margin-bottom: 1px;}
   p{font-size: 1rem; margin-top: 0; letter-spacing: .2px;  font-size: 14px; letter-spacing: 0;}
   .event-box{
     h3, h4, p{margin: 10px 0;}
@@ -230,18 +233,35 @@ h2 {line-height: 1.35rem;}
     padding-bottom: 60px;border-bottom: $border;
     .textbox, img, iframe {display: inline-block; float:left; width:50%;}
     .textbox{float:right; width:45%; margin-top: 8%;}
+    .ds-link{font-size: 14px;}
+    .ds-link.def {width:60%;}
   }
 
 
-  @include bp(tn) {
+  @include bp(tb) {
     h1{font-size:1.7rem;}
     .event-fw {padding-bottom: 40px; margin-bottom: 40px;
       .textbox{ margin-top: 3%;}
       p{font-size: 15px;}
       h4{font-size: 1.15rem;}
       .ds-link{width:auto;}
+      .ds-link.def {width:70%;}
     }
   }
+
+  @include bp(tn) {
+    h1{font-size:1.5rem;}
+    .event-fw {
+      .ds-link.def {width:80%;}
+    }
+  }
+
+  @include bp(pl) {
+    .event-fw {
+      .ds-link.def {width:90%;}
+    }
+  }
+
 
   @include bp(oc) {
     h1{font-size:1.5rem;}
@@ -249,12 +269,13 @@ h2 {line-height: 1.35rem;}
       text-align: center;
       img {width:80%; @include center-block();}
       .textbox{ @include sec-default();margin-top: 20px;}
+      .ds-link.def {width:280px; @include center-block();}
     }
   }
 
   @include bp(sm) {
     h1{font-size:1.35rem;}
-    .event-fw {
+    .event-fw {padding-bottom: 25px;
       img {width:90%;}
     }
   }
@@ -265,20 +286,7 @@ h2 {line-height: 1.35rem;}
     label{@include sec-default();}
     #event_image{ width:60%; border:1px solid rgba($black,.1);padding:15px; height:auto;}    
   }
-
-  &.index {
-    .ehead{padding-bottom: 0px;}
-    .event-list {@include sec-default(); position: relative; z-index: 0; padding-top:0;
-      &::before{@include before(); width:90%; left:5%; height: 55px; background-color: $black;}
-    }
-
-    @include bp(tn) {
-      .ehead {padding-top:25px;}
-      .event-list{padding:30px 0 0;
-        &::before{display: none;}
-      }
-    }
-  }
+  .form-group.extras {margin-top: 30px;}
 
   &.edit{
     .thumb {width:100px; margin-bottom: 20px;}

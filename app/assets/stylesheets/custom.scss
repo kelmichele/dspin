@@ -176,7 +176,7 @@ a {
 .msg-bx {@include sec-default();
   .alert-top {padding:8px 0;}
 }
-.notice, .notice p, p.alert.scs, .alert-top {color: $red; text-align: center;}
+.notice, .notice p, p.alert.scs, .alert-top, p.alert.reg, p.notice.reg {color: $red; text-align: center;}
 
 .panel.panel-danger.err {
   // width:90%; @include center-block();

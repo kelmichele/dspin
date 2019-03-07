@@ -1,27 +1,27 @@
 <% @page_title = "Upcoming Events" %>
-<% @page_description = "" %>
-
-<%= render 'shared/collage-hd' %>
+<% @page_description = "Take a look at Dana's upcoming speaking engagements, and find one near you." %>
 
 <div class="event-lay">
-	<div class="inside lg">
+	<!-- <div class="inside lg">
 		<div class="ehead">
 			<div class="inside">
 				<h1><%= @page_title %></h1>
 			</div>
 		</div>
+	</div> -->
+	<div class="inside">
+		<!-- COPIED HEADLINE FROM SPEAKING PAGE -->
+		<div class="title"><h1>Get ready to get <span class="lspace">inspired.</span></h1></div>
 	</div>
 
 	<div class="event-list">
 		<div class="inside med2-def">
-			<% if user_signed_in? && current_user.admin? %>
+			<!-- < if user_signed_in? && current_user.admin? %>
 		    <button class="admin-uk wl-uk uk-float-right" type="button"><span  uk-icon="icon: settings;"></span></button>
 		    <div uk-dropdown="mode: click; pos: bottom-right; boundary: .wl-uk;">
 					<%= link_to "Create New Event", new_event_path, class: 'ds-link' %>
 		    </div>
-			<% end %>
-			<!-- <div class="clearfix"></div> -->
-			<!-- <hr> -->
+			< end %> -->
 
 			<% @events.each do |event| %>
 				<div class="event-fw event-<%= event.id %>">
@@ -32,9 +32,21 @@
 					<div class="textbox">
 						<h4><%= event.title %></h4>
 						<p><%= event.date %> &nbsp; | &nbsp; <%= event.time %></p>
+					
 						<p class="desc"><%= event.description.truncate(60) %></p>
 
-						<%= link_to "Event Details", event_path(event), class: 'ds-link' %>
+						<% if event.link != '' %>
+							<!-- <= link_to "Event Details", event_path(event), class: 'ds-link' %> -->
+							<%= link_to "Event Details", "#{event.link}", class: 'ds-link', target: '_blank' %>
+
+						<% else %>
+							<div class="ds-link def">Details Coming Soon</div>
+						<% end %>
+
+						<% if user_signed_in? && current_user.admin? %>
+							<div class="clearfix space"></div>
+							<%= link_to "[ Edit Event Details]", edit_event_path(event), class: 'text-link admin' %>
+						<% end %>
 					</div>
 				</div>
 			<% end %>
