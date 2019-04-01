@@ -1078,3 +1078,14 @@ h2 {line-height: 1.35rem;}
     .ds-link, .freefab .ds-link {@include sec-default();}
   }
 }
+
+
+.features.new {
+  // .lform {@include sec-default(); border: 1px solid $f0; padding:15px 20px;}
+  #wufoo-m1uftpkw0im3b6p {@include sec-default(); max-width:100%; border: 1px solid $f0; padding:15px 20px 15px 15px;}
+  @include bp(tn) {
+    // .narrow-def {width:700px;}
+    // #wufoo-m1uftpkw0im3b6p {width:90%;}
+  }
+}
+
