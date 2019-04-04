@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700'); 
+
+.wufoo {padding:15px;}
+.wufoo .info{display:none;}
+form .instruct{width:auto; left:10%;}
+form li.focused .instruct, form li:hover .instruct {left:40%}
+
+
+.wufoo label, .wufoo label.desc{letter-spacing: .4px; text-transform: uppercase; font-size:15px;font-family:'Montserrat', sans-serif;}
+.wufoo form span.req, .wufoo li span.req, .wufoo span.req {color:transparent !important;}
+
+.wufoo input, .wufoo textarea, .wufoo select {
+  background:none; border: 1px solid rgba(0,0,0,.1);
+  padding-left:5px; width:100%; 
+  margin-top:3px; font-size:14px;
+  font-family:'Montserrat', sans-serif;
+}
+.wufoo input, .wufoo select {height:30px;}
+.wufoo select {letter-spacing: .4px;}
+
+.wufoo input.btTxt{background-color: #000; height:auto; padding: 8px 30px; color: #fff; text-transform:uppercase; font-weight:600;
+	width:220px; float:left;
+}
+
+.wufoo .date span label {display:none;}
+.wufoo .date span.symbol {display:none;}
+form li .datepicker {margin-left:5px;}
+.embed form {margin:5px !important;}
+
+
+.noI form li, .wufoo li {display:inline-block; width:45%; margin-left:1.5%;}
+/* .noI form li.flRight, .wufoo li.flRight{float:right} */
+
+
+@media screen and (max-width:992px) {
+  .wufoo li {width:100% !important; display:block; float:left; margin:8px 0;}
+}
+
+
+@media screen and (max-width:823px) {
+  .wufoo li {width:97%; display:block; float:left; margin:8px 0;}
+}
+
+@media screen and (max-width:768px) {
+  .wufoo li {width:97%; display:block; float:left; margin:8px 0;}
+}
