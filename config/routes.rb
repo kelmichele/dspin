@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   resources :requests, :except => [:new]
   get '/speaking', to: 'requests#new', as: 'speaking'
   post '/speaking', to: 'requests#create'
+  get '/formstyles', to: 'requests#wuf.css'
+
 
   resources :features, :except => [:new]
   get '/feature-dana', to: 'features#new', as: 'feature-dana'
