@@ -899,13 +899,11 @@ h2 {line-height: 1.35rem;}
     // .lform{min-height:1000px;}
     // iframe {height:1650px;}
     .lform{height:1750px;}
-    iframe {height:2050px;}
+    iframe {height:2150px;}
   }
   @include bp(oc) {
     // .lform{min-height:1000px;}
     // iframe {height:1520px;}
-    .lform{height:1550px;}
-    iframe {height:1750px;}
   }
 
   @include bp(ph) {
