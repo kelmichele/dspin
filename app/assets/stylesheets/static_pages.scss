@@ -846,6 +846,7 @@ h2 {line-height: 1.35rem;}
   @media screen and (max-width:1113px) {
 
     .lform{min-height:1000px;}
+    iframe {height:1520px;}
   }
 
   @include bp(tb) {
