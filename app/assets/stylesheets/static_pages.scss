@@ -844,9 +844,8 @@ h2 {line-height: 1.35rem;}
   .full-img {@include sec-default(); margin-top:15px; margin-bottom:30px;}
 
   @media screen and (max-width:1113px) {
-
     .lform{min-height:1000px;}
-    iframe {height:1520px;}
+    iframe {height:1520px; overflow: scroll;}
   }
 
   @include bp(tb) {
