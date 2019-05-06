@@ -843,6 +843,11 @@ h2 {line-height: 1.35rem;}
 
   .full-img {@include sec-default(); margin-top:15px; margin-bottom:30px;}
 
+  @media screen and (max-width:1113px) {
+
+    .lform{min-height:1000px;}
+  }
+
   @include bp(tb) {
     h1 {font-size: 1.45rem;}
     h1 span {font-size: 3rem;}
@@ -1083,4 +1088,10 @@ h2 {line-height: 1.35rem;}
 .features.new {
   #wufoo-m1uftpkw0im3b6p {@include sec-default(); max-width:100%; border: 1px solid $f0; padding:15px 20px 15px 15px;}
 }
+// .requests.new #form {min-height:700px;}
+
+@include bp(tb) {
+  // .requests.new #form {min-height:920px;}
+}
+
 
