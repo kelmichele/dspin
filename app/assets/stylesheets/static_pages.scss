@@ -845,7 +845,7 @@ h2 {line-height: 1.35rem;}
 
   @media screen and (max-width:1113px) {
     .lform{min-height:1000px;}
-    iframe {height:1520px; overflow: scroll;}
+    iframe {height:1520px;}
   }
 
   @include bp(tb) {
@@ -890,6 +890,15 @@ h2 {line-height: 1.35rem;}
       form {width:95%; }
       p.print{ @include sec-default();}
     }
+  }
+
+  @include bp(mb) {
+    .lform{min-height:1000px;}
+    iframe {height:1650px;}
+  }
+  @include bp(oc) {
+    .lform{min-height:1000px;}
+    iframe {height:1520px;}
   }
 
   @include bp(ph) {
