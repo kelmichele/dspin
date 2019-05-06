@@ -844,8 +844,11 @@ h2 {line-height: 1.35rem;}
   .full-img {@include sec-default(); margin-top:15px; margin-bottom:30px;}
 
   @media screen and (max-width:1113px) {
-    .lform{min-height:1000px;}
-    iframe {height:1520px;}
+    // .lform{min-height:1000px;}
+    // iframe {height:1520px;}
+
+    .lform{height:1550px; overflow-y: scroll;}
+    iframe {height:1750px;}
   }
 
   @include bp(tb) {
@@ -893,12 +896,12 @@ h2 {line-height: 1.35rem;}
   }
 
   @include bp(mb) {
-    .lform{min-height:1000px;}
-    iframe {height:1650px;}
+    // .lform{min-height:1000px;}
+    // iframe {height:1650px;}
   }
   @include bp(oc) {
-    .lform{min-height:1000px;}
-    iframe {height:1520px;}
+    // .lform{min-height:1000px;}
+    // iframe {height:1520px;}
   }
 
   @include bp(ph) {
