@@ -1,0 +1,196 @@
+
+<!-- action="https://formspree.io/email" -->
+<form 
+	id="givebackForm"
+  method="POST"
+>
+	<input type="hidden" name="_subject" value="New Giveback Shop Submission" />
+  <input type="hidden" name="_cc" id="mgrCopy">
+
+  <div class="formGroup">
+  	<label>Name</label>
+    <input type="text" id="givebackName" name="name" />
+  </div>
+  
+  <div class="formGroup">
+  	<label>Phone</label>
+    <input type="text" id="givebackPhone" name="phone" />
+  </div>
+
+  <div class="formGroup">
+  	<label>Email</label>
+	  <input type="text" id="givebackEmail" name="_replyto">
+	</div>
+
+	<div class="formGroup">
+  	<label>Store Location</label>
+	  <select id="givebackStore" class="form-select">
+	    <option selected value=""></option>
+	    <option value="Athens">Athens</option>
+	    <option value="AtlanticStation">Atlantic Station</option>
+	    <option value="Auburn">Auburn</option>
+	    <option value="Augusta">Augusta</option>
+	    <option value="Austin">Austin</option>
+	    <option value="Avalon">Avalon</option>
+	    <option value="Birkdale">Birkdale</option>
+	    <option value="Birmingham">Birmingham</option>
+	    <option value="Brentwood">Brentwood</option>
+	    <option value="Buckhead">Buckhead</option>
+	    <option value="Carytown">Carytown</option>
+	    <option value="Chattanooga">Chattanooga</option>
+	    <option value="Citywalk">Citywalk</option>
+	    <option value="ColoradoSprings">Colorado Springs</option>
+	    <option value="Columbia">Columbia</option>
+	    <option value="Denver">Denver</option>
+	    <option value="Destin">Destin</option>
+	    <option value="Dunwoody">Dunwoody</option>
+	    <option value="EastCobb">East Cobb</option>
+	    <option value="Easton">Easton</option>
+	    <option value="Forum">Forum</option>
+	    <option value="HiltonHead">Hilton Head</option>
+	    <option value="Homewood">Homewood</option>
+	    <option value="Lexington">Lexington</option>
+	    <option value="Murfreesboro">Murfreesboro</option>
+	    <option value="Nashville">Nashville</option>
+	    <option value="PeachtreeCity">Peachtree City</option>
+	    <option value="Raleigh">Raleigh</option>
+	    <option value="Savannah">Savannah</option>
+	    <option value="SouthCharlotte">South Charlotte</option>        
+	    <option value="SouthMiami">South Miami</option>
+	    <option value="SouthTampa">South Tampa</option>
+	    <option value="Suwanee">Suwanee</option>
+	    <option value="Tallahassee">Tallahassee</option>
+	    <option value="Tuscaloosa">Tuscaloosa</option>        
+	    <option value="Valdosta">Valdosta</option>
+	    <option value="Vinings">Vinings</option>
+	    <option value="WestCobb">West Cobb</option>
+	    <option value="WickerPark">Wicker Park</option>
+	  </select>
+	</div>
+
+  <div class="formGroup">
+  	<label>Date Option 1</label>
+    <input type="date" id="givebackDate1" name="date1" />
+  </div>
+
+  <div class="formGroup">
+  	<label>Date Option 2</label>
+    <input type="date" id="givebackDate2" name="date2" />
+  </div>
+
+  <div class="formGroup">
+  	<label>Cause</label>
+    <input type="text" id="givebackCause" name="cause" />
+  </div>
+
+  <div class="formGroup">
+  	<label>Estimated # of Guests</label>
+  	<input type="text" id="givebackGuests" name="guests" />
+  </div>
+
+
+  <!-- your other form fields go here -->
+  <div class="clearfix"></div>
+
+  <button type="submit" class="submit">Submit Request</button>
+</form>
+
+
+<script>
+  jQuery(document).ready(function(){
+   jQuery('.form-select').change(function(){
+      apptLocation = jQuery(this).val();     
+      if (apptLocation == "Athens" ) {
+        var dets = JSON.parse('{"name": "Athens","storeEmail": "athens@fabrikstyle.com", "managerEmail": "melissa.mcgill@fabrikstyle.com"}');
+      } else if (apptLocation == "AtlanticStation") {
+        var dets = JSON.parse('{"name": "AtlanticStation","storeEmail": "AtlanticStation@fabrikstyle.com", "managerEmail": "Laura.avenick@fabrikstyle.com"}');
+      } else if (apptLocation == "Auburn") {
+        var dets = JSON.parse('{"name": "Auburn","storeEmail": "Auburn@fabrikstyle.com", "managerEmail": "tanya.fuller@fabrikstyle.com"}');
+      } else if (apptLocation == "Augusta") {
+        var dets = JSON.parse('{"name": "Augusta","storeEmail": "Augusta@fabrikstyle.com", "managerEmail": "carolyn.thornton@fabrikstyle.com"}');
+      } else if (apptLocation == "Austin") {
+        var dets = JSON.parse('{"name": "Austin","storeEmail": "Austin@fabrikstyle.com", "managerEmail": "leslie.kempler@fabrikstyle.com"}');
+      } else if (apptLocation == "Avalon") {
+        var dets = JSON.parse('{"name": "Avalon","storeEmail": "Avalon@fabrikstyle.com", "managerEmail": "jade.geserick@fabrikstyle.com"}');
+      } else if (apptLocation == "Baton Rouge") {
+        var dets = JSON.parse('{"name": "Baton Rouge","storeEmail": "batonrouge@fabrikstyle.com", "managerEmail": "elizabeth.waits@fabrikstyle.com"}');        
+      } else if (apptLocation == "Birkdale") {
+        var dets = JSON.parse('{"name": "Birkdale","storeEmail": "Birkdale@fabrikstyle.com", "managerEmail": "denisse.spade@fabrikstyle.com"}');
+      } else if (apptLocation == "Birmingham") {
+        var dets = JSON.parse('{"name": "Birmingham","storeEmail": "Birmingham@fabrikstyle.com", "managerEmail": "julie.myers@fabrikstyle.com"}');
+      } else if (apptLocation == "Brentwood") {
+        var dets = JSON.parse('{"name": "Brentwood","storeEmail": "Brentwood@fabrikstyle.com", "managerEmail": "beth.hughes@fabrikstyle.com"}');
+      } else if (apptLocation == "Buckhead") {
+        var dets = JSON.parse('{"name": "Buckhead","storeEmail": "Buckhead@fabrikstyle.com", "managerEmail": "courtney.witcher@fabrikstyle.com"}');
+      } else if (apptLocation == "Carytown") {
+        var dets = JSON.parse('{"name": "Carytown","storeEmail": "Carytown@fabrikstyle.com", "managerEmail": "sarah.joyner@fabrikstyle.com"}');
+      } else if (apptLocation == "Chattanooga") {
+        var dets = JSON.parse('{"name": "Chattanooga","storeEmail": "Chattanooga@fabrikstyle.com", "managerEmail": "candace.barber@fabrikstyle.com"}');
+      } else if (apptLocation == "Citywalk") {
+        var dets = JSON.parse('{"name": "Citywalk","storeEmail": "Citywalk@fabrikstyle.com", "managerEmail": "Mckale.Yancey@fabrikstyle.com"}');
+      } else if (apptLocation == "ColoradoSprings") {
+        var dets = JSON.parse('{"name": "ColoradoSprings","storeEmail": "ColoradoSprings@fabrikstyle.com", "managerEmail": "kari.reyner@fabrikstyle.com"}');
+      } else if (apptLocation == "Columbia") {
+        var dets = JSON.parse('{"name": "Columbia","storeEmail": "Columbia@fabrikstyle.com", "managerEmail": "carol.doonan@fabrikstyle.com"}');
+      } else if (apptLocation == "Tuscaloosa") {
+        var dets = JSON.parse('{"name": "Tuscaloosa","storeEmail": "Tuscaloosa@fabrikstyle.com", "managerEmail": "jeanne.roche@fabrikstyle.com"}');
+      } else if (apptLocation == "Denver") {
+        var dets = JSON.parse('{"name": "Denver","storeEmail": "Denver@fabrikstyle.com", "managerEmail": "leslie.clay@fabrikstyle.com"}');
+      } else if (apptLocation == "Destin") {
+        var dets = JSON.parse('{"name": "Destin","storeEmail": "Destin@fabrikstyle.com", "managerEmail": "madison.hepstall@fabrikstyle.com"}');
+      } else if (apptLocation == "Dunwoody") {
+        var dets = JSON.parse('{"name": "Dunwoody","storeEmail": "Dunwoody@fabrikstyle.com", "managerEmail": "melissa.chiverton@fabrikstyle.com"}');
+      } else if (apptLocation == "EastCobb") {
+        var dets = JSON.parse('{"name": "EastCobb","storeEmail": "EastCobb@fabrikstyle.com", "managerEmail": "nicole.blochinger@fabrikstyle.com"}');
+      } else if (apptLocation == "Easton") {
+        var dets = JSON.parse('{"name": "Easton","storeEmail": "Easton@fabrikstyle.com", "managerEmail": "angie.ashbaugh@fabrikstyle.com"}');
+      } else if (apptLocation == "Forum") {
+        var dets = JSON.parse('{"name": "Forum","storeEmail": "Forum@fabrikstyle.com", "managerEmail": "whitney.harrell@fabrikstyle.com"}');
+      } else if (apptLocation == "HiltonHead") {
+        var dets = JSON.parse('{"name": "HiltonHead","storeEmail": "HiltonHead@fabrikstyle.com", "managerEmail": "kelly.welch@fabrikstyle.com"}');
+      } else if (apptLocation == "Homewood") {
+        var dets = JSON.parse('{"name": "Homewood","storeEmail": "Homewood@fabrikstyle.com", "managerEmail": "lauren.gamble@fabrikstyle.com"}');
+      } else if (apptLocation == "Lexington") {
+        var dets = JSON.parse('{"name": "Lexington","storeEmail": "Lexington@fabrikstyle.com", "managerEmail": "chris.godfrey@fabrikstyle.com"}');
+      } else if (apptLocation == "Murfreesboro") {
+        var dets = JSON.parse('{"name": "Murfreesboro","storeEmail": "Murfreesboro@fabrikstyle.com", "managerEmail": "meghan.orourke@fabrikstyle.com"}');
+      } else if (apptLocation == "Franklin") {
+        var dets = JSON.parse('{"name": "Franklin","storeEmail": "franklin@fabrikstyle.com", "managerEmail": "debbi.kerrigan@fabrikstyle.com"}');
+      } else if (apptLocation == "PeachtreeCity") {
+        var dets = JSON.parse('{"name": "PeachtreeCity","storeEmail": "PeachtreeCity@fabrikstyle.com", "managerEmail": "hannah.johnston@fabrikstyle.com"}');
+      } else if (apptLocation == "Raleigh") {
+        var dets = JSON.parse('{"name": "Raleigh","storeEmail": "Raleigh@fabrikstyle.com", "managerEmail": "courtney.batts@fabrikstyle.com"}');
+      } else if (apptLocation == "Savannah") {
+        var dets = JSON.parse('{"name": "Savannah","storeEmail": "Savannah@fabrikstyle.com", "managerEmail": " ashley.radeck@fabrikstyle.com"}');
+      } else if (apptLocation == "SouthCharlotte") {
+        var dets = JSON.parse('{"name": "SouthCharlotte","storeEmail": "SouthCharlotte@fabrikstyle.com", "managerEmail": "heather.mcnamara@fabrikstyle.com"}');
+      } else if (apptLocation == "SouthTampa") {
+        var dets = JSON.parse('{"name": "SouthTampa","storeEmail": "SouthTampa@fabrikstyle.com", "managerEmail": "andrea.tuggle@fabrikstyle.com"}');
+      } else if (apptLocation == "Suwanee") {
+        var dets = JSON.parse('{"name": "Suwanee","storeEmail": "Suwanee@fabrikstyle.com", "managerEmail": "kim.wholly@fabrikstyle.com"}');
+      } else if (apptLocation == "Tallahassee") {
+        var dets = JSON.parse('{"name": "Tallahassee","storeEmail": "Tallahassee@fabrikstyle.com", "managerEmail": "alana.hollifield"}');
+      } else if (apptLocation == "Valdosta") {
+        var dets = JSON.parse('{"name": "Valdosta","storeEmail": "Valdosta@fabrikstyle.com", "managerEmail": "naiz.bolin@fabrikstyle.com"}');
+      } else if (apptLocation == "Vinings") {
+        var dets = JSON.parse('{"name": "Vinings","storeEmail": "Vinings@fabrikstyle.com", "managerEmail": "julie.myers@fabrikstyle.com"}');
+      } else if (apptLocation == "WestCobb") {
+        var dets = JSON.parse('{"name": "WestCobb","storeEmail": "WestCobb@fabrikstyle.com", "managerEmail": "Kayla.smith@fabrikstyle.com"}');
+      } else if (apptLocation == "WickerPark") {
+        var dets = JSON.parse('{"name": "WickerPark","storeEmail": "WickerPark@fabrikstyle.com", "managerEmail": "maria.sanzone@fabrikstyle.com"}');
+        //} else if (apptLocation == "NEWSTORE") {
+        //var dets = JSON.parse('{"name": "NEWSTORE","storeEmail": "NEWSTORE@fabrikstyle.com", "managerEmail": "NEWSTOREManager@fabrikstyle.com"}');
+      } // <-- This bracket ends your data section. Make sure this is still here if you edit anything.
+     
+
+    if(apptLocation){
+        console.log(apptLocation);
+        var givebackForm = document.getElementById('givebackForm');
+        givebackForm.setAttribute('action', '//formspree.io/' + dets.storeEmail);
+
+        var ecopy = document.getElementById('mgrCopy');
+        jQuery(ecopy).replaceWith('<input type="hidden" name="_cc" id="mgrCopy" value="'+dets.managerEmail + ',operations.intern@fabrikstyle.com">');
+     }
+    });
+  });
+</script>
