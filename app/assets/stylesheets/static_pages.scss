@@ -75,6 +75,7 @@
 
 @include bp(tn) {
   .lightwidget-widget {min-height:190px;}
+  // .lightwidget[data-id="df568c51ac3f52d684ae4b8aacd74053"] .lightwidget__tile {padding:0 !important;}
 }
 
 @include bp(md) {
@@ -82,7 +83,11 @@
 }
 
 @include bp(oc) {
-  .lightwidget-widget {min-height:150px;}
+  .lightwidget-widget {@include center-block(); width:95%; min-height:137px;}
+}
+
+@include bp(sm) {
+  .lightwidget-widget {width:92%; min-height: auto;}
 }
 
 
