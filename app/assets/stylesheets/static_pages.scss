@@ -87,7 +87,7 @@
 }
 
 @include bp(sm) {
-  .lightwidget-widget {width:92%; min-height: auto;}
+  .lightwidget-widget {width:90%; float:left; min-height: auto;}
 }
 
 
