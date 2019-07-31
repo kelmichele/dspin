@@ -164,6 +164,7 @@ h2 {line-height: 1.35rem;}
         span.fancy { font-size: 3rem;}
       }
     }
+    .insta{margin-bottom: 40px;}
   }
 
   @include bp(tn) {
@@ -207,6 +208,10 @@ h2 {line-height: 1.35rem;}
         p{font-size:15px;}
       }
     }
+  }
+
+  @include bp(sm) {
+    .insta{margin-bottom: 20px;}
   }
 }
 
