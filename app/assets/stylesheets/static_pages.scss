@@ -58,6 +58,11 @@
 }
 
 .collage-img {margin-bottom: 70px;}
+
+@include bp(dt) { 
+  .lightwidget-widget {min-height:320px;}
+}
+
 @include bp(tb) { 
   .collage-img {margin-bottom: 35px;}
 }
