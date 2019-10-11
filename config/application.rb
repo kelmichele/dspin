@@ -12,7 +12,7 @@ module Dspin
     config.load_defaults 5.2
 
     config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
-		config.assets.precompile << /\.(?:eot|woff|ttf)$/
+		# config.assets.precompile << /\.(?:eot|woff|ttf)$/
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
