@@ -1,0 +1,57 @@
+<% @page_title = "Press" %>
+<% @page_description = "Take a look at some of the Dana Spinola's article coverage." %>
+
+<!-- https://www.11alive.com/article/news/local/features/changing-lives-through-clothes-nonprofit-supports-women-in-need-with-free-shopping-sprees/85-592609812 -->
+
+<div class="event-lay press">
+	<div class="inside med2-def">
+		<div class="title"><h1><span>Haute</span> off the Press.</h1></div>
+
+		<% if user_signed_in? && current_user.admin? %>
+	    <button class="admin-uk wl-uk uk-float-right" type="button"><span  uk-icon="icon: settings;"></span></button>
+	    <div uk-dropdown="mode: click; pos: bottom-right; boundary: .wl-uk;">
+				<%= link_to "Create New Press Item", new_article_path, class: 'ds-link' %>
+	    </div>
+		<% end %>
+
+		<div class="btn-side">
+			<%= link_to "Feature Dana", feature_dana_path, class: 'ds-link' %>
+		</div>
+	</div>
+
+	<div class="event-list">
+		<div class="inside med-def">
+			<% @articles.each do |article| %>
+				<div class="event-li article">
+					<% if article.image.attached? %>
+					  <%= image_tag article.image, class: 'img-responsive', alt: "#{article.alt}"%>
+					<% end %>
+
+					<div class="textbox">
+						<% if article.publication != '' %><p class="pub"><%= article.publication %></p><% end %>
+						<% if article.title != '' %><h4><%= article.title %></h4><% end %>
+						<% if article.details != '' %><p class="desc"><%= article.details %></p><% end %>
+
+						<% if article.link1 != '' %>
+							<%= link_to "View Article", '#{article.link1}', class: 'text-link', target: '_blank' %>
+						<% end %>
+
+						<% if article.link2 != '' %>
+							<% if article.link1 != '' %>
+								<%= link_to "View Video", '#{article.link2}', class: 'text-link dub', target: '_blank' %>
+							<% else %>
+								<%= link_to "View Video", '#{article.link2}', class: 'text-link', target: '_blank' %>
+							<% end %>
+						<% end %>
+					</div>
+
+					<hr>
+					<% if user_signed_in? && current_user.admin? %>
+						<div class="clearfix space"></div>
+						<%= link_to "[ Edit Article Details]", edit_article_path(article), class: 'text-link admin' %>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

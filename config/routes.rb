@@ -32,6 +32,11 @@ Rails.application.routes.draw do
   get '/twitter', to: 'links#twitter'
 
 
+  resources :articles do 
+    member do
+      delete :delete_image_attachment
+    end
+  end
 
   resources :requests, :except => [:new]
   get '/speaking', to: 'requests#new', as: 'speaking'

@@ -4,6 +4,7 @@
 @import "variables";
 @import "mixins";
 
+.eventAdmin{display: none;}
 .honey {position: absolute;left: -9999px;}
 .ds-link {@include link(30%, $white); background-color: $black; @include tshadowl(rgba($black, .3));
   text-transform: uppercase;
