@@ -1,0 +1,126 @@
+<% @page_title = "Past Events (beta)" %>
+<% @page_description = "Take a closer look at Dana's previous speaking engagements, and get inspired to live with passion." %>
+
+<div class="past-events">
+	<div class="event-lay">
+		<div class="event-list">
+			<div class="inside med-def">
+				<div class="intro">
+					<div class="title"><h1>Your <span class="lspace">front row</span> seat to past events.</h1>
+							<% if user_signed_in? && current_user.admin? %>
+						    <button class="admin-uk wl-uk uk-float-right" type="button"><span  uk-icon="icon: settings;"></span></button>
+						    <div uk-dropdown="mode: click; pos: bottom-right; boundary: .wl-uk;">
+									<%= link_to "Create New Past Event", new_archive_path, class: 'ds-link' %>
+						    </div>
+							<% end %>
+					</div>
+				</div>
+			</div>
+
+			<div class="cat-sec">
+				<div class="inside alt">
+					<div class="cat key">
+						<a href="/past-events#keynotes" class="link-title">Keynotes</a>
+					</div>
+
+					<div class="cat chat">
+						<a href="/past-events#chats" class="link-title">Fireside Chats</a>
+					</div>
+
+					<div class="cat pods">
+						<a href="/past-events#podcasts" class="link-title">Podcasts</a>
+					</div>
+
+					<div class="cat msg">
+						<a href="/messages" class="link-title">Messages</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="inside med-def lists">
+				<div id="keynotes" class="cat-list">
+					<h3 class="sec-title">Keynotes</h3>
+
+					<% @keynotes.each do |archive| %>
+						<div id="el-{{ archive.id }}" class="event-hlf">
+							<% if archive.image.attached? %>
+							  <div class="image">
+							  	<%= image_tag archive.image, class: 'img-responsive', alt: "#{archive.title}"%>
+							  </div>
+
+							<% elsif archive.video != '' %>
+								<%= archive.video %>
+								<!-- <iframe src="https://www.youtube.com/embed/H3gJtV6Cy-0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+							<% end %>
+
+							<div class="textbox">
+								<% if archive.title != '' %><h4><%= archive.title %></h4><% end %>
+								<% if archive.details != '' %><p><%= archive.details %></p><% end %>
+							</div>
+
+							<% if user_signed_in? && current_user.admin? %>
+								<div class="clearfix space"></div>
+								<%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
+				<div class="border-row"></div>
+
+				<div id="chats" class="cat-list">
+					<h3 class="sec-title">Fireside Chats</h3>
+
+					<% @chats.each do |archive| %>
+						<div id="el-{{ archive.id }}" class="event-hlf">
+							<% if archive.image.attached? %>
+							  <div class="image">
+							  	<%= image_tag archive.image, class: 'img-responsive', alt: "#{archive.title}"%>
+							  </div>
+
+							<% elsif archive.video != '' %>
+								<%= archive.video %>
+							<% end %>
+
+							<div class="textbox">
+								<% if archive.title != '' %><h4><%= archive.title %></h4><% end %>
+								<% if archive.details != '' %><p><%= archive.details %></p><% end %>
+							</div>
+
+							<% if user_signed_in? && current_user.admin? %>
+								<div class="clearfix space"></div>
+								<%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
+							<% end %>
+						</div>
+					<% end %>
+				</div>
+				<div class="border-row"></div>
+
+				<div id="podcasts" class="cat-list pods">
+					<h3 class="sec-title">Podcasts</h3>
+
+					<% @podcasts.each do |archive| %>
+						<div id="el-{{ archive.id }}" class="event-thr">
+							<a <% if archive.link != '' %>href="<%= archive.link %>" target="_blank"<% end %>>
+								<% if archive.image.attached? %>
+							  	<%= image_tag archive.image, class: 'img-responsive', alt: "#{archive.title}"%>
+
+								<% elsif archive.video != '' %>
+									<%= archive.video %>
+								<% end %>
+
+								<% if archive.title != '' %><h4><%= archive.title %></h4><% end %>
+								<% if archive.details != '' %><p><%= archive.details %></p><% end %>
+
+								<% if user_signed_in? && current_user.admin? %>
+									<div class="clearfix space"></div>
+									 <%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
+								<% end %>
+							</a>
+						</div>
+					<% end %>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>

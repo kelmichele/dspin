@@ -1145,3 +1145,30 @@ h2 {line-height: 1.35rem;}
 @include bp(tb) {
   // .requests.new #form {min-height:920px;}
 }
+
+
+
+//*************************************//
+//********* ADMIN FORMS ***************//
+//*************************************//
+.admin-form {background-color:#f7f7f7; padding:30px;
+  label{font-weight:bold; color:#4D0268;}
+  label span{font-weight: normal; text-transform: none; font-size:14px;}
+  p.print, .rmv-img{color:$red;}
+  h4 span{font-size:15px;}
+
+  input,textarea{border-color:rgba($black,.1); padding:5px;}
+  input {height:auto;min-height:35px;}
+
+  .form-group.submit{margin-top: 30px;}
+}
+
+
+
+
+
+
+
+
+
+

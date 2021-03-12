@@ -45,10 +45,10 @@
 						<% end %>
 					</div>
 
-					<hr>
+
 					<% if user_signed_in? && current_user.admin? %>
 						<div class="clearfix space"></div>
-						<%= link_to "[ Edit Article Details]", edit_article_path(article), class: 'text-link admin' %>
+						<%= link_to "[Edit Article Details]", edit_article_path(article), class: 'text-link admin' %>
 					<% end %>
 				</div>
 			<% end %>

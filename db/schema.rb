@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_10_220754) do
+ActiveRecord::Schema.define(version: 2021_03_12_194738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,19 @@ ActiveRecord::Schema.define(version: 2021_03_10_220754) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "archives", force: :cascade do |t|
+    t.text "title"
+    t.text "details"
+    t.string "link"
+    t.string "image"
+    t.string "video"
+    t.integer "order"
+    t.string "timestamps"
+    t.string "category"
+    t.index ["id"], name: "index_archives_on_id"
+    t.index ["title"], name: "index_archives_on_title"
+  end
+
   create_table "articles", force: :cascade do |t|
     t.string "publication"
     t.string "title"
@@ -45,6 +58,9 @@ ActiveRecord::Schema.define(version: 2021_03_10_220754) do
     t.string "image"
     t.string "alt"
     t.string "timestamps"
+    t.integer "order"
+    t.boolean "display"
+    t.string "link"
     t.index ["id"], name: "index_articles_on_id"
     t.index ["title"], name: "index_articles_on_title"
   end
