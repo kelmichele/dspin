@@ -51,7 +51,15 @@
 							  </div>
 
 							<% elsif archive.video != '' %>
-								<%= archive.video %>
+								<% if archive.video.include? "youtube" %>
+									<iframe src="<%= archive.video %>?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+								<% else %>
+									<iframe src="<%= archive.video %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<!-- <iframe class="fw-shot" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+									<!-- https://youtu.be/H3gJtV6Cy-0 -->
+								<% end %>
+
 							<% end %>
 
 							<div class="textbox">
@@ -62,6 +70,7 @@
 							<% if user_signed_in? && current_user.admin? %>
 								<div class="clearfix space"></div>
 								<%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
+								<br><small>Current position: <%= archive.order %></small>
 							<% end %>
 
 							<% if archive.link != '' %></a><% end %>
@@ -94,6 +103,7 @@
 							<% if user_signed_in? && current_user.admin? %>
 								<div class="clearfix space"></div>
 								<%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
+								<br><small>Current position: <%= archive.order %></small>
 							<% end %>
 					
 							<% if archive.link != '' %></a><% end %>
@@ -121,6 +131,7 @@
 								<% if user_signed_in? && current_user.admin? %>
 									<div class="clearfix space"></div>
 									 <%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
+									 <br><small>Current position: <%= archive.order %></small>
 								<% end %>
 							</a>
 						</div>

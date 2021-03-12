@@ -1,8 +1,6 @@
 <% @page_title = "Press (beta)" %>
 <% @page_description = "Take a look at some of the Dana Spinola's article coverage." %>
 
-<!-- https://www.11alive.com/article/news/local/features/changing-lives-through-clothes-nonprofit-supports-women-in-need-with-free-shopping-sprees/85-592609812 -->
-
 <div class="event-lay press">
 	<div class="inside med2-def">
 		<div class="title"><h1><span>Haute</span> off the Press.</h1></div>
@@ -49,6 +47,7 @@
 					<% if user_signed_in? && current_user.admin? %>
 						<div class="clearfix space"></div>
 						<%= link_to "[Edit Article Details]", edit_article_path(article), class: 'text-link admin' %>
+						<small>Current position: <%= archive.order %></small>
 					<% end %>
 				</div>
 			<% end %>

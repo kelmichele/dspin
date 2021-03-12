@@ -1120,6 +1120,7 @@ h2 {line-height: 1.35rem;}
 //*************************************//
 //********* ADMIN ***************//
 //*************************************//
+.event-li small, .event-hlf small, .event-thr small{color:$black;}
 .sessions, .registrations {
   form {
     .field {@include sec-default();margin-bottom: 25px;}
@@ -1173,6 +1174,7 @@ h2 {line-height: 1.35rem;}
   input {height:auto;min-height:35px;}
 
   .form-group.submit{margin-top: 30px;}
+  .form-group.cat input{min-height:1px; width:12px; height:12px;}
+  .thumb{width:200px;}
 }
-
 
