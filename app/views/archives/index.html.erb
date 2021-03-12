@@ -43,6 +43,8 @@
 
 					<% @keynotes.each do |archive| %>
 						<div id="el-{{ archive.id }}" class="event-hlf">
+							<% if archive.link != '' %><a href="<%= archive.link %>" target="_blank"><% end %>
+							
 							<% if archive.image.attached? %>
 							  <div class="image">
 							  	<%= image_tag archive.image, class: 'img-responsive', alt: "#{archive.title}"%>
@@ -50,7 +52,6 @@
 
 							<% elsif archive.video != '' %>
 								<%= archive.video %>
-								<!-- <iframe src="https://www.youtube.com/embed/H3gJtV6Cy-0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 							<% end %>
 
 							<div class="textbox">
@@ -62,6 +63,8 @@
 								<div class="clearfix space"></div>
 								<%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
 							<% end %>
+
+							<% if archive.link != '' %></a><% end %>
 						</div>
 					<% end %>
 				</div>
@@ -72,6 +75,8 @@
 
 					<% @chats.each do |archive| %>
 						<div id="el-{{ archive.id }}" class="event-hlf">
+							<% if archive.link != '' %><a href="<%= archive.link %>" target="_blank"><% end %>
+
 							<% if archive.image.attached? %>
 							  <div class="image">
 							  	<%= image_tag archive.image, class: 'img-responsive', alt: "#{archive.title}"%>
@@ -90,6 +95,8 @@
 								<div class="clearfix space"></div>
 								<%= link_to "[Edit Details]", edit_archive_path(archive), class: 'text-link admin' %>
 							<% end %>
+					
+							<% if archive.link != '' %></a><% end %>
 						</div>
 					<% end %>
 				</div>
