@@ -22,7 +22,7 @@
 			<% @articles.each do |article| %>
 				<div class="event-li article">
 					<% if article.image.attached? %>
-					  <%= image_tag article.image, class: 'img-responsive', alt: "#{article.alt}"%>
+					  <%= image_tag article.image, class: 'img-responsive', alt: "#{article.title}"%>
 					<% end %>
 
 					<div class="textbox">
@@ -47,7 +47,7 @@
 					<% if user_signed_in? && current_user.admin? %>
 						<div class="clearfix space"></div>
 						<%= link_to "[Edit Article Details]", edit_article_path(article), class: 'text-link admin' %>
-						<small>Current position: <%= archive.order %></small>
+						<small>Current position: <%= article.order %></small>
 					<% end %>
 				</div>
 			<% end %>
