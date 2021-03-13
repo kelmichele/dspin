@@ -425,6 +425,7 @@ h2 {line-height: 1.35rem;}
   .event-li {display: inline-block; float: left; margin-bottom: 40px; border:$border;
     width:48%; margin:0 1% 40px; min-height: 525px;
     // &:nth-child(2n+2){float:right;}
+    &:nth-child(2n+2){clear:both;}
 
     .article-img{border-bottom:$border;}
     .textbox {@include sec-default(); padding:20px;
@@ -1174,6 +1175,7 @@ h2 {line-height: 1.35rem;}
   input {height:auto;min-height:35px;}
 
   .form-group.submit{margin-top: 30px;}
+  .send-message:hover{cursor: pointer;}
   .form-group.cat input{min-height:1px; width:12px; height:12px;}
   .thumb{width:200px;}
 }
