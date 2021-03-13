@@ -483,12 +483,11 @@ h2 {line-height: 1.35rem;}
     .event-list .inside.med-def{width:90%;}
   }
 }
-.articles {
-  .event-li{
-    &:nth-child(2n+2){clear:after}
-  }
-
-}
+// .articles {
+//   .event-li{
+//     &:nth-child(2n+2){clear:after;}
+//   }
+// }
 
 .features {
   .form-section {@include sec-default(); 
@@ -1181,7 +1180,7 @@ h2 {line-height: 1.35rem;}
 
   .form-group.submit{margin-top: 30px;}
   .send-message:hover{cursor: pointer;}
-  .form-group.cat input{min-height:1px; width:12px; height:12px;}
+  .form-group.cat input, .form-group.clear input{min-height:1px; width:12px; height:12px;}
   .thumb{width:200px;}
 }
 

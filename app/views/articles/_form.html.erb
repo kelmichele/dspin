@@ -12,6 +12,11 @@
     <p class="print">* indicates required field</p>
     <div class="clearfix"></div><hr>
 
+    <div class="form-group clear">
+		  <%= f.check_box :display %> 
+		  <label>Clear the row:<br><span>You won't need this until after you save. If the rows are off after you add, check this box.</span></label>
+		</div>
+
     <div class="form-group sort">
 		  <label>* Position:<br><span>NUMBER 1-100 -- Lower numbers will display toward top of page.</span></label><br>
 		  <%= f.text_field :order %> 
