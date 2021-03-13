@@ -425,7 +425,6 @@ h2 {line-height: 1.35rem;}
   .event-li {display: inline-block; float: left; margin-bottom: 40px; border:$border;
     width:48%; margin:0 1% 40px; min-height: 525px;
     // &:nth-child(2n+2){float:right;}
-    &:nth-child(2n+2){clear:both;}
 
     .article-img{border-bottom:$border;}
     .textbox {@include sec-default(); padding:20px;
@@ -483,6 +482,12 @@ h2 {line-height: 1.35rem;}
     .btn-side .ds-link {width:80%;}
     .event-list .inside.med-def{width:90%;}
   }
+}
+.articles {
+  .event-li{
+    &:nth-child(2n+2){clear:after}
+  }
+
 }
 
 .features {
