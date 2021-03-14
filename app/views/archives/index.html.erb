@@ -42,7 +42,7 @@
 					<h3 class="sec-title">Keynotes</h3>
 
 					<% @keynotes.each do |archive| %>
-						<div id="el-{{ archive.id }}" class="event-hlf">
+						<div id="el-<%= archive.id %>" class="event-hlf arc">
 							<% if archive.link != '' %><a href="<%= archive.link %>" target="_blank"><% end %>
 							
 							<% if archive.image.attached? %>
@@ -83,7 +83,7 @@
 					<h3 class="sec-title">Fireside Chats</h3>
 
 					<% @chats.each do |archive| %>
-						<div id="el-{{ archive.id }}" class="event-hlf">
+						<div id="el-<%= archive.id %>" class="event-hlf arc">
 							<% if archive.link != '' %><a href="<%= archive.link %>" target="_blank"><% end %>
 
 							<% if archive.image.attached? %>
@@ -118,7 +118,7 @@
 					<h3 class="sec-title">Podcasts</h3>
 
 					<% @podcasts.each do |archive| %>
-						<div id="el-{{ archive.id }}" class="event-thr">
+						<div id="el-<%= archive.id %>" class="event-thr">
 							<a <% if archive.link != '' %>href="<%= archive.link %>" target="_blank"<% end %>>
 								<% if archive.image.attached? %>
 							  	<%= image_tag archive.image, class: 'img-responsive', alt: "#{archive.title}"%>

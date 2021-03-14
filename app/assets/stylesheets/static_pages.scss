@@ -329,6 +329,10 @@ h2 {line-height: 1.35rem;}
     // float: right; 
     // &:nth-child(2n+2) {float:left;}
 
+    &.arc{float:none; margin-left:1.4%; margin-right:1.4%; vertical-align: top;
+      // float: left; &:nth-child(2n+2) {float:right;}
+    }
+
     .textbox, iframe, .image {@include sec-default();}
     .image, iframe {margin-bottom: 15px;}
     iframe {min-height:350px;}
@@ -383,7 +387,8 @@ h2 {line-height: 1.35rem;}
     }
   }
 
-  @include bp(tn) {
+  // @include bp(tn) {
+  @media (max-width:959px){
     h1{font-size: 1.4rem;}
     h1 span{font-size: 2.5rem;}
 
@@ -392,9 +397,12 @@ h2 {line-height: 1.35rem;}
     .event-hlf {@include sec-default();
       iframe {min-height:300px;}
       .image {max-height: 300px;}
+      &.arc .image{max-height:100%;}
 
       .image.mobile-shot {display: block;}
       iframe.fw-shot{display: none;}
+
+      &.arc{margin-left: 0; margin-right: 0;}
     }
     .event-thr {width:45%; margin-left:5%; margin-bottom: 20px;}
   }
@@ -417,10 +425,6 @@ h2 {line-height: 1.35rem;}
 @media (min-width:824px) {
   .static_pages.past-events .event-hlf{float: right; 
     &:nth-child(2n+2) {float:left;}
-  }
-  .past-events.archive-list .event-hlf{//float:none; vertical-align: top; margin:0 1% 40px;
-    float: left; 
-    &:nth-child(2n+2) {float:right;}
   }
 }
 
