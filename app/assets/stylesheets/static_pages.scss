@@ -329,16 +329,15 @@ h2 {line-height: 1.35rem;}
     // float: right; 
     // &:nth-child(2n+2) {float:left;}
 
-    &.arc{float:none; margin-left:1.4%; margin-right:1.4%; vertical-align: top;
-      // float: left; &:nth-child(2n+2) {float:right;}
-    }
+    &.arc{float:none; margin-left:1.4%; margin-right:1.4%; vertical-align: top;}
 
     .textbox, iframe, .image {@include sec-default();}
     .image, iframe {margin-bottom: 15px;}
-    iframe {min-height:350px;}
+    iframe {min-height:350px; min-height:338px;}
     .image {max-height: 350px; overflow: hidden;}
 
     &.lwyd iframe {background-color:$black;}
+    iframe {background-color:$black;}
     .image.mobile-shot {display: none;}
   }
 
