@@ -325,9 +325,9 @@ h2 {line-height: 1.35rem;}
   }
 
   .event-hlf {
-    display: inline-block; float: right; width:47%; margin-bottom: 40px;
-    min-height: 458px;
-    &:nth-child(2n+2) {float:left;}
+    display: inline-block; width:47%; margin-bottom: 40px; min-height: 458px;
+    // float: right; 
+    // &:nth-child(2n+2) {float:left;}
 
     .textbox, iframe, .image {@include sec-default();}
     .image, iframe {margin-bottom: 15px;}
@@ -343,7 +343,7 @@ h2 {line-height: 1.35rem;}
 
     h4{margin-top:15px;}
     .textbox, iframe {@include sec-default();}
-    img{@include center-block(); height:280px;}
+    img{@include center-block(); height:280px;border:1px solid #f0f0f0;}
     &.ceo, &.launch{
       img{border:$border;}
     }
@@ -389,8 +389,7 @@ h2 {line-height: 1.35rem;}
 
     .event-list h4{font-size:1rem;}
     .inside.med-def.lists{width:60%;}
-    .event-hlf {
-      @include sec-default();
+    .event-hlf {@include sec-default();
       iframe {min-height:300px;}
       .image {max-height: 300px;}
 
@@ -414,6 +413,19 @@ h2 {line-height: 1.35rem;}
     // .event-hlf {margin-bottom: 10px;}
   }
 }
+
+@media (min-width:824px) {
+  .static_pages.past-events .event-hlf{float: right; 
+    &:nth-child(2n+2) {float:left;}
+  }
+  .past-events.archives .event-hlf{//float:none; vertical-align: top; margin:0 1% 40px;
+    float: left; 
+    &:nth-child(2n+2) {float:right;}
+  }
+}
+
+
+
 
 .press {
   // h1, .btn-side {display: inline-block; float: left;}
@@ -483,11 +495,6 @@ h2 {line-height: 1.35rem;}
     .event-list .inside.med-def{width:90%;}
   }
 }
-// .articles {
-//   .event-li{
-//     &:nth-child(2n+2){clear:after;}
-//   }
-// }
 
 .features {
   .form-section {@include sec-default(); 

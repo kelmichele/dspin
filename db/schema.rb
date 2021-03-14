@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_194738) do
+ActiveRecord::Schema.define(version: 2021_03_14_135251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_03_12_194738) do
     t.integer "order"
     t.string "timestamps"
     t.string "category"
+    t.boolean "clearfix"
     t.index ["id"], name: "index_archives_on_id"
     t.index ["title"], name: "index_archives_on_title"
   end
