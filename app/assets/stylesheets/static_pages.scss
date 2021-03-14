@@ -418,7 +418,7 @@ h2 {line-height: 1.35rem;}
   .static_pages.past-events .event-hlf{float: right; 
     &:nth-child(2n+2) {float:left;}
   }
-  .past-events.archives .event-hlf{//float:none; vertical-align: top; margin:0 1% 40px;
+  .past-events.archive-list .event-hlf{//float:none; vertical-align: top; margin:0 1% 40px;
     float: left; 
     &:nth-child(2n+2) {float:right;}
   }
