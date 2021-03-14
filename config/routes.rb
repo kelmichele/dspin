@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'messages', to: 'static_pages#messages'
   get 'love-what-you-do', to: 'static_pages#love-what-you-do'
   get 'buy-the-book', to: 'static_pages#buy-the-book'
-  get 'past-events', to: 'static_pages#past-events'
+  # get 'past-events', to: 'static_pages#past-events'
   # get 'press', to: 'static_pages#press'
   get 'heart', to: 'static_pages#heart'
   get 'press-form', to: 'static_pages#press-form'
@@ -44,6 +44,7 @@ Rails.application.routes.draw do
       delete :delete_image_attachment
     end
   end
+  get 'past-events', to: 'archives#index', as: 'past-events'
 
   resources :requests, :except => [:new]
   get '/speaking', to: 'requests#new', as: 'speaking'
