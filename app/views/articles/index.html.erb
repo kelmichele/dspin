@@ -46,7 +46,7 @@
 
 					<% if user_signed_in? && current_user.admin? %>
 						<div class="clearfix space"></div>
-						<%= link_to "[Edit Article Details]", edit_article_path(article), class: 'text-link admin' %>
+						<%= link_to "[Edit Details]", edit_article_path(article), class: 'text-link admin' %>
 						<br><small>Current position: <%= article.order %></small>
 					<% end %>
 				</div>

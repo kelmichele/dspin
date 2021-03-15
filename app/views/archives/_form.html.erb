@@ -80,6 +80,15 @@
       <%= f.submit "Submit", :class=> "send-message" %>
     </div>
 
+    <div class="sub-actions">
+    	<div class="actions">
+        <% unless @archive.new_record? %>
+          <%= link_to "Delete This Event", article_path(@archive), method: :delete, data: { confirm: "Are you sure you want to delete this event?" }, class: "action danger" %>
+          <div class="clearfix dgr"></div>
+        <% end %>
+      </div>
+    </div>
+
 		 <%= link_to "[ Cancel and Return ]", :back, class: 'text-link admin' %>
   </fieldset>
 <% end %>
