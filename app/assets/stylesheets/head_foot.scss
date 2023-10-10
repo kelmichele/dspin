@@ -127,22 +127,33 @@ footer {@include sec-default();
 
 		.ft-block {display: inline-block; 
 			width:18%; float: left; vertical-align: top;
-
 			&.one {margin-left: 4%; }
 			&.three, &.four, &.icons {width:16%;}
 			&.soc {width:24%;
 				p{margin-top: 0;}
 			}
-			#mc-embedded-subscribe-form{padding-top: 0;@include sec-default();}
-			#mc_embed_signup {@include sec-default();
-				form{padding:0;@include sec-default();}
-				input.email, .button {display: inline-block; float: left; margin:0; min-width:auto; font-size: 14px;}
-				input.email {border-radius: 0; width:67%;}
-				.button {background-color: $black; font-family: $lato; text-transform:uppercase; font-size: 13px; border-radius: 0; padding:7.7px 10px;
-					height:auto; float:right; width:33%;min-height: auto; line-height: 1rem;
-				}
+		}
+
+		// .medDef{border:1px solid black;}
+		.ftBlock{width:auto;display:inline-block;vertical-align: top;
+			margin-left:3%;
+			&:first-child{width:20%;}
+			&.three, &.four{width:15%;}
+			&.soc {width:35%;float:right;
+				p{margin-top: 0;}
 			}
 		}
+
+		#mc-embedded-subscribe-form{padding-top: 0;@include sec-default();}
+		#mc_embed_signup {@include sec-default();
+			form{padding:0;@include sec-default();}
+			input.email, .button {display: inline-block; float: left; margin:0; min-width:auto; font-size: 14px;}
+			input.email {border-radius: 0; width:67%;}
+			.button {background-color: $black; font-family: $lato; text-transform:uppercase; font-size: 13px; border-radius: 0; padding:7.7px 10px;
+				height:auto; float:right; width:33%;min-height: auto; line-height: 1rem;
+			}
+		}
+	
 
 		h4, p, a {text-transform: uppercase; letter-spacing: .3px;}
 		h4{margin-bottom: 0px; font-size:1.15rem;font-weight: 600; 
@@ -153,27 +164,38 @@ footer {@include sec-default();
 		li.fab .nav-fab {height:16px;}
 	}
 
-	.btm-foot {@include sec-default(); padding: 10px; background-color: $black;
+	.btm-foot {@include sec-default(); padding: 10px; background-color: $black; margin-top:20px;
 		.copy, .hs {display: inline-block; float: left; width:50%;}
 		.hs {float: right; text-align: right;}
 		p, a {color: $white; font-size: 11px; letter-spacing: 1.2px; margin: 0;}
 	}
 
+	@media (max-width:1200px){
+		.medDef{max-width:800px;}
+		.ftBlock{
+			&.soc {width:40%;margin-left:0;}
+		}
+	}
 
 	@include bp(tb) {
-		.clearfix.mob{display: block;}
+		// .clearfix.mob{display: block;}
 		.top-foot {
 			h4{font-size:1.8rem;}
 			li {font-size: 14px;}
 			li.fab .nav-fab {height:15px;}
 
 			.ft-block {
-				// width:20%;
-				// &.three, &.four{width:15%;}
 				&.one {margin-left: 12%;}
 				&.one, &.two{width:22%;}
 				&.three, &.four{width:20%;}
 				&.soc {width:70%; @include center-block(); margin-top: 30px;}
+			}
+
+			.medDef{max-width:550px;}
+			.ftBlock {
+				&:first-child{width:30%;margin-left:12%;}
+				&.three, &.four{width:20%;}
+				&.soc {@include sec-default();}
 			}
 		}
 	}
@@ -203,6 +225,11 @@ footer {@include sec-default();
 			.ft-block{
 				&.one,&.two, &.three, &.four {display: none;}
 				&.soc{width:80%; margin-top: 0;}
+			}
+
+			.medDef{max-width:400px;}
+			.ftBlock{
+				&.two, &.three, &.four{display:none;}
 			}
 		}
 	}

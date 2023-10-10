@@ -36,6 +36,10 @@ html {
 }
 
 
+.medDef, .insideNrw, .insideKP{width:95%;@include center-block();}
+.medDef{max-width:1000px;}
+.insideNrw{max-width:800px;}
+
 .inside{width: 85%; @include center-block();
   // 1224px
   &.xl {width: 95%;}
