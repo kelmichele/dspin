@@ -80,7 +80,7 @@ Rails.application.configure do
    }
 
    config.action_mailer.default_options = {
-   from: "noreply@woofgangbakery.com"
+   from: "noreply@danaspinola.com"
    }
 
   # Ignore bad email addresses and do not raise email delivery errors.
